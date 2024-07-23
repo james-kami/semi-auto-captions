@@ -132,7 +132,7 @@ def main():
                 print(f'{video_file} generated an exception: {exc}')
                 results.append((video_file, "Exception occurred", "Bad file"))
 
-    with open('video_descriptions.txt', 'w') as f:
+    with open('video_descriptions.txt', 'a') as f:
         for result in results:
             video_file_name, description, final_description = result
             if description and final_description:
@@ -146,4 +146,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-#223
+#338
