@@ -115,12 +115,12 @@ def main():
     save_dir = "/home/james/semi-auto-captions/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=100)
+    video_files = get_random_video_files(video_dir, limit=200)
 
     print(f"Found {len(video_files)} video files.")
 
     results = []
-    with ThreadPoolExecutor(max_workers=3) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
@@ -146,4 +146,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-#338
+#348
