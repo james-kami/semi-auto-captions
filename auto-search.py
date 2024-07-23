@@ -43,9 +43,9 @@ def generate_description(video_file):
         print(description)
 
         enhanced_prompt = (
-            """You are a model responsible for detecting if any people or pets are shown in the description. 
-            Output 'positive' if the description mentions people or pets performing significant activities. 
-            If the video is grainy or upside-down, or if it does not mention people or pets, output 'negative'."""
+            """You are a model responsible for identifying videos with significant activities involving people or pets. 
+            If the video description mentions people or pets doing important actions, respond with 'positive'. 
+            If the video is grainy, upside-down, or does not mention people or pets, respond with 'negative'."""
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
@@ -120,7 +120,7 @@ def main():
     print(f"Found {len(video_files)} video files.")
 
     results = []
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
