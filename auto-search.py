@@ -44,28 +44,32 @@ def generate_description(video_file):
         response = model.generate_content([prompt, description], request_options={"timeout": 600})
         final_description = response.text
         print(final_description)
-        return final_description
+        return description, final_description
     except Exception as e:
         print(f"Error generating description for video {video_file.name}: {e}")
-        return None
+        return None, None
 
 def process_video(video_file_name, save_dir):
-    video_file = upload_and_process_video(video_file_name)
-    if not video_file:
-        return None
+    try:
+        video_file = upload_and_process_video(video_file_name)
+        if not video_file:
+            return video_file_name, "Error during upload/processing", "Bad file"
 
-    final_description = generate_description(video_file)
-    if not final_description:
-        return None
+        description, final_description = generate_description(video_file)
+        if not final_description:
+            return video_file_name, description, "Error during description generation"
 
-    if "positive" in final_description.lower():
-        save_path = os.path.join(save_dir, os.path.basename(video_file_name))
-        shutil.copy(video_file_name, save_path)
-        print(f'Saved video to {save_path}')
+        if "positive" in final_description.lower():
+            save_path = os.path.join(save_dir, os.path.basename(video_file_name))
+            shutil.copy(video_file_name, save_path)
+            print(f'Saved video to {save_path}')
 
-    genai.delete_file(video_file.name)
-    print(f'Deleted file {video_file.uri}')
-    return final_description
+        genai.delete_file(video_file.name)
+        print(f'Deleted file {video_file.uri}')
+        return video_file_name, description, final_description
+    except Exception as e:
+        print(f"Exception processing video {video_file_name}: {e}")
+        return video_file_name, "Exception occurred", "Bad file"
 
 def main():
     userdata = {"GOOGLE_API_KEY": "AIzaSyDuBW39CChEUCrer81fc6YTn-UhtAKwAzA"}
@@ -89,14 +93,18 @@ def main():
             video_file = future_to_video[future]
             try:
                 data = future.result()
-                results.append(data)
+                if data:
+                    results.append(data)
             except Exception as exc:
                 print(f'{video_file} generated an exception: {exc}')
+                results.append((video_file, "Exception occurred", "Bad file"))
 
     with open('video_descriptions.txt', 'w') as f:
         for result in results:
-            if result:
-                f.write(result + '\n')
+            video_file_name, description, final_description = result
+            f.write(f'File: {video_file_name}\n')
+            f.write(f'Description: {description}\n')
+            f.write(f'Final Description: {final_description}\n\n')
 
 if __name__ == "__main__":
     main()
