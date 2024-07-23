@@ -44,10 +44,9 @@ def generate_description(video_file):
 
         enhanced_prompt = (
             """You are a model responsible for detecting if any people or pets are shown in the description. 
-            Output 'positive' if the description mentions people or pets performing significant activities, 
-            unless the video is grainy or upside-down. Otherwise, output 'negative'."""
+            Output 'positive' if the description mentions people or pets performing significant activities. 
+            If the video is grainy or upside-down, or if it does not mention people or pets, output 'negative'."""
         )
-
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
         final_description = response.text
@@ -58,8 +57,6 @@ def generate_description(video_file):
         return None, None
 
 def process_video(video_file_name, save_dir):
-    description = None
-    final_description = None
     try:
         video_file = upload_and_process_video(video_file_name)
         if not video_file:
@@ -74,20 +71,18 @@ def process_video(video_file_name, save_dir):
             shutil.copy(video_file_name, save_path)
             print(f'Saved video to {save_path}')
 
-        # Save description and final description before deleting the file
         result = (video_file_name, description, final_description)
         
         genai.delete_file(video_file.name)
         print(f'Deleted file {video_file.uri}')
         
-        # Explicitly delete large objects and force garbage collection
         del video_file, description, final_description
         gc.collect()
         
         return result
     except Exception as e:
         print(f"Exception processing video {video_file_name}: {e}")
-        return video_file_name, description or "Exception occurred", final_description or "Bad file"
+        return video_file_name, "Exception occurred", "Bad file"
 
 def get_random_video_files(video_dir, limit=10):
     us_region_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
@@ -120,16 +115,12 @@ def main():
     save_dir = "/home/james/semi-auto-captions/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    
-    # VIDEOS TO FIND
-    limit = 20
-
-    video_files = get_random_video_files(video_dir, limit)
+    video_files = get_random_video_files(video_dir, limit=100)
 
     print(f"Found {len(video_files)} video files.")
 
     results = []
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
@@ -153,7 +144,6 @@ def main():
                 f.write('Description: Error generating description or processing video.\n')
                 f.write('Final Description: Bad file\n\n')
 
-
 if __name__ == "__main__":
     main()
-#213
+#223
