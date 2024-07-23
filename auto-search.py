@@ -3,6 +3,7 @@ import time
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import shutil
+import gc
 
 def upload_and_process_video(video_file_name):
     max_retries = 3
@@ -66,6 +67,11 @@ def process_video(video_file_name, save_dir):
 
         genai.delete_file(video_file.name)
         print(f'Deleted file {video_file.uri}')
+        
+        # Explicitly delete large objects and force garbage collection
+        del video_file, description, final_description
+        gc.collect()
+        
         return video_file_name, description, final_description
     except Exception as e:
         print(f"Exception processing video {video_file_name}: {e}")
@@ -76,7 +82,7 @@ def main():
     GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
     genai.configure(api_key=GOOGLE_API_KEY)
 
-    video_dir = "/home/james/semi-auto-captions/small_dataset"
+    video_dir = "/nfsshare/vidarchives/us_region"
     save_dir = "/home/james/semi-auto-captions/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
@@ -87,7 +93,7 @@ def main():
     print(f"Found {len(video_files)} video files.")
 
     results = []
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
