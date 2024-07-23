@@ -1,0 +1,527 @@
+File: /nfsshare/vidarchives/us_region/TNPXGAW-011989-JLVCL/20240528/2024Y05M28D21H19M02S00.30.ts
+Description: The video is a security camera recording. The camera is positioned on the side of a house.  The video begins with a view of a truck in the driveway, with a large flatbed trailer attached. The camera pans to a side of the house with a green lawn and some trees. At the end of the video, the camera pans back to the truck.  The video only includes sounds of wind and nature.  It is unclear what is happening in the video, as there is no clear subject or action taking place. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/3MA38S3BC7L9MRD1111A/20240528/2024Y05M28D05H53M54S00.30.ts
+Description: This is a video from a security camera showing a young girl lying on a bed in a cluttered room. The camera is pointed towards the ceiling, and the girl's legs are visible as she moves around in the bed. She is connected to a medical device, which is likely a breathing machine. The room is very messy and there are many items scattered about. The video is likely from a home, and it is possible that the girl is sick or injured. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-668523-CXNFF/20240528/2024Y05M28D23H43M27S00.30.ts
+Description: The video is a black and white night-time security camera recording of a backyard. The camera is pointed towards a wooden gate, which is closed. There is a fence in the background. A large, bright light is shining from above, illuminating the scene. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAQ-136866-HJEUH/20240528/2024Y05M28D07H24M32S00.30.ts
+Description: The video is in black and white, showing a blurred, grainy image of a dark surface with a brighter object in the corner of the screen. The bright object seems to be made of reflective material and flashes with light. There is a date and time stamp in the upper left corner: 05/28/2024 03:24:33. At the very end of the video, a loud, short, "p" sound is played. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPWSAA-612330-YVFGJ/20240528/2024Y05M28D19H14M07S00.30.ts
+Description: The video shows a shirtless man wearing gray shorts and carrying a white bag. He is walking on a porch toward a blue recycling bin with a recycling symbol on the side.  There is a car parked in the driveway behind him. The man throws the white bag into the recycling bin. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAC-146519-EJXXV/20240528/2024Y05M28D14H04M19S00.30.ts
+Description: The video shows a view from a home security camera. It is focused on the front yard of the home. The yard has grass, trees, bushes, and a walkway leading to the house. The camera is looking through a window. The sun is shining, and there are no people in the video. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-254514-KDWLR/20240528/2024Y05M28D15H34M50S00.30.ts
+Description: The video shows a split screen of two security camera views of a backyard. The right view shows a wooden fence with a brick house and air conditioning unit in the background.  The left view shows a narrow space between two brick walls. An audio track is heard, possibly from a baby or child. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAZ-743640-PTCMU/20240528/2024Y05M28D01H52M03S00.30.ts
+Description: This is a black and white security camera video of a white van parked in a driveway. There is a grill, a table, and a bucket in the foreground. The video is taken at night. The van's back tire is slightly turning, possibly caused by the wind. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAM-580312-ZUMLW/20240528/2024Y05M28D08H56M16S00.30.ts
+Description: This is a black and white night-time video taken from a security camera. The video shows a white pickup truck parked in a driveway. The truck is facing the camera, and the headlights are on. The camera is mounted on a fence, and we can see the wooden slats of the fence.  In the distance, there are some lights. The date and time are displayed in the top left corner of the video: 05/28/2024 03:56:16. The video is 30 seconds long. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-246173-UMUHN/20240528/2024Y05M28D16H21M28S00.30.ts
+Description: The video is a black and white recording of a garage. The camera is positioned in the corner of the garage, facing a car parked in the center of the garage. The camera is recording the car from above. The garage is cluttered with various items, including a ladder, a trash can, some tools, and a few boxes. The door to the garage is visible in the background, and it is open. There are also some bags hanging from the ceiling of the garage. At 0:30, a loud, high-pitched beep sounds, and the video ends. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D23H46M26S00.30.ts
+Description: The video is a time-lapse view from a security camera on a porch. A water bottle is sitting on the railing of the porch. In the distance, a silver car is parked in the driveway of a house. A dark car drives up and parks behind the silver car. In the background, there are trees and a grassy lawn. The audio is a sound of a bird chirping. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528/2024Y05M28D06H32M17S00.30.ts
+Description: The video is from a security camera, showing a black and white image of a person walking around in the bushes near a house at night. The camera zooms in and out occasionally. The person is not visible clearly, but appears to be wearing dark clothes. It's unclear what the person is doing or if they are doing anything suspicious. After 24 seconds, the person goes off camera and a loud beeping sound comes from what appears to be the camera itself. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-398999-YHGHY/20240528/2024Y05M28D19H21M33S00.30.ts
+Description: The video shows a security camera inside a living room, overlooking a patio. A man in a dark shirt and light pants enters the frame. He stands on the patio, apparently doing something with a trash bin.  The security camera’s timestamp is visible and shows that the video was taken on May 28th, 2024, at 21:33. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-324882-KEEBM/20240528/2024Y05M28D06H26M39S00.30.ts
+Description: The video shows a black and white night-time recording of a child's bedroom. The camera is mounted in the corner of the room. In the footage, you can see a child laying in a bed. It looks like the child is sleeping. The child's head is under the covers. A parent walks into the room, looks at the child and then pulls up the covers to make sure the child is fully covered. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAQ-043156-SMZSB/20240528/2024Y05M28D20H25M37S00.30.ts
+Description: The video shows a woman in a kitchen. The camera is mounted on a wall, so we see the scene from a high angle. The kitchen is mostly empty, except for a large island in the center that is completely covered in boxes of food, limes, and other groceries. There's also a pot on the stove and another pot on the counter. The woman is wearing a red shirt. It's difficult to tell what she's doing. She seems to be taking something out of a container, but it's not clear what the container holds. She may be preparing a meal, although the amount of food on the island is excessive for a single meal. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAE-574742-ZYKZU/20240528/2024Y05M28D20H05M04S00.30.ts
+Description: The video shows a young woman eating at a kitchen table while talking to another person off-camera. The woman is wearing a gray hoodie and is eating from a bowl with a spoon. The camera is pointing at the woman from an angle. She talks about the other person's "special flower". The dialogue is in Mandarin Chinese. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAO-398486-VNREN/20240528/2024Y05M28D17H14M50S00.30.ts
+Description: The video shows a backyard with a chain link fence. There is a black car with the hood open. The car is parked next to a gate that leads to a dirt driveway. There are trees all around the yard. A birdhouse is visible on a tree in the distance. The timestamp in the corner of the video shows that it was filmed on May 28th, 2024, at 12:14:50.  The video is taken from a security camera. The camera is likely pointing toward the driveway to capture any activity entering or leaving the property.  There is no noticeable movement in the video. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAC-242391-CUTJT/20240528/2024Y05M28D10H07M52S00.30.ts
+Description: The video is in black and white. It shows a person wearing a skull mask, sitting at a table. Their hand is on the table. There is a piece of paper on the table in front of them. The person is moving their hand as if they are typing on a keyboard.  There is a sound of a keyboard being typed. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-132701-MJWHS/20240528/2024Y05M28D23H32M05S00.30.ts
+Description: The video shows a door with a door knob. The door is slightly ajar.  There is a doormat on the floor.  The video is shaky and has the sound of a bird chirping in the background.  You hear a car door slam and the sound of a car pulling away. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-463062-MSVBL/20240528/2024Y05M28D17H03M21S00.30.ts
+Description: The video shows a security camera view of an apartment complex courtyard. The camera is positioned near the wall of the building and is looking out towards the grass. A small, thin tree is leaning to the right. There are bushes on the left side of the screen, and a few birds are in the grass. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGBA-383347-TMVNG/20240528/2024Y05M28D17H57M07S00.30.ts
+Description: Error generating description or processing video.
+Final Description: Bad file
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-057988-LBRLZ/20240528/2024Y05M28D17H24M27S00.30.ts
+Description: This video shows a black and white security camera recording of two objects hanging from the ceiling, swinging back and forth. The audio is of a person talking, but the quality is too poor to understand what they are saying. In the background, there are two black leather armchairs, and a table with miscellaneous items on it. The video appears to be from a residence. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPWSAA-466663-VWWEV/20240528/2024Y05M28D23H43M24S00.30.ts
+Description: The video shows a woman walking up to the door of a house, carrying a bag. She opens the door and goes inside. The video is shot from a doorbell camera. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-789457-NPVBS/20240528/2024Y05M28D15H49M47S00.30.ts
+Description: The video shows a kitchen table with a chair in the foreground. The camera is pointing down at the table, and there is a bright light reflecting off of the table surface. There is a date and time stamp in the upper left corner of the screen. In the background, we see a white cabinet, a brown wall, and a painting. The video is short and doesn't show anything specific happening. It looks like it could be a security camera feed. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-338765-ZBLXC/20240528/2024Y05M28D12H13M06S00.30.ts
+Description: The video shows a man in a bar. The bar has a lot of dollar bills taped to the ceiling. The man is trying to get the bills down. He uses a long stick to try and get the bills down. He is talking in the video but the audio is muffled so it's unclear what he is saying. The video is 47 seconds long. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAZ-743640-PTCMU/20240528/2024Y05M28D06H14M40S00.30.ts
+Description: The video shows a white van parked in a driveway at night. There is a grill and a table to the left of the van and a blue barrel to the right. The video is grainy and appears to be from a security camera. A loud noise can be heard towards the end of the clip. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-742474-NSJFP/20240528/2024Y05M28D18H01M23S00.30.ts
+Description: The video shows a living room of a house.  It’s an interior shot of the room taken from a security camera.  It shows a large window, a dining table with chairs, a set of decorative circles on the wall, a counter with a microwave and more.  There are a few plants in the room.  A voice can be heard on the audio track, but what is being said is not clear. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAO-623485-RLREW/20240528/2024Y05M28D01H42M00S00.30.ts
+Description: The video shows a security camera view of a front porch. The porch has a chair, a walkway and a grassy lawn. There is a street visible in the background. The video has no sound and shows the grass moving slightly in the wind. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-266180-YJKDL/20240528/2024Y05M28D11H36M37S00.30.ts
+Description: Error generating description or processing video.
+Final Description: Bad file
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-606263-FSWKJ/20240528/2024Y05M28D00H55M43S00.30.ts
+Description: The video is a security camera recording from a kitchen. It shows a woman wearing a green shirt opening the oven and pulling out a dish. The man in a white shirt is rummaging through the counter. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-855093-FHTFD/20240528/2024Y05M28D11H35M39S00.30.ts
+Description: The video shows a person standing in front of a closed white door. The person is out of focus. The walls are wooden, and a water pipe is in the left corner of the video. A box of laundry detergent is in the right corner. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAZ-205332-VGLPL/20240528/2024Y05M28D17H15M00S00.30.ts
+Description: The video shows a close-up of a dirty air conditioner filter. The filter is brown and covered in dust and debris. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-098224-BDVNP/20240528/2024Y05M28D17H01M52S00.30.ts
+Description: The video shows a security camera footage of a woman opening a door and walking away. She was wearing a denim jacket and beige pants. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-818491-BWSBH/20240528/2024Y05M28D20H30M42S00.30.ts
+Description: The video shows a reflection of trees and a fence in a shiny, angled surface. The surface is likely a piece of glass or metal. The time stamp indicates that the video was recorded on May 28, 2024 at 3:30 PM. In the background, we can see buildings with trees in front of them. A bird's chirp can be heard in the background. The video is static and there is no movement in the scene. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAQ-067314-JZZZM/20240528/2024Y05M28D18H36M14S00.30.ts
+Description: This is a security camera video from inside an apartment hallway. The video shows a white door with a small white light on it, a black and white print on the wall, and a coat rack with clothes hanging on it. The date and time is visible in the top left corner of the screen: 05/28/2024 14:36:15. Nothing particularly eventful happens in the video, but it is likely intended for security purposes. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAT-573895-DJMKJ/20240528/2024Y05M28D02H49M42S00.30.ts
+Description: The video starts with a close-up of a window blind.  The blinds are moving as if someone is opening them.  The camera then pulls back and we see a dark sky with a bright light in the center.  Two orange objects appear in the sky.  The bright light in the center appears to be a reflection of the sun in the camera's lens.  The orange objects appear to be airplanes or drones.  The camera then pans back to the window blind and the video ends. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAP-752535-NSRVC/20240528/2024Y05M28D14H29M16S00.30.ts
+Description: The video shows a security camera view of a home's driveway. Two people are walking towards the camera, one in a pink dress and the other in black pants. A black dog follows behind them.  Another person walks toward the camera in the distance. A motorcycle with two people on it drives past the camera and then out of the frame. The two people who had been walking in front of the camera stop to talk to the person who is now walking towards the camera. They all walk out of the frame, and then the dog continues to walk towards the camera. The dog walks out of the frame, and then the video ends. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-833360-VNCCC/20240528/2024Y05M28D14H17M49S00.30.ts
+Description: The video shows an elderly woman sitting on the edge of a bed in a bedroom. She is wearing a floral dress and glasses. She is holding a white piece of fabric in her hands and appears to be folding or examining it. There is a nightstand with a lamp on it to the left of the bed and a walker to the right. The room has brown curtains, a television, and some framed pictures.  She makes a noise like "ppppp" at the end of the video. 
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-606263-FSWKJ/20240528/2024Y05M28D14H02M37S00.30.ts
+Description: The video shows a person in a kitchen. They are standing in front of a microwave and are using a spoon to stir something in a container. The person is wearing a yellow shirt and black pants and has a cup on the counter. There is a lot of clutter on the counter and a window on the right. The person walks away from the counter and towards the living room, where there is a couch, a lamp, and a rug. The person then sits down on the couch. The video is in black and white. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAC-370568-JLWTU/20240528/2024Y05M28D15H00M52S00.30.ts
+Description: The video shows a security camera view of the outside of a house. The camera is pointed at a small patio with a wicker chair and a stone path leading up to a door. A small lizard or gecko walks in front of the camera, coming from the right, walking across the patio and then out of view to the left.  The camera is positioned in the door frame, making the view slightly obstructed.  The video is 30 seconds long. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528/2024Y05M28D09H03M30S00.30.ts
+Description: The video is in black and white and appears to be from a security camera. It shows a kitchen with a doorway leading into a dining room. The kitchen has a large island with cabinets and drawers, a sink, and a counter. There is a chair in the dining room, and the door at the end of the room is slightly ajar.  There are baskets hanging from the ceiling and a mirror on the wall. The video is still, and there is no sound. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528/2024Y05M28D12H05M18S00.30.ts
+Description: The video shows a view through a window screen of a backyard. There is some foliage and grass, and a building can be heard in the background. You can hear someone talking, but it is difficult to understand what they are saying. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGBA-383347-TMVNG/20240528/2024Y05M28D23H22M15S00.30.ts
+Description: The video starts with a close-up shot of a clothesline with red and green markings. The camera then pans to the left, revealing a small dog in the doorway of a house. The dog is barking at a woman who is standing outside the house, holding a white bag. The woman is wearing a blue and red outfit. She walks into the house and the dog follows her. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAX-114229-WDKWJ/20240528/2024Y05M28D02H14M23S00.30.ts
+Description: The video is a black and white night time recording from a security camera. There is a dark silhouette of a building in the background and an object, which looks like a flying insect, flies across the screen from right to left. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAT-664104-SYZSF/20240528/2024Y05M28D15H10M21S00.30.ts
+Description: The video shows a hallway in a home. The camera is fixed and looking down the hall toward a closed door. There is a picture frame in the foreground on the left side of the screen. There is a light on in the ceiling. The only sound is a series of beeps starting around the 15 second mark. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-739106-FWVVG/20240528/2024Y05M28D02H51M50S00.30.ts
+Description: The video shows a man in a kitchen. He is wearing a black t-shirt. He is standing at the kitchen counter, and there is a white cup and a pink cup on the counter. The man appears to be eating or drinking something. The video is shot from another room, and the view is through a doorway. The camera is stationary. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAZ-098152-BKKFS/20240528/2024Y05M28D17H50M00S00.30.ts
+Description: This video shows a security camera pointed at the side of a house. There is a brick wall with a house number on it, and a small bush in front of it. The video is very still and just shows the wall and bush for the entire duration. A faint, high-pitched chirping sound can be heard in the background. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-740632-MXLLK/20240528/2024Y05M28D14H13M13S00.30.ts
+Description: The video is a close-up view of a wooden table in a business or office setting. The camera is mounted on the ceiling looking down at the table. There is a cup of coffee on the table, along with papers and other office supplies. There is also a pair of headphones, a phone, and a power bank. The camera is focused on the table and the objects on it. There is no visible person on camera, but the sound suggests someone is there. The person says something and then makes a few sounds, possibly to themselves, before the audio cuts out.  There is no clear context or narrative to the video. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-254514-KDWLR/20240528/2024Y05M28D12H40M02S00.30.ts
+Description: This is a security camera video. It shows the backyard of a home with a wooden fence. There is a brick house in the background with a window visible. There are a few things in the yard, including an air conditioner, a metal bucket and some gardening tools.  There's a long, narrow passage between a brick wall and the fence on the left side of the frame. The video ends with a bird singing. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528/2024Y05M28D05H19M23S00.30.ts
+Description: The video shows a black and white night vision recording of a truck. The truck is parked in a garage, with a metal gate in the background.  The truck has a wooden bed, and there is a shadowy figure visible behind the gate. It seems like someone is walking around, possibly trying to open the gate.  The video is very quiet. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAT-573895-DJMKJ/20240528/2024Y05M28D01H56M13S00.30.ts
+Description: The video shows two small glowing objects in the night sky. One is brighter and closer to the camera, the other fainter and further away. It appears that the closer object is moving slowly across the sky and then disappears. 
+The timestamp on the screen indicates that the video was taken on May 27th, 2024 at 9:56:13 PM. It's not clear what the objects are. They could be stars, planets, drones, or even satellites. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528/2024Y05M28D13H43M16S00.30.ts
+Description: The video is a black and white security camera shot from a living room. The person speaking is discussing their girlfriend and their relationship with her. The camera does not pick up their face, but it is clear they are trying to be secretive about the conversation. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAX-062035-ZVVPN/20240528/2024Y05M28D21H05M47S00.30.ts
+Description: The video is from a security camera. It shows a white car parked in a driveway next to a silver car. The cars are parked in front of a house with a green lawn and a fence in the background. A bird is heard chirping in the background and a car driving by can be heard. The video ends with the sound of a car alarm. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAV-563921-FCNJF/20240528/2024Y05M28D10H42M34S00.30.ts
+Description: The video shows a backyard with a wooden deck and a gate leading to the backyard. There are three cars parked in the driveway. The time stamp on the video shows 2024-05-26 05:42:34. The sound of a bird chirping can be heard. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAO-628829-ZUGZY/20240528/2024Y05M28D10H39M40S00.30.ts
+Description: This video shows a security camera outside of a house. The camera is pointed at the side of the house and captures the sound of what appears to be a car horn. The timestamp on the video shows it was recorded on 2024-05-26 at 5:39:40.  A toilet and other debris can be seen in the yard. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAH-739717-YDCKJ/20240528/2024Y05M28D08H00M06S00.30.ts
+Description: The video shows a dark, narrow space, possibly inside a wall or an attic. A small, faint noise, resembling a scratching sound, can be heard in the background. The camera remains stationary, pointing towards the narrow space, with no other movements or objects visible. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-206830-STCDL/20240528/2024Y05M28D22H41M46S00.30.ts
+Description: The video shows a home office. A bird is perched on a lamp in the upper left corner of the frame. There are pictures on the wall behind the desk. There are books on shelves behind a white chair in the background. A book lies open on the desk in front of the camera. The video is silent. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAR-575491-MDMZM/20240528/2024Y05M28D00H50M58S00.30.ts
+Description: The video shows a black SUV parked in a driveway. The camera is positioned high up, looking down on the vehicle. The SUV is stationary throughout the clip. There is some grass on the left side of the driveway.  The audio is a loud humming noise that continues throughout the video. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGBA-541214-UVVHX/20240528/2024Y05M28D16H46M39S00.30.ts
+Description: The video is from a security camera inside of a store. The camera is pointing towards the front door, which is made of glass and has metal blinds.  There is a car parked outside the store and the blinds are slowly closing. There is a bench to the left of the door and a red wall to the left of the bench. The time stamp on the video is 2024-05-28 11:46:39. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-005347-XNBCH/20240528/2024Y05M28D13H45M10S00.30.ts
+Description: The video shows a white pickup truck parked in a parking lot. The camera is positioned on the front of the truck, facing the hood. There is no movement or action in the video. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-832677-DSLVZ/20240528/2024Y05M28D02H22M10S00.30.ts
+Description: The video shows a turtle in its enclosure. The enclosure is made of wood and has a wire mesh top. The turtle is on the floor of the enclosure, which is covered in wood chips. There is a green plant in the enclosure, as well as a heat lamp. The video is shot from above the enclosure, and the person filming is not visible. The turtle is moving slowly around the enclosure, and at one point it stops to eat some of the wood chips. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-686846-VJPPR/20240528/2024Y05M28D09H33M35S00.30.ts
+Description: The video shows a black and white night vision view of a room. In the room, there is a white folding chair, a white ball on the floor and a white desk in the background.  A sound of a cat meowing can be heard. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-824337-YYFJS/20240528/2024Y05M28D23H14M57S00.30.ts
+Description: The video shows an empty kitchen with a white countertop, a sink with a chrome faucet, a red dish rack, a blue baby walker and a dining table with four chairs in the background. The video is shot using a security camera. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-297582-VBVTF/20240528/2024Y05M28D13H19M52S00.30.ts
+Description: The video shows a black metal gate with a wire mesh insert. The gate is slightly ajar. There is a green plant and some grass in the foreground, and a concrete pathway. The video is taken from a security camera, with a timestamp indicating it was recorded on May 25, 2021. You can hear a dog barking. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D22H09M39S00.30.ts
+Description: The video shows a still image of a porch railing. There is a water bottle sitting on the railing with some trees and bushes in the background. The timestamp in the top left corner indicates it was taken on May 26, 2021 at 18:09:39. There is a faint sound of birds chirping. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAN-476106-DCGNP/20240528/2024Y05M28D22H10M29S00.30.ts
+Description: The video shows a woman in a kitchen. She's talking, but the audio is unclear. She's walking back and forth and gesturing with her hands. In the background, you can see a refrigerator, a kitchen island with groceries and a chair, a stove and a pot, and a doorway to another room. The time stamp shows the date is May 28th, 2024. 
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-789457-NPVBS/20240528/2024Y05M28D14H38M47S00.30.ts
+Description: Error generating description or processing video.
+Final Description: Bad file
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-698856-HPEYH/20240528/2024Y05M28D22H02M55S00.30.ts
+Description: The video shows a person lying on a bed under a blanket. They are facing away from the camera, and only their legs are visible. The bed is white with black circles on it, and a laundry basket is visible on the left side of the bed. The video is shot from a security camera that is mounted on the wall. The video is very still, and nothing happens in it other than the person shifting slightly. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-606263-FSWKJ/20240528/2024Y05M28D15H15M28S00.30.ts
+Description: The video shows a black dog in a living room with a child. The dog barks and then walks over to the couch where the child is sitting. The child is reading a book. The dog sniffs the child's legs and then looks around the room. The child is not paying attention to the dog. 
+The video is in black and white and looks like it's from a security camera. The room is cluttered and messy. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAX-308991-BWSDH/20240528/2024Y05M28D23H41M21S00.30.ts
+Description: The video shows an empty workshop with a metal bending machine in the center. There are metal bars stacked up next to the machine. The machine is making a repetitive sound as it runs.  The video is silent but the sound from the machine is audible.
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-631363-TXEBK/20240528/2024Y05M28D21H53M26S00.30.ts
+Description: The video shows a white car parked on a street in front of a house. The car is facing the camera and is partially obscured by a tree. There is a house behind the car. The house is grey and has a brown roof. There is a driveway in front of the house. There are trees on both sides of the street. The sky is blue with some white clouds. The video is shot from a security camera and the date and time are displayed in the top left corner. The sound is of wind blowing through leaves. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-311030-XSNJN/20240528/2024Y05M28D05H24M35S00.30.ts
+Description: This is a black and white video taken from a security camera at night. It is unclear what is being filmed, but there are some objects on the ground in the middle of the frame. The camera is mounted on the side of a building and looks out over a small, fenced-in area. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/3MA38S3BC7L9MRD1111A/20240528/2024Y05M28D05H19M35S00.30.ts
+Description: The video is taken from a low angle, possibly a security camera, and shows a small child sleeping in a bed with a stuffed animal. The child is hooked up to a medical device, possibly a heart monitor. There are other medical supplies in the room, including a  bag of saline solution. The child's breathing can be heard and the video is silent otherwise. 
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAC-487581-ZVPMY/20240528/2024Y05M28D23H10M31S00.30.ts
+Description: The video shows a white semi-truck parked on a paved lot next to a white car. There are a few buildings in the background. There is a lot of noise from the truck's engine.  The video appears to be taken from a security camera. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-818491-BWSBH/20240528/2024Y05M28D00H09M13S00.30.ts
+Description: The video shows a security camera view of a backyard with a swing set. There is a house and a car parked in the background. The camera is pointed at the swing set, which is not moving. The video is very short, lasting just 29 seconds. There is no other activity seen in the backyard besides the wind moving the trees in the background. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAQ-298076-TLGGD/20240528/2024Y05M28D16H45M40S00.30.ts
+Description: The video shows a blurry, grainy image of a red light, possibly a reflection,  moving in a windy, cloudy environment. The camera is likely pointed upward, and the wind causes the clouds to shift and the reflection to flicker. The sound is a constant, low hum. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-311030-XSNJN/20240528/2024Y05M28D08H52M04S00.30.ts
+Description: The video is a black and white security camera footage showing a shadowy figure sitting in the corner of what seems to be a backyard or an alley. There is a brick wall with a broken window and a fence in the background.  The video also features some small objects in the foreground, and it seems like there is a faint noise of someone whistling or panting. It's unclear what is happening in the video, but it appears to be taken at night.  
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-152004-GFFVP/20240528/2024Y05M28D05H03M12S00.30.ts
+Description: The video is a black and white security camera recording. It shows a dark room with a light source coming from the right of the frame. The date and time stamp in the top left corner shows that the video was taken on May 28, 2024, at 3:12 AM. A small object, possibly a shadow or a bug, can be seen in the upper part of the frame. The "kami" logo appears at the bottom left corner. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK/20240528/2024Y05M28D01H31M03S00.30.ts
+Description: This is a security camera video that was taken at night. The video shows a driveway in front of a closed gate. It is likely that the video was recorded in a residential area. The video is grainy and in black and white, which is typical of security cameras. There are two birds in the driveway. At around 0:44, a noise can be heard, which might be a bird flying away. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-398999-YHGHY/20240528/2024Y05M28D02H29M24S00.30.ts
+Description: The video shows a dark room with a ceiling fan spinning and two doors to the left. The door is open and there is a shadowy figure in the room behind it. A dog is standing to the right of the door. The room is lit up from behind the figure. The date and time are displayed in the upper left corner of the video.  There is a faint sound of someone saying "Oh, yeah. No. We're about to get started."  The video is grainy and appears to be shot on a security camera. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAH-549239-TXGXR/20240528/2024Y05M28D18H25M24S00.30.ts
+Description: The video is a still shot taken from a backyard deck. The camera is looking out over a green lawn that has a trampoline, a swing set, and a playhouse. The camera is zoomed in slightly on the playhouse. Behind the lawn are tall trees and a house that is hidden behind the trees. There is some movement in the trees caused by the wind. At 0:29 you can hear the sound of a bird chirping.  At 0:30 a sound similar to a cat meowing can be heard. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-729371-VDSBK/20240528/2024Y05M28D14H53M29S00.30.ts
+Description: The video shows a bakery where a man is standing by a rack of freshly baked bread.  In the background, a woman is putting more baked bread onto a rack. The video is captured by a surveillance camera. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-042516-LEVUU/20240528/2024Y05M28D01H19M27S00.30.ts
+Description: The video shows a black and white night-time security camera recording of a silver SUV pulling into a driveway. The SUV turns the corner and stops in front of a house. The driver's side door is opened. The driver remains in the car. Another car is parked in the driveway. The date and time are visible in the upper left corner of the video. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAV-583461-ZNSZP/20240528/2024Y05M28D04H42M08S00.30.ts
+Description: The video shows a security camera view of a street at night. There are two cars parked on the right side of the street and a few power lines running across the camera's view. A man walks down the street from the left with his dog. The dog goes to the middle of the street and the man calls it back to him. The dog then runs into the middle of the street again. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAM-878703-PFTPH/20240528/2024Y05M28D10H46M39S00.30.ts
+Description: The video shows a living room and dining room area. There are white tiled floors, a couch with pillows and a coffee table in front of it. The dining room table is set with chairs. The video appears to be from a security camera as the timestamp is visible in the top left corner.  A noise starts around 0:10 and continues for a few seconds. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGBA-310431-FTFFP/20240528/2024Y05M28D23H38M42S00.30.ts
+Description: The video is a close-up of four chairs, likely kitchen chairs. The video is taken from a low angle, looking up at the chairs. The chairs are arranged in a row, with their backs facing the camera. The chairs are wooden with green cushions. The video also shows a wooden floor and a small piece of furniture. The chairs are very still and the only noise is a muffled conversation of what appears to be a family. The sound quality is unclear but the conversation sounds casual. The date and time is shown at the top of the video. It is a typical home video that was probably taken on a security camera. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528/2024Y05M28D06H34M52S00.30.ts
+Description: The video shows a black and white shot of a kitchen. It is quiet, and there is a single, slow, faint creaking sound. The camera is positioned in a corner of the room facing toward the middle of the kitchen. There is a table, an open doorway, a chair, and cabinets visible.  The camera is on a shelf next to a box of tissues, a roll of aluminum foil, and another box. There is a large ceiling fan in the background that is not moving, and hanging from the ceiling are several baskets.  A single, faint creak can be heard in the background. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAO-813449-JYBBC/20240528/2024Y05M28D05H03M44S00.30.ts
+Description: The video is a night time recording from a security camera. The camera is pointed at the back yard. There are plants in the yard, and it appears that a small animal is walking through the grass. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAU-020600-VGUXW/20240528/2024Y05M28D17H38M13S00.30.ts
+Description: The video shows a hallway inside a building. The camera is mounted on the ceiling and looking down the hallway. There is a door on the left side of the hall and a sign on the right side. The hall is empty. There is a sound of a bird chirping in the background. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAT-892437-XCFVW/20240528/2024Y05M28D17H40M31S00.30.ts
+Description: The video shows a security camera view of a dirt area in front of a small building. There is a hammock, a bench, and a blue barrel in the area. The camera is facing a road, where a few motorbikes are driving by and some people are walking.  It is unclear if the people in the video are associated with the building. The audio is difficult to hear but includes unintelligible speech. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAE-163988-RPNXP/20240528/2024Y05M28D15H40M11S00.30.ts
+Description: The video shows a man sitting at a desk, wearing a plaid shirt and a backwards baseball cap. He is working on something, presumably on a computer. The camera is pointing at him from a high angle. There is a desk lamp on in front of him, and a window to his right. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK/20240528/2024Y05M28D10H40M48S00.30.ts
+Description: The video shows a black gate that is opening. The gate is made of metal panels with glass inserts.  It is night time.  It takes about 1 minute for the gate to open fully. 
+The gate is set in a driveway.   There is a white car parked in the driveway.  Two lights are shining on the gate. The gate is connected to the wall with a door visible behind the gate on the left.  There is a trash can and a few other objects in the yard. 
+There is a slight blue tint to the video.   The camera makes a clicking noise as it moves.   The video is from a security camera. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-297582-VBVTF/20240528/2024Y05M28D08H28M27S00.30.ts
+Description: The video is a black and white security camera recording of a driveway at night. There is a closed gate and a truck parked in the driveway. The video shows nothing happening other than a slight breeze blowing the palm tree in the background. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAY-541277-ZJZWB/20240528/2024Y05M28D14H21M44S00.30.ts
+Description: This video is shot from a security camera looking into a driveway. A dark SUV pulls into the driveway and stops, blocking the camera's view. A few seconds later, the SUV drives out and the view is obscured by the camera's motion sensor. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP/20240528/2024Y05M28D16H21M26S00.30.ts
+Description: The video shows a security camera's view of a backyard. There are bushes, trees, and a house with a red roof. A bird can be heard chirping in the background. 
+
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-548060-BEDRD/20240528/2024Y05M28D16H14M35S00.30.ts
+Description: The video shows a security camera footage of a garage. A person is walking through the garage toward a car and out of view.  The car appears to be a Dodge Challenger. There are some other items in the garage such as a ladder, a blue circular object, and a shelf. The camera is pointed toward the car. The video is time stamped and recorded on 05/28/2024. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAP-743740-NPDPY/20240528/2024Y05M28D18H46M38S00.30.ts
+Description: The video shows an empty room with white walls and a gray tiled floor. There are several toolboxes in the room, including a large yellow one labeled "US GENERAL" in the lower left corner of the frame and a large red one labeled "US GENERAL" in the lower center. The room is cluttered with tools and other miscellaneous items. There are two doorways in the back of the room. A man in a blue shirt can be seen walking through the doorway in the center of the frame.  The video is likely from a security camera. 
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAM-777096-BYFVD/20240528/2024Y05M28D14H21M21S00.30.ts
+Description: The video shows a young girl standing in a nursery. She is wearing a blue dress and appears to be looking at a fan. There is a crib in the background and a bookshelf with toys on it in the foreground. The name "NOAH" is displayed on the wall with large letters. The video is taken from a security camera and the date and time are displayed in the top left corner.  The girl is quiet and still throughout the video. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-011483-HMPBR/20240528/2024Y05M28D04H46M39S00.30.ts
+Description: The video is a black and white recording from a security camera at night. The camera is aimed at a bush and the ground in front of it. There is no movement in the video. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAW-297582-VBVTF/20240528/2024Y05M28D07H28M59S00.30.ts
+Description: The video shows a black and white security camera footage of a gated driveway. The gate is closed and a white truck is parked in the driveway. A large plant is in the left corner of the footage. 
+Final Description: negative 
+
+
