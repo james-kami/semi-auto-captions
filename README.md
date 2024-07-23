@@ -53,20 +53,33 @@ This script automates the process of uploading videos to the Google Generative A
 
 ## Example Execution
 ```sh
-Found 100 video files.
-Uploading file video1.mp4...
-Completed upload: gs://bucket/video1.mp4
-Waiting for video video1.mp4 to be processed.
-...
-File: video1.mp4
-Description: Video of a family picnic.
-Final Description: Positive
-...
+~/semi-auto-captions$ python auto-search.py
 
-File: video2.mp4
-Description: Error generating description or processing video.
-Final Description: Bad file
-...
+Found 200 video files.
+
+Uploading file /nfsshare/vidarchives/us_region/TNPXGAP-765661-TRPGW/20240528/2024Y05M28D14H17M05S00.30.ts...
+Uploading file /nfsshare/vidarchives/us_region/TNPXGAV-675905-YCTWZ/20240528/2024Y05M28D07H09M58S00.30.ts...
+
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1721775025.989454 1081592 config.cc:230] gRPC experiments enabled: call_status_override_on_cancellation, event_engine_dns, event_engine_listener, http2_stats_fix, monitoring_experiment, pick_first_new, trace_record_callops, work_serializer_clears_time_cache
+
+Completed upload: https://generativelanguage.googleapis.com/v1beta/files/a6jn0w47yce7
+Waiting for video /nfsshare/vidarchives/us_region/TNPXGAP-765661-TRPGW/20240528/2024Y05M28D14H17M05S00.30.ts to be processed.
+
+Completed upload: https://generativelanguage.googleapis.com/v1beta/files/yfagj6w134x3
+Waiting for video /nfsshare/vidarchives/us_region/TNPXGAV-675905-YCTWZ/20240528/2024Y05M28D07H09M58S00.30.ts to be processed.
+
+Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/a6jn0w47yce7
+Making LLM inference request for files/a6jn0w47yce7...
+The video shows a black SUV driving down a residential street. The car is driving slowly and appears to be looking for a specific house. The video is likely captured from a home security camera. 
+negative 
+Deleted file https://generativelanguage.googleapis.com/v1beta/files/a6jn0w47yce7
+
+Video processing complete: https://generativelanguage.googleapis.com/v1beta/files/yfagj6w134x3
+Making LLM inference request for files/yfagj6w134x3...
+The video shows a car parked on a street at night. The camera is facing the car, and the street is illuminated by a streetlight. The street is cracked and has a yellow stripe painted along the edge. The car's tail lights are visible, as well as part of the rear bumper. There is some green grass growing along the side of the street.  A voice can be heard speaking in a foreign language.  It is unclear what the person is saying. 
+negative
+Deleted file https://generativelanguage.googleapis.com/v1beta/files/yfagj6w134x3
 ```
 
 ## Additional Notes
