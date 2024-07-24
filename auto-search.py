@@ -115,7 +115,7 @@ def main():
     save_dir = "/home/james/semi-auto-captions/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=200)
+    video_files = get_random_video_files(video_dir, limit=20)
 
     print(f"Found {len(video_files)} video files.")
 
@@ -146,4 +146,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-#350
+
