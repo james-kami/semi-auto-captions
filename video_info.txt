@@ -1,0 +1,31 @@
+File: /nfsshare/vidarchives/us_region/TNPUSAP-824337-YYFJS/20240528/2024Y05M28D21H43M06S00.30.ts
+Description: The video shows a family in their kitchen. A man is standing at the counter, reaching into a cabinet above him. He is wearing a blue shirt with a yellow logo on it. A woman with long, dark hair is standing at the counter next to him, holding a baby. The baby is crying.  A little girl is sitting in a baby walker in the foreground. 
+The man is looking for seasoning, and the woman is trying to calm the baby. The baby continues to cry. The little girl in the baby walker is looking at the man and the baby, and she appears to be fascinated by the commotion. The man is still searching for the seasoning. 
+The video ends before the man finds the seasoning. 
+
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAN-476106-DCGNP/20240528/2024Y05M28D21H00M59S00.30.ts
+Description: The video is a short clip from a home security camera.  It shows the inside of a kitchen and a hallway with a door at the end.  On the counter in the kitchen is a variety of grocery bags and a few items, including a bottle of wine, a lime, and three apples.  In the hallway, a black vacuum cleaner is sitting by a chair.  On the floor, there is a bowl of pet food.  A young blonde woman walks into the kitchen and grabs one of the grocery bags.  She is wearing a black t-shirt.  She heads towards the hallway and opens the door.  Two small dogs, one white and one brown, are in the hallway running around and playing, and the blonde woman walks out of the kitchen after opening the door, but it is unclear where she is going. 
+The white dog then walks back into the kitchen and stands by the island for a while, looking around.  The brown dog remains in the hallway out of view for a while, but then eventually walks back into the kitchen and stands by the island as well.  The white dog starts barking softly at the brown dog, and the brown dog then moves away from the island, but it still remains in the kitchen.  The video ends. 
+The security camera does not capture audio, and there is no dialogue or music in the clip.  It is just a simple recording of the activity in the kitchen and hallway. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPXGAX-030533-XPYGF/20240528/2024Y05M28D11H31M10S00.30.ts
+Description: The video is a static shot of a wooden fence. The wood is weathered and gray, with some darker streaks running vertically. The camera is positioned so that the fence appears to be blurry, almost as if it is out of focus. The video is accompanied by an audio clip of what sounds like birds chirping and rustling leaves. 
+Final Description: negative 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAF-350278-ZYDXT/20240528/2024Y05M28D09H03M20S00.30.ts
+Description: The video shows a white car parked in front of a building. The car has black rims and tinted windows. The car is parked on a concrete driveway with a few parking lines. The footage is from a security camera and the night is dark, but there is some light illuminating the car. A person's voice can be heard saying "pee" in the background. 
+Final Description: positive 
+
+
+File: /nfsshare/vidarchives/us_region/TNPUSAH-687769-UUTPD/20240528/2024Y05M28D01H37M56S00.30.ts
+Description: The video shows a man sitting in a living room watching television. The man is seated in a large armchair in front of a coffee table with a glass of wine and other items on it. The television is on the wall and showing a scene from a television show. The man is not visible in the video, but we can see his reflection in the television screen.  The room is nicely decorated with a dark green wall, white cabinets and a fireplace with a decorative bird on it. The video is shot from a wide angle and there is an audio track in the background. 
+
+Final Description: negative 
+
+
