@@ -1,4 +1,5 @@
 import re
+import os
 
 # Define the event descriptions and corresponding categories with multiple keywords
 categories = {
@@ -48,6 +49,7 @@ def process_file(input_file, output_file):
 
     entries = content.split('\n\n')
     positive_descriptions = []
+    picked_files = set()
 
     for entry in entries:
         if 'Final Description: positive' in entry:
@@ -57,14 +59,33 @@ def process_file(input_file, output_file):
                 category, keyword = categorize_description(description)
                 if category:
                     positive_descriptions.append(f"Category {category}: {keyword}\n\n{entry}")
+                    # Extract file path
+                    file_match = re.search(r'File: (.*)', entry)
+                    if file_match:
+                        file_path = file_match.group(1).strip()
+                        picked_files.add(os.path.basename(file_path))  # Use the base name
 
     filtered_content = '\n\n'.join(positive_descriptions)
 
     with open(output_file, 'w') as output_file:
         output_file.write(filtered_content)
 
+    return picked_files
+
+def delete_unpicked_files(directory, picked_files):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file not in picked_files:
+                file_path = os.path.join(root, file)
+                print(f"Deleting: {file_path}")
+                os.remove(file_path)
+
 if __name__ == "__main__":
     input_file = 'video_descriptions.txt'
-    output_file = 'filtered_descriptions.txt'
-    process_file(input_file, output_file)
+    output_file = 'classified_video_descriptions.txt'
+    picked_files = process_file(input_file, output_file)
     print(f"Filtered descriptions have been written to {output_file}")
+    
+    valid_dataset_dir = '/home/james/semi-auto-captions/valid_dataset'
+    delete_unpicked_files(valid_dataset_dir, picked_files)
+    print(f"Unpicked files in {valid_dataset_dir} have been deleted")

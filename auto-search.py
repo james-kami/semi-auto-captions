@@ -35,7 +35,7 @@ def upload_and_process_video(video_file_name):
 
 def generate_description(video_file):
     try:
-        prompt = "Describe this video."
+        prompt = "Describe this video in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 600})
@@ -43,9 +43,10 @@ def generate_description(video_file):
         print(description)
 
         enhanced_prompt = (
-            """You are a model responsible for identifying videos with significant activities involving people or pets. 
-            If the video description mentions people or pets doing important actions, respond with 'positive'. 
-            If the video is grainy, upside-down, or does not mention people or pets, respond with 'negative'."""
+            "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
+            "IMPORTANT: VIDEO MUST NOT BE STILL OR BLACK SCREEN. "
+            "If the video description mentions people or pets performing meaningful actions, respond with 'positive'. "
+            "If the video is grainy, upside-down, or does not mention people or pets, respond with 'negative'."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
@@ -58,14 +59,17 @@ def generate_description(video_file):
 
 def process_video(video_file_name, save_dir):
     try:
+        # Upload and process video
         video_file = upload_and_process_video(video_file_name)
         if not video_file:
             return video_file_name, "Error during upload/processing", "Bad file"
 
+        # Generate description
         description, final_description = generate_description(video_file)
         if not final_description:
             return video_file_name, description, "Error during description generation"
 
+        # Save valid video
         if "positive" in final_description.lower():
             save_path = os.path.join(save_dir, os.path.basename(video_file_name))
             shutil.copy(video_file_name, save_path)
@@ -73,6 +77,7 @@ def process_video(video_file_name, save_dir):
 
         result = (video_file_name, description, final_description)
         
+        # Delete the file from the server
         genai.delete_file(video_file.name)
         print(f'Deleted file {video_file.uri}')
         
@@ -112,15 +117,15 @@ def main():
     genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/home/james/semi-auto-captions/valid_dataset"
+    save_dir = "/nfsshare/james_storage/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=20)
+    video_files = get_random_video_files(video_dir, limit=100)
 
     print(f"Found {len(video_files)} video files.")
 
     results = []
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=1) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
@@ -146,4 +151,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
