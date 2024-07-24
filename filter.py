@@ -56,7 +56,7 @@ def process_file(input_file, output_file):
                 description = match.group(1).strip()
                 category, keyword = categorize_description(description)
                 if category:
-                    positive_descriptions.append(f"Category {category}: {keyword}\n{entry}")
+                    positive_descriptions.append(f"Category {category}: {keyword}\n\n{entry}")
 
     filtered_content = '\n\n'.join(positive_descriptions)
 
