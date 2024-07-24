@@ -86,6 +86,6 @@ if __name__ == "__main__":
     picked_files = process_file(input_file, output_file)
     print(f"Filtered descriptions have been written to {output_file}")
     
-    valid_dataset_dir = '/home/james/semi-auto-captions/valid_dataset'
+    valid_dataset_dir = '/nfsshare/james_storage/valid_dataset'
     delete_unpicked_files(valid_dataset_dir, picked_files)
     print(f"Unpicked files in {valid_dataset_dir} have been deleted")

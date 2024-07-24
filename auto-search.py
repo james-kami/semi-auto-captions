@@ -124,7 +124,6 @@ def main():
 
     print(f"Found {len(video_files)} video files.")
 
-    results = []
     with ThreadPoolExecutor(max_workers=1) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
@@ -132,22 +131,24 @@ def main():
             try:
                 data = future.result()
                 if data:
-                    results.append(data)
+                    # Open the file in append mode for each result and write it immediately
+                    with open('video_info.txt', 'a') as f:
+                        video_file_name, description, final_description = data
+                        if description and final_description:
+                            f.write(f'File: {video_file_name}\n')
+                            f.write(f'Description: {description}\n')
+                            f.write(f'Final Description: {final_description}\n\n')
+                        else:
+                            f.write(f'File: {video_file_name}\n')
+                            f.write('Description: Error generating description or processing video.\n')
+                            f.write('Final Description: Bad file\n\n')
             except Exception as exc:
                 print(f'{video_file} generated an exception: {exc}')
-                results.append((video_file, "Exception occurred", "Bad file"))
-
-    with open('video_descriptions.txt', 'a') as f:
-        for result in results:
-            video_file_name, description, final_description = result
-            if description and final_description:
-                f.write(f'File: {video_file_name}\n')
-                f.write(f'Description: {description}\n')
-                f.write(f'Final Description: {final_description}\n\n')
-            else:
-                f.write(f'File: {video_file_name}\n')
-                f.write('Description: Error generating description or processing video.\n')
-                f.write('Final Description: Bad file\n\n')
+                # Handle exceptions by writing them immediately to the file as well
+                with open('video_info.txt', 'a') as f:
+                    f.write(f'File: {video_file}\n')
+                    f.write(f'Description: Exception occurred\n')
+                    f.write(f'Final Description: {exc}\n\n')
 
 if __name__ == "__main__":
     main()
