@@ -120,7 +120,7 @@ def main():
     save_dir = "/nfsshare/james_storage/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=100)
+    video_files = get_random_video_files(video_dir, limit=200)
 
     print(f"Found {len(video_files)} video files.")
 

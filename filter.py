@@ -58,7 +58,7 @@ def process_file(input_file, output_file):
                 description = match.group(1).strip()
                 category, keyword = categorize_description(description)
                 if category:
-                    positive_descriptions.append(f"Category {category}: {keyword}\n\n{entry}")
+                    positive_descriptions.append(f"\n\n\n\n\n\n\n\n\nCategory {category}: {keyword}\n\n{entry}")
                     # Extract file path
                     file_match = re.search(r'File: (.*)', entry)
                     if file_match:
@@ -81,8 +81,8 @@ def delete_unpicked_files(directory, picked_files):
                 os.remove(file_path)
 
 if __name__ == "__main__":
-    input_file = 'video_descriptions.txt'
-    output_file = 'classified_video_descriptions.txt'
+    input_file = 'video_info.txt'
+    output_file = 'classified_video_info.txt'
     picked_files = process_file(input_file, output_file)
     print(f"Filtered descriptions have been written to {output_file}")
     
