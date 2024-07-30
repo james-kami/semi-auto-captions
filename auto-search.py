@@ -6,7 +6,14 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import shutil
 import gc
 
-def upload_and_process_image(image_file_name, delay=0.1):
+def extract_unique_id(filename):
+    """
+    Extracts the unique ID from the filename.
+    Example: "TNPUSAF-018072-YXCWN_2024Y07M10D15H15M22S00_door_8.jpg" -> "018072"
+    """
+    return filename.split('-')[1]
+
+def upload_and_process_image(image_file_name, delay=3):
     max_retries = 1
     for attempt in range(max_retries):
         try:
@@ -36,10 +43,10 @@ def upload_and_process_image(image_file_name, delay=0.1):
         finally:
             time.sleep(delay)  # Delay to slow down the process
 
-def generate_description(media_file, delay=0.1):
+def generate_description(media_file, delay=3):
     try:
         models = list(genai.list_models())
-        #print(models)
+        # print(models)
         prompt = "Describe this image in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {media_file.name}...")
@@ -63,11 +70,18 @@ def generate_description(media_file, delay=0.1):
     finally:
         time.sleep(delay)  # Delay to slow down the process
 
-def process_image(image_file_name, save_dir):
+def process_image(image_file_name, save_dir, processed_ids=set()):
+    unique_id = extract_unique_id(image_file_name)
+    if unique_id in processed_ids:
+        print(f"Duplicate file detected: {image_file_name}. Skipping upload.")
+        return None, None, None
+
+    processed_ids.add(unique_id)
+    
     try:
         image_file = upload_and_process_image(image_file_name)
         if not image_file:
-            return image_file_name, "Error during upload/processing", "Bad file"
+            return image_file_name, "Error during upload/processing", "Bad file or duplicate"
 
         description, final_description = generate_description(image_file)
         if not final_description:
@@ -89,9 +103,9 @@ def process_image(image_file_name, save_dir):
         return result
     except Exception as e:
         print(f"Exception processing image {image_file_name}: {e}")
-        return image_file_name, "Exception occurred", "Bad file"
+        return image_file_name, "Exception occurred", "Bad file or duplicate"
 
-def get_random_files(media_dir, limit=10):
+def get_random_files(media_dir, limit=1000):
     media_files = []
     for root, dirs, files in os.walk(media_dir):
         jpg_files = [os.path.join(root, file) for file in files if file.endswith('.jpg')]
@@ -115,8 +129,10 @@ def main():
 
     print(f"Found {len(image_files)} files.")
 
-    with ThreadPoolExecutor(max_workers=1) as executor:  # Start with max_workers=3 and adjust as needed
-        future_to_image = {executor.submit(process_image, image_file, save_dir): image_file for image_file in image_files}
+    processed_ids = set()
+
+    with ThreadPoolExecutor(max_workers=1) as executor:  # Start with max_workers=1 and adjust as needed
+        future_to_image = {executor.submit(process_image, image_file, save_dir, processed_ids): image_file for image_file in image_files}
         for future in as_completed(future_to_image):
             image_file = future_to_image[future]
             try:
@@ -131,7 +147,7 @@ def main():
                         else:
                             f.write(f'File: {image_file_name}\n')
                             f.write('Description: Error generating description or processing image.\n')
-                            f.write('Final Description: Bad file\n\n')
+                            f.write('Final Description: Bad file or duplicate\n\n')
             except Exception as exc:
                 print(f'{image_file} generated an exception: {exc}')
                 with open('image_info.txt', 'a') as f:
