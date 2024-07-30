@@ -1,0 +1,22 @@
+File: /nfsshare/zj/fenlei/TNPXGAS-866815-YHHZX_2024Y07M10D11H36M05S00_door_2.jpg
+Description: The image shows a black SUV parked on the street in front of a house. The SUV is parked behind a chain link fence. The house is a single-story house with a white front door and white windows. The house has a brick facade and a small front yard with green grass. There is a mailbox on the right side of the image. The time and date are displayed in the upper left corner of the image: 2024-07-10 06:36:06.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D20H02M40S00_door_1.jpg
+Description: The image shows the interior of a shop. There are three large grandfather clocks on the right side of the image. The shop has a black and white checkered floor. In the middle of the image is a glass door with a metal screen door. The door leads to a concrete patio. There are several plants in pots throughout the shop. On the left side of the image are more clocks, including one hanging from the ceiling. The walls are white, and there is a white air conditioning unit mounted above the door. There are also some papers and signs stuck to the walls.
+Final Description: positive 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAE-014820-KZXVF_2024Y07M10D13H07M11S00_door_2.jpg
+Description: The image is a black and white shot of a garage interior. The garage door is open and a white SUV is parked in the driveway.  The garage door opener is visible in the ceiling, and there are some items hanging on the wall on the left side of the image.  A vacuum cleaner is next to the open garage door on the right side of the image. The floor is concrete and there is a slight sheen on it due to the light coming from the open garage door. The image is taken from a low angle, which gives the impression that the garage is spacious. The focus of the image is the open garage door and the white SUV parked outside.
+Final Description: positive 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D11H09M24S00_door_1.jpg
+Description: The image shows the interior of a shop, likely an antique shop, with a black and white checkered floor. There are four tall grandfather clocks, all of various styles and designs. The clocks are arranged along the right and left walls, with the door to the shop in the center of the image. The door leads to a patio or backyard with a view of green foliage.
+
+The shop has several windows with blinds pulled down, providing natural light. A black chain hangs from the ceiling, possibly attached to a light fixture. The shop floor is partially covered with a black and white checkered tile pattern. There are a few potted plants placed around the room, adding a touch of greenery. In the bottom left corner, there's a glimpse of a red and white object, possibly a decoration or an item for sale. The image captures a typical antique shop setting with a focus on the clocks and the shop's interior decor.
+Final Description: positive 
+
+
