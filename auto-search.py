@@ -82,36 +82,36 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
     if unique_id in processed_ids:
         duplicate_counter[0] += 1
         print(f"Duplicate file detected: {image_file_name}. Skipping upload. Total duplicates: {duplicate_counter[0]}")
-        return None, None, None
+        return image_file_name, None, None, None, None, None
 
     processed_ids.add(unique_id)
     
     try:
         image_file = upload_and_process_image(image_file_name)
         if not image_file:
-            return image_file_name, "Error during upload/processing", "Bad file or duplicate"
+            return image_file_name, "Error during upload/processing", "Bad file or quota has been exhausted", None, None
 
         description, final_description = generate_description(image_file)
         if not final_description:
-            return image_file_name, description, "Error during description generation"
+            return image_file_name, description, "Error during description generation", None, None
 
         # Only save the file if it is positively identified as having an open or closed door
+        category = "ambiguous"
+        save_path = ""
         if "positive" in final_description.lower():
             if "open" in description.lower():
                 category = "open-door"
             elif "closed" in description.lower():
                 category = "close-door"
-            else:
-                print(f"Ambiguous description for image {image_file_name}. Skipping save.")
-                return image_file_name, description, "Ambiguous description"
             
-            category_dir = os.path.join(save_dir, category)
-            os.makedirs(category_dir, exist_ok=True)
-            save_path = os.path.join(category_dir, os.path.basename(image_file_name))
-            shutil.copy(image_file_name, save_path)
-            print(f'Saved image to {save_path}')
+            if category in ["open-door", "close-door"]:
+                category_dir = os.path.join(save_dir, category)
+                os.makedirs(category_dir, exist_ok=True)
+                save_path = os.path.join(category_dir, os.path.basename(image_file_name))
+                shutil.copy(image_file_name, save_path)
+                print(f'Saved image to {save_path}')
         
-        result = (image_file_name, description, final_description)
+        result = (image_file_name, description, final_description, category, save_path)
         
         genai.delete_file(image_file.name)
         print(f'Deleted file {image_file.uri}')
@@ -122,7 +122,7 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         return result
     except Exception as e:
         print(f"Exception processing image {image_file_name}: {e}")
-        return image_file_name, "Exception occurred", "Bad file or duplicate"
+        return image_file_name, "Exception occurred", "Bad file or quota has been exhausted", "error", ""
 
 def get_random_files(media_dir, limit=1000):
     media_files = []
@@ -173,16 +173,18 @@ def main():
             try:
                 data = future.result()
                 if data:
+                    image_file_name, description, final_description, category, save_path = data
                     with open('image_info.txt', 'a') as f:
-                        image_file_name, description, final_description = data
                         if description and final_description:
                             f.write(f'File: {image_file_name}\n')
                             f.write(f'Description: {description}\n')
-                            f.write(f'Final Description: {final_description}\n\n')
+                            f.write(f'Final Description: {final_description}\n')
+                            f.write(f'Category: {category}\n')
+                            f.write(f'Save Path: {save_path}\n\n')
                         else:
                             f.write(f'File: {image_file_name}\n')
                             f.write('Description: Error generating description or processing image.\n')
-                            f.write('Final Description: Bad file or duplicate\n\n')
+                            f.write('Final Description: Bad file or quota has been exhausted\n\n')
             except Exception as exc:
                 print(f'{image_file} generated an exception: {exc}')
                 with open('image_info.txt', 'a') as f:
