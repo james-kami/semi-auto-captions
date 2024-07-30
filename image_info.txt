@@ -1,8 +1,959 @@
-File: /nfsshare/zj/fenlei/TNPXGAP-640058-SHFVT_2024Y07M10D05H18M35S00_door_6.jpg
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D02H01M32S00_door_0.jpg
+Description: The image shows a black car parked in a driveway. The car is facing the camera and only the front hood is visible. The car is parked next to a motorcycle, which is partially visible in the background. The motorcycle is parked in front of a glass door, which is open. A small fountain can be seen in the background, surrounded by plants. The image is taken at night and is slightly blurry. The timestamp in the upper left corner indicates the date and time of the image, "2024-07-09 21:01:39".
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D04H07M32S00_door_6.jpg
 Description: Error generating description or processing image.
 Final Description: Bad file or duplicate
 
-File: /nfsshare/zj/fenlei/TNPXGAP-667251-ZKHHR_2024Y07M10D07H29M31S00_door_0.jpg
+File: /nfsshare/zj/fenlei/TNPUSAQ-045288-YFEEZ_2024Y07M10D10H23M03S00_door_5.jpg
+Description: The image appears to be taken from a security camera in a bedroom. The image is blurry and out of focus. There is a ceiling fan in the corner of the room and a flat screen TV mounted on the wall to the left. A woman with reddish hair is sitting on the bed, and her back is to the camera. A bedspread with a floral pattern is visible. The image is mostly obscured by a large, purple, blurred object. The date and time of the image are displayed in the top left corner.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D12H15M48S00_door_5.jpg
+Description: The image shows a view from under a bridge or overpass at night. The camera is pointed upward, so we see the underside of the structure. The image is blurry and the lighting is poor, but we can make out a few details. There are several green pillars supporting the bridge. In the distance, we can see a few lights, perhaps streetlights or car headlights. The overall impression is one of darkness and obscurity. The image has the date and time stamp "2024-07-10 05:16:10" in the top left corner, suggesting that this is a security camera shot.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAN-724550-UUVBJ_2024Y07M10D05H46M59S00_door_3.jpg
+Description: The image is a black and white night-time shot from a security camera. The camera is mounted on a pole on the left side of the image. The pole is brightly lit, and the rest of the image is mostly dark with a few faint lights in the distance. The ground is covered in grass and there is a faint outline of a driveway in the middle of the image. The image is blurry and grainy, indicating that it is a low-quality image. The timestamp in the top left corner indicates that the image was taken on July 10, 2024, at 00:47:13.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAP-422854-KEZTM_2024Y07M10D02H01M57S00_door_0.jpg
+Description: The image is a night-time shot taken from a security camera. It's a wide shot of a suburban street, captured through a fisheye lens, which distorts the edges of the frame. The image is grainy and low-resolution, typical of night-time security footage.
+
+In the foreground, there's a small area of gravel and grass, along with two black chairs and a small green table. The table is partially out of focus and there's a black object lying in the foreground, obscuring the view. The focus is on the background, which is illuminated by streetlights and the headlights of cars.
+
+A tall, slender palm tree dominates the center of the image, its leaves are swaying in the breeze. Behind the palm tree, there's a metal fence that runs the width of the shot. The fence separates the camera's location from a residential street beyond.
+
+Through the fence, several cars and a white van are parked. The street is mostly empty, with only one car visible in the distance. The houses on the opposite side of the street are obscured by trees and bushes. The sky is dark grey and overcast.  
+
+A white sign with a black "1" is visible on a metal pole just to the right of the large palm tree.  In the upper left corner of the image, the date and time are displayed: "07/09/2024 22:01:59." A small "kmi" logo is in the bottom left corner. 
+
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D15H46M56S00_door_2.jpg
+Description: The image shows the interior of a shop. There is a large glass door leading to the outside. A black and white checkered tile floor leads up to the door. Along the walls are several large grandfather clocks, and on the floor around them are various potted plants. There is a metal chain hanging from the ceiling, and in the foreground, a wooden counter with a partially obscured box on top of it. The walls are painted white and there are windows on both sides of the glass door. The windows are covered with brown blinds. There is a sign on the glass door that reads "Exit". The image was likely captured by a security camera.
+Final Description: Positive 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAO-078029-BDWJJ_2024Y07M10D16H15M20S00_door_2.jpg
+Description: The image shows a bedroom with a bed in the foreground, a window to the left, and a white door to the right. There is a white wall in the background, with a painting of a colorful bird on a branch hanging on it. To the left of the painting is a white shelf with a clock and a small plant on it. On the floor next to the bed is a black electric heater. The bed is unmade with a blue blanket and several white pillows scattered on it. The window is open, and there are green trees visible outside. The door is closed, and there is a black coat hanging on the handle. The floor is carpeted. There is also a mirror on the wall, and a black exercise machine in the room. The room is well-lit and there is a slight fish-eye effect.
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPUSAO-078029-BDWJJ_2024Y07M10D16H15M20S00_door_2.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D09H31M13S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D12H11M45S00_door_0.jpg
+Description: The image is taken from a security camera looking out from under a porch roof.  A swimming pool, with a ladder and a filter, is in the foreground, to the left.  A grassy area with green landscaping fabric on the ground extends to the right, where two large bushes are growing.  A white building, partially obscured by the bushes, is in the background. The date and time are displayed at the top left corner of the image.
+Final Description: Negative. 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D05H49M34S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D12H56M55S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAU-720735-NRMEW_2024Y07M10D18H10M34S00_door_1.jpg
+Description: The image shows a street with a concrete sidewalk and a grassy area to the left. There is a white pole with a light at the top in the upper left corner. There is a concrete ramp on the sidewalk that leads to the street. The sidewalk has a yellow stripe on the edge. The street is paved with asphalt and has a large puddle in the middle. In the upper right corner of the image, there is a row of buildings. There are some trees and bushes visible in the background. The image appears to be taken from a security camera.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D09H32M42S00_door_5.jpg
+Description: The image is a grainy, low-resolution night-time security camera shot. The image is mostly dark with a few faint details visible. In the center of the image, a white railing can be seen in the foreground. Behind the railing, the image is blurry but appears to be a dark structure that could be a building or a garage. The building is shrouded in darkness except for a faint light shining from near the top of the structure. There are also faint lights visible in the background. The image is dated "2024-07-10 04:33:01."
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D06H02M13S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D15H12M34S00_door_2.jpg
+Description: The image is taken from a doorbell camera and shows a narrow walkway between two white houses. The camera is pointing down the walkway, with the left side of the image showing a white house with horizontal siding. The right side of the image shows the other white house, but the camera angle only captures the side of the house. The walkway is paved and there is a small patch of grass to the right.  There is a small black car parked in the driveway of the house on the right, but the camera only captures the rear of the car. The date and time of the image is displayed in the upper left corner, indicating the image was taken on July 10, 2024 at 10:12:31. The image is blurred and has a slightly fisheye effect, likely due to the camera lens. The logo of the company that made the doorbell camera is in the lower left corner.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGBA-404464-VTSYX_2024Y07M10D20H42M58S00_door_0.jpg
+Description: The image shows a view from inside a store, looking out through a window. The window is made up of two panes, and is divided by a metal bar. The left side of the image shows a wall lined with colorful items, most likely toys or other trinkets, that are in the store. The right side of the image shows the view from the window. A small, thin, green tree is visible to the left, with an empty cement area extending out to the right. On the right side of the window, there is a sign in Spanish that reads "CERRADO REGRESO" which translates to "Closed. Back Soon." In the background, there is a building with a blue wall and a black door. The door appears to have an iron grill over it, and the wall has some kind of writing or sign on it.  The image is taken from a security camera, and there is a date and time stamp in the top left corner, "2024-07-10 15:42:57." The image is slightly blurry, suggesting that it was captured at a distance. The overall impression is one of a closed store with a clear view of the outside, possibly an indication of the store's opening hours.
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPXGBA-404464-VTSYX_2024Y07M10D20H42M58S00_door_0.jpg
+
+File: /nfsshare/zj/fenlei/TNPUSAQ-324209-EUUZH_2024Y07M10D18H02M23S00_door_0.jpg
+Description: The image shows a kitchen from a low angle. A ceiling fan with four blades is spinning in the center of the room. The fan is silver and the blades are a dark wood color. 
+
+The walls are a light beige color. To the left of the image is a small, grey door leading into another room. The door is closed. Next to the door is a white cabinet with a shelf containing a variety of items. There is also a sliver of a black stovetop visible.
+
+On the right side of the image, there is a window with blinds. The blinds are closed but some light is coming through. There is a canvas painting on the wall to the right of the window. The painting depicts a row of vases with pink and white flowers. 
+
+The image seems to have been taken from a security camera due to the low angle and the date and time stamp in the upper left corner.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAX-738051-GMFXE_2024Y07M10D02H56M52S00_door_0.jpg
+Description: The image shows a close-up of a wall with electrical wiring and a metal staircase. The wall is painted white and there are two electrical boxes mounted on it. The wiring is tangled and messy, with some of the wires hanging loose. The staircase is made of metal and has a blue light shining on it. There are some other objects in the background, including a blue bin, a yellow object, and a red wall. The image is a bit blurry and grainy, but the details are still visible. The image seems to have been taken from a security camera.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D11H26M53S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D06H02M13S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAY-820699-GGFWH_2024Y07M10D18H21M00S00_door_0.jpg
+Description: The image is a blurry, grainy, and poorly lit close-up shot of a tangle of what appears to be thin branches or twigs.  The background is a hazy grey, making it difficult to discern any details.  There are a few small, blurry, light-colored objects scattered throughout the image.  A timestamp "2024-07-10 14:21:01" is present in the upper left corner. It is unclear what the specific context or location of this image might be.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D15H22M10S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAC-224041-LJYBF_2024Y07M10D20H05M49S00_door_0.jpg
+Description: The image shows a living room with a large black sectional sofa in the center of the room. The sofa is covered with blankets and pillows. There is a coffee table in front of the sofa with a few items on it, including a red box, a white box, and a few papers. The living room is cluttered, with various items scattered around, including a fan, a box, a treadmill, and a basketball hoop. There is also a dining room table visible through an archway, as well as a staircase leading up to the next floor. The walls are painted a light beige color and the lighting is bright. The ceiling has a fan with a light fixture.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAQ-045288-YFEEZ_2024Y07M10D13H40M43S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D01H51M39S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D08H44M55S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-101132-EHGEY_2024Y07M10D04H56M34S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D05H36M23S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-342701-FNGCP_2024Y07M10D07H40M23S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-039204-WSMGR_2024Y07M10D10H10M13S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D06H04M13S00_door_0.jpg
+Description: The image shows a dark, nighttime scene captured by a security camera. The camera is mounted on a white wall, and the image is mostly black, with only a few faint details visible. The camera has a timestamp of 2024-07-10 00:04:17. The camera's view is obscured by a white vertical beam, likely a support beam or part of the camera's housing. There are dark, blurry shapes in the background, but they are impossible to identify due to the poor lighting and the low resolution of the image. The image gives the impression of a deserted or isolated location, with the darkness and blurry shapes adding an eerie and unsettling feeling.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAO-322175-XTPWX_2024Y07M10D15H11M53S00_door_7.jpg
+Description: The image is taken from a security camera in what appears to be a hallway. The wall is painted a light gray and a white door is in the center of the image. There are some items hanging on hooks to the left of the door. There is also a sign on the wall that says "A Little Dirt Don't Hurt." In the bottom right corner there is a red and black duffel bag and a few boxes. The image is taken from an angle that makes it look like the camera is mounted high on the wall. The date and time stamp in the top left corner indicates that the image was taken on July 10, 2024 at 10:13:05.
+Final Description: positive 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-612221-KFHKE_2024Y07M10D19H19M42S00_door_2.jpg
+Description: The image shows the interior of a building. A set of double doors with a metal grate over them are open to the exterior. A black motorcycle is visible parked outside through the open doors. The interior of the building is bright with a tiled floor and white walls. A counter is visible to the left with a wooden top and a metal grate covering the lower portion. A green recycling bin is visible next to the counter and a black one behind it. There is a black mat placed on the floor in front of the open doors. The walls are painted white and there is a white ceiling with pipes visible. A wall mounted clock is visible on the left wall. There is a date and time stamp in the top left corner of the image. The image appears to be from a security camera.
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPXGAP-612221-KFHKE_2024Y07M10D19H19M42S00_door_2.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D10H03M00S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAT-570036-FRLKW_2024Y07M10D01H31M19S00_door_5.jpg
+Description: The image is a black and white still from a security camera. The camera is pointed at a corner of a room. On the left wall is a flat screen TV with a light on. On the right wall is a white door with an oval shaped window near the top. Above the door is another window that is not visible in the image. In the corner is a tall piece of exercise equipment. In front of the equipment is a black object that looks like a bench. The rest of the room is mostly dark. The image is slightly blurry and grainy. The date and time is displayed in the top left corner of the image.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAP-416110-EBZMM_2024Y07M10D23H54M34S00_door_3.jpg
+Description: The image is taken from inside a room, and shows a white wall with a white metal shelving unit on the left side. On the top shelf of the unit there is a wicker basket and on the next shelf down there is a brown terracotta pot. The next shelf down has a brown bowl, followed by a clear plastic bowl and then a black bowl. On the bottom shelf there is a green pot and a red saucer. Underneath the shelf there is a yellow pot. 
+
+On the right side of the image, there is a window with a white frame and a window pane that is divided into four sections by white framing. There are two cats sitting on the window ledge. The cat on the left is mostly black, and the cat on the right is mostly gray. 
+
+On the wall below the window, there is a white electrical outlet and a white cord running from the outlet to an object on the floor.  There is a black hook on the wall beneath the shelf. The floor is a brown wood floor. The date and time are displayed in the upper left corner of the image, "07/10/2024 19:54:45".  A logo for "kami" is in the lower left corner. 
+
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D06H16M53S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-206276-GVFFF_2024Y07M10D10H01M04S00_door_1.jpg
+Description: The image is a black and white night-time security camera shot of a car parked under a covered porch. The car is a sedan with its headlights on and is parked next to a large, white RV that is partially visible in the right side of the image. There is a wind chime hanging from the porch ceiling, and the porch has two white pillars, one of which is mostly out of frame, but the other is clearly visible in the left side of the image. The image is grainy and has a low resolution, but the camera seems to be pointed directly at the car. The time stamp in the top left corner reads "2024-07-10 05:01:16".
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAO-191086-HSLTS_2024Y07M10D03H11M42S00_door_2.jpg
+Description: The image is a security camera shot taken at 8:12 PM on July 9, 2024. It shows an alleyway behind a building. On the right, there is a concrete wall and a yellow corrugated metal wall. The metal wall has "SHIPPING" and "NEDITERRAN" written on it. The left side of the image is obscured by a window or door. A black grate fence is in the background. There is a dark, blurry car to the left of the window, which also obscures a lot of the image. The concrete ground of the alleyway is visible. The image is blurry and low-resolution, making it difficult to see details.  It is not clear if there is anything else in the alley. The time stamp at the top indicates it is a security camera image.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAX-824992-JKFYY_2024Y07M10D20H30M44S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D03H57M50S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D07H52M32S00_door_0.jpg
+Description: The image shows a closed shop with a green metal roller shutter. The shutter is partially open, revealing the interior of the shop. There are some fruits and vegetables visible inside, including watermelons, cantaloupe melons, and tomatoes. The light is shining from the top of the image, casting a bright light on the shutter and the fruits and vegetables. The date and time are displayed in the top left corner of the image. The image is taken from a security camera.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAU-614081-BTDPF_2024Y07M10D09H18M18S00_door_2.jpg
+Description: The image shows a white car parked on a street. The car is facing the right side of the image and only the back half of the car is visible. The roof of the car is covered in light rain. The car's windows are tinted and it's hard to make out what is inside the car. The car has a black antenna on the roof. There is a manhole cover on the pavement in front of the car. It is a black and white image. The time and date are visible in the top left corner.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D07H13M47S00_door_8.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-476726-RGTVC_2024Y07M10D00H38M50S00_door_4.jpg
+Description: The image shows a counter in a mall with a blue and yellow surface. On the counter are a few items, including an open notebook, a white tablet, a small black device and a tumbler. The counter is directly in front of an escalator and there are a few children's toy cars parked to the left. There are a few people walking by in the background.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D15H59M33S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAV-635219-SCUMF_2024Y07M10D02H07M26S00_door_0.jpg
+Description: The image is a night-time view from a security camera, looking out through a window. The window frame is brown and has a white rubber seal around the glass. The date and time are visible in the top left corner, showing July 9th, 2024 at 9:07:49 PM. The view outside is blurry, but it appears to be a backyard with a wooden fence. The fence is in the foreground and there are trees in the background. The trees are dark green and the branches are bare. The sky is a deep blue with a few stars visible. The image is slightly grainy, which is typical of security camera footage.
+Final Description: Negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D04H01M48S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAC-224041-LJYBF_2024Y07M10D19H41M13S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D04H25M13S00_door_8.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAE-610043-LGXZY_2024Y07M10D14H23M00S00_door_2.jpg
+Description: The image is a wide shot of a dining room. The walls are painted a pale yellow with a light brown trim. The room has a decorative stencil pattern in pale blue and green that looks like vines and flowers. The ceiling is white with a single white ceiling light in the upper left corner of the image. A large brass chandelier hangs in the center of the room. A door to the right leads out to a screened-in porch. The porch is visible through the door and has a table and chairs and a potted plant. A door on the left leads into another room, and the room can be seen through the doorway. A brick fireplace with a mantel is visible, as well as an overstuffed chair, a coffee table, and a large exercise ball. The doorway is flanked by two other doors, both white. A black coat can be seen hanging on the door on the left.
+Final Description: positive 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D03H12M50S00_door_2.jpg
+Description: The image is a grainy, low-resolution photo taken with a security camera. It shows a room with a white post in the center of the frame.  The post casts a large shadow to the left of the post. The floor is visible on both sides of the post. On the left side of the image is a partially obscured wall with an ornate metal design on it. In the background to the left there is a small table with a white surface and black legs. There are some dark, blurry objects on the table. On the right side of the image, there is a shadowy figure of a large black object against a white wall.  There are four white bell-shaped lights hanging from the ceiling that are partially visible in the upper right corner of the image. The time stamp in the upper left corner of the image reads 2024-07-09 22:12:55. The image is dark and difficult to make out details in the shadows.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D05H46M02S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D02H18M50S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAU-720735-NRMEW_2024Y07M10D04H00M12S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D06H22M36S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D07H27M08S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D07H11M24S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D01H46M13S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D15H15M22S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAQ-121132-EBPGP_2024Y07M10D01H04M09S00_door_0.jpg
+Description: The image shows a view from a security camera looking out over a parking lot and a building. The camera is mounted on the wall of a building with light-colored siding. The camera is looking slightly down at a slight angle. 
+
+The parking lot is in the foreground, with four cars parked in it. There is a fence bordering the lot, and trees and bushes can be seen beyond it.
+
+In the background, there is a three-story building with a brown brick facade. It has several windows, some of which are lit. A black roof is visible on the building. There are trees and a patch of sky in the upper right corner of the image.  The time 07/09/2024 21:04:25 is displayed in the top left corner. The image seems to be captured by a surveillance camera.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAP-398406-YVGPU_2024Y07M10D03H55M18S00_door_5.jpg
+Description: The image shows a hallway with a bright light at the end.  The hallway is narrow and the walls are painted a light beige color. There is a door on the right side of the image that is closed. The floor is carpeted. The camera is angled up and towards the end of the hallway, making it look like the hallway is going uphill. The hallway is empty, and there are no people or objects in sight. There is a timestamp in the upper left corner of the image, which indicates the date and time the picture was taken.  There is a logo for the app "kami" in the lower left corner of the image. The hallway appears to be in a residential home or apartment building.  The light at the end of the hallway suggests there is a room or area beyond the view of the camera. The image has a slightly distorted, wide-angle look, likely because it was taken with a security camera.
+Final Description: positive 
+
+Category: close-door
+Save Path: /nfsshare/james_storage/door-tracking/close-door/TNPUSAP-398406-YVGPU_2024Y07M10D03H55M18S00_door_5.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D10H48M26S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAL-165062-CBSVS_2024Y07M10D13H25M02S00_door_1.jpg
+Description: The image is taken from a security camera in a garage. The image shows a concrete floor with a yellow hydraulic lift on the left side. A person is visible in the middle of the image, seemingly looking over something, but their face is blurred. A blue hydraulic lift is visible on the left side of the image, with a green barrel in the background. The image appears to be taken under slightly cloudy skies, as there are some shadows on the floor and walls, indicating partial sunlight. The right side of the image shows rows of various items, including oil containers, tires, and other tools. The yellow and blue colors of the shop's signage and equipment are dominant in the image, creating a vibrant contrast against the gray concrete floor and the more neutral colors of the walls. The image conveys a sense of activity within the garage, possibly suggesting a routine maintenance or repair operation.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAS-002845-LGVYD_2024Y07M10D01H45M04S00_door_1.jpg
+Description: The image appears to be a black and white security camera still from a wooded area. The image is very blurry. A single, tall tree trunk dominates the left side of the frame, and the camera appears to be mounted on a wooden structure. A section of a tan tarp hangs from a branch. There is a blurry, faded object that could be a small quad bike or ATV in the background. The image is out of focus and there is glare coming from the top right and bottom left corners.  The timestamp is 2024-07-09 21:45:08.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAE-014820-KZXVF_2024Y07M10D13H08M33S00_door_1.jpg
+Description: The image shows a white SUV parked in a garage. The garage door is open and the car is partially inside. The garage is messy, with various items stored on the walls and in the corner. The ceiling has exposed rafters and there are several lights hanging down. There are also several bicycles hanging from the ceiling on the right side of the image. The image is taken from the back of the SUV, looking towards the open garage door. The image has a purplish tint.
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPUSAE-014820-KZXVF_2024Y07M10D13H08M33S00_door_1.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D03H28M10S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAO-718598-YLSDG_2024Y07M10D20H28M44S00_door_4.jpg
+Description: The image is a still from a security camera. The camera is mounted on the exterior of a house, looking out at a yard. It is a sunny day with a few clouds in the sky. The American flag is hanging from a pole and is waving in the wind. The flag is in the right side of the frame, and is partially obscured by the window of the camera. The yard is sandy and dry with some grass and bushes. There is a fence in the background, and mountains in the distance. The date and time of the image is displayed at the top: "07/10/2024 13:29:13".  The camera's logo is seen in the bottom left corner of the image: "kami".  The image appears to be taken in a desert environment.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D06H09M58S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAM-663448-TTWZU_2024Y07M10D03H17M34S00_door_0.jpg
+Description: The image is a grainy, black and white, nighttime security camera shot.  In the foreground, there are some bushes in the lower right corner of the image. The rest of the image is mostly obscured by a blurry, white blob in the center. To the left of this white blob, there is a vertical, thin, dark shape that resembles a post or pole. The background appears to be a dark, nighttime scene with a few faint lights in the distance. The image is out of focus and difficult to make out. It's likely a night vision security camera captured it. 
+
+It's hard to see details due to the low-light conditions and blurry nature of the image.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAW-313589-XLPPD_2024Y07M10D17H12M47S00_door_3.jpg
+Description: The image is taken from a security camera and shows a street scene. In the foreground, a white van is parked on a street, facing toward the camera.  The van has a black bumper, and a license plate is partially visible.  The van is parked in front of a small, wooden structure with a grey tarp covering part of the roof. The structure is made of wood planks. The image is blurry and the colors are muted.  There is a  dark car parked in the background on the left side of the frame.  The street is lined with a brick wall and dirt on one side and a hill on the other.  Trees are visible in the background. The timestamp in the top left corner reads "2024-07-10 10:12:54".
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D09H04M02S00_door_1.jpg
+Description: The image shows a concrete surface with a white garage door on the left side. The concrete surface is divided into two sections, with a raised edge separating them. The lower section of the concrete surface is covered with a layer of small gravel and some leaves. The garage door is partially open, and the bottom of the door is visible. There is a shadow cast on the concrete surface from the garage door. The image is likely captured from a security camera. The date and time stamp, 2024-07-10 02:04:21, is visible in the upper left corner of the image.
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPXGAQ-762919-JFCXH_2024Y07M10D09H04M02S00_door_1.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAT-570036-FRLKW_2024Y07M10D00H33M47S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D19H00M59S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D03H50M37S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D09H02M21S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D07H37M10S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D02H35M10S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D04H08M34S00_door_7.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D11H25M37S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAC-672685-YKVZW_2024Y07M10D18H31M36S00_door_0.jpg
+Description: The image shows the interior of a small grocery store. The store has a white tiled ceiling with several fluorescent light fixtures. There are two ceiling fans in the store, one near the front and one in the middle. The walls are white with a few signs and decorations. The store has a variety of items for sale, including:
+
+* A large walk-in refrigerator in the back corner on the left side of the image. 
+* Two large shelves filled with jars of various products along the right side of the store. The jars are mostly glass and filled with a green liquid, potentially olives. 
+* Several shelves of packaged food in the center of the store. These shelves are filled with many products, including canned goods, snacks, and bags of dried pasta.
+* Two shelves with a variety of products, including jars and bottles of spices, sauces, and other condiments. 
+* A large metal cart near the back of the store, with several bags of produce, including bananas, carrots, and other vegetables.
+* A counter along the back wall, and a wooden shelf above it. 
+* Several stacks of paper towels and boxes on the floor by the refrigerator.
+
+The store seems to be well-stocked and organized. The lighting is bright and there are many products on display. The overall impression of the store is clean and inviting.
+Final Description: Negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D10H58M29S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D03H48M10S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAT-867634-HRKDJ_2024Y07M10D18H06M31S00_door_0.jpg
+Description: The image is a close-up shot of a cracked concrete floor. The floor is mostly gray with a slight blue tint. There are several cracks running across the surface, with a large diagonal crack dominating the upper half of the image. In the foreground, there are two potted plants, one with bright green leaves and the other with darker green leaves. In the background, a sliver of a car tire and a potted plant are visible in the upper left corner. The image was taken on July 10, 2024 at 15:06:39, as indicated by the timestamp in the top left corner. The image is slightly blurred, likely due to motion blur or the limitations of the camera. The lighting is somewhat dim, casting a shadow from the plants and the car. The overall impression is one of a simple, everyday scene captured in an unassuming, almost utilitarian style.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D02H04M36S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAT-630100-PEJDE_2024Y07M10D12H32M00S00_eat_0.jpg
+Description: The image is a black and white still from a security camera. It shows a living room with two women sitting on a couch. One is sitting on the edge of the couch while the other is further back. The women are looking toward a large flat-screen TV that is mounted on the wall. There is a small table in front of the TV, and a cluttered counter behind it. The living room is sparsely furnished with another couch, a coffee table, and some chairs. There is a window on the far wall and a closed door on the right. The image is grainy and the lighting is poor. There is a date and time stamp in the upper left corner.
+Final Description: positive 
+
+Category: close-door
+Save Path: /nfsshare/james_storage/door-tracking/close-door/TNPXGAT-630100-PEJDE_2024Y07M10D12H32M00S00_eat_0.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAT-430826-DMMLE_2024Y07M10D08H48M51S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAM-596955-VJSZN_2024Y07M10D12H15M45S00_door_3.jpg
+Description: The image is a security camera shot of a front yard. The camera is mounted on the side of the house, looking out. The yard is mostly green grass with a few small plants and rocks. There is a small concrete path leading to the house, with a mailbox on the right side. An American flag is visible in the middle of the yard and another is on the right side of the frame, partially obscured by the house. The image is taken on a cloudy day, and the sky is not visible. The date and time are shown in the upper left corner: 07/10/2024 07:16:10. There is a small red car in the upper left corner, partially visible. A small "kami" logo is in the lower left corner.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D06H55M34S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D19H04M45S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAU-720735-NRMEW_2024Y07M10D00H15M51S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAO-322175-XTPWX_2024Y07M10D17H25M54S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D02H20M33S00_door_7.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D20H57M16S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-193050-YWEKR_2024Y07M10D09H00M51S00_door_3.jpg
+Description: The image is a black and white security camera shot of a dark, empty parking lot or driveway. The camera is mounted high on the wall and is angled down, capturing a wide view of the area. The image is blurry and grainy, with low-light conditions. There are a few shadows on the ground, possibly from cars or other objects that are not visible in the image. The top of the image has the date and time stamped in the corner, “2024-07-10 02:00:59”. There is a building on the right side of the image with a window that appears to have a light inside.  The building is concrete with a dark horizontal line along the bottom. The building is also casting a shadow. The rest of the image is the dark concrete area.  It is clear the image was captured at night.  It is also possible that it was raining, as there is a small puddle of water on the ground.  It is a rather boring, dark image.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D08H38M05S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D02H06M57S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-738051-GMFXE_2024Y07M10D08H39M44S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAP-407058-RECZK_2024Y07M10D03H39M07S00_door_7.jpg
+Description: The image shows a hallway with tiled floor, a closed door on the left side, a mirror reflecting the hallway and another room on the right. There are shoes and slippers on the floor, a baby's head with purple bow in a photo frame, and a blue bag with the word "Bath Tissue" visible. On the right side, a staircase leads up, the first two steps are visible with carpet.  Above the staircase, a white light fixture is attached to the wall. Above the door on the left side, the word "HOME" is visible through the mirror. The image is taken from a security camera, and the date and time "07/09/2024 21:39:16" is displayed in the top left corner.
+Final Description: positive 
+
+Category: close-door
+Save Path: /nfsshare/james_storage/door-tracking/close-door/TNPUSAP-407058-RECZK_2024Y07M10D03H39M07S00_door_7.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAX-824136-GKZXF_2024Y07M10D20H05M47S00_door_5.jpg
+Description: The image is a low-resolution security camera image of a residential street.  The image shows a paved driveway that is bordered by a grassy area on the left and right.  The driveway is cracked and shows wear and tear.  The grass is browning in places and looks like it needs to be mowed.  A black trash can with a gray lid is visible in the upper right corner of the image.  The time stamp in the upper left corner reads 2024-07-10 16:06:04.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D04H39M07S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D09H15M10S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D03H46M31S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D19H29M12S00_door_7.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D06H29M26S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-412546-UBNWJ_2024Y07M10D20H04M24S00_door_7.jpg
+Description: The image shows a close-up of a white surface, likely a wall or a table, with a black wire mesh panel on top. The surface is covered in horizontal lines, suggesting it's made of some kind of corrugated material. On the mesh panel, there is a white plastic bag, a white bottle with a blue label, and a yellow rectangular object that could be a bar of soap. There is also a dark rectangular object, possibly a piece of paper or a small electronic device, lying on the surface below the mesh panel. The time stamp "2024-07-10 14:04:25" is visible in the top left corner, indicating that the image was taken on July 10, 2024, at 2:04:25 PM. The overall lighting is bright and there is some glare on the white surface. The image appears to be taken with a security camera, as the quality is slightly grainy and the angle is tilted.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D02H18M38S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D11H49M53S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D02H28M52S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D05H05M23S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D08H24M31S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAO-718598-YLSDG_2024Y07M10D19H28M54S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAP-422854-KEZTM_2024Y07M10D23H13M19S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D07H11M42S00_door_8.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D12H41M37S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D06H12M26S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-404464-VTSYX_2024Y07M10D19H57M50S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H06M21S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D09H47M42S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D06H39M48S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-273796-MMFYB_2024Y07M10D00H21M34S01_door_0.jpg
+Description: The image shows the interior of a dry cleaner. There are a few pieces of furniture, including a counter with a wood top and a black bottom, and a small desk with a black top and black chair. There is also a metal shelving unit in the background. On the counter are two white mats, some cleaning supplies, and a red trash bin. There are several hangers with clothes on them, hanging from the ceiling, and a large, white, hanging garment is being cleaned in a large machine behind the counter. A large, wooden ceiling fan is visible in the upper left corner of the image.  The floor is carpeted. There is a window to the right of the counter, and another window, or doorway, behind the counter. The door to the right is open and shows a blue and white tiled floor. The wall to the left of the counter has a sign on it that reads "Help Save The Environment".
+Final Description: positive 
+
+Category: open-door
+Save Path: /nfsshare/james_storage/door-tracking/open-door/TNPUSAF-273796-MMFYB_2024Y07M10D00H21M34S01_door_0.jpg
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D15H41M29S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D04H45M44S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H42M10S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D07H59M13S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAN-032444-CEZTF_2024Y07M10D17H02M28S00_door_2.jpg
+Description: The image is taken from a doorbell camera looking out. The camera is facing a white wooden railing that is attached to a house. There is a white porch to the right of the railing and a set of stairs leading up to it. The railing and stairs are in focus and the background is blurry. There are green trees in the background, and the sky is cloudy. The date and time are displayed in the top left corner of the image: 07/10/2024 13:02:47.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D05H26M40S00_door_7.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D05H22M44S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAV-635219-SCUMF_2024Y07M10D02H45M23S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAU-720735-NRMEW_2024Y07M10D13H34M10S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-667251-ZKHHR_2024Y07M10D05H53M23S00_door_0.jpg
+Description: The image is a grainy black and white shot taken from a security camera at night. The image is focused on a driveway with a car parked in the foreground, but the quality is quite poor. At the top of the image, a large white object is obscuring the view. This could be the camera housing or a part of the roof above the camera. The driveway is in front of a house, which is in the background of the image. There is a street lamp illuminating the front of the house. 
+
+The car is parked at a slight angle, and the front of the car is facing the camera. The car is partially lit by the streetlamp. The car appears to be a sedan or a hatchback with a large windshield and a rounded rear end.
+
+The house appears to have a front porch with a door leading inside. The image is too dark and grainy to make out the details of the house, but it appears to be a single-story home with a simple facade. 
+
+Overall, the image is a simple, but grainy, night-time shot of a driveway and house. It is difficult to discern much detail from the image, but it gives a glimpse of a typical suburban setting.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAN-045910-RXZYR_2024Y07M10D04H19M04S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H29M32S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAP-416110-EBZMM_2024Y07M10D23H54M34S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D09H15M10S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D20H07M03S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D06H36M21S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D11H25M37S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D05H36M50S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-824136-GKZXF_2024Y07M10D01H51M55S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAU-720735-NRMEW_2024Y07M10D23H15M08S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D02H22M18S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAO-718598-YLSDG_2024Y07M10D18H10M45S00_door_7.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-692270-FMCNS_2024Y07M10D18H50M00S00_door_1.jpg
+Description: The image shows a wooden deck with a screened-in porch on the right side. The deck is made of wood planks and has a railing around it. There are several potted plants on the deck, including a three-tiered plant stand with red pots. There is a blue box on the left side of the deck and a hose coiled nearby. A white building is visible in the background, through the trees. The time "2024-07-10 14:50:11" is displayed at the top of the image, suggesting that this is a screenshot from a security camera. The overall appearance of the scene is one of peace and tranquility, with the natural elements of wood, plants, and trees dominating the space.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPUSAP-216111-YTYPY_2024Y07M10D15H14M12S00_door_0.jpg
+Description: The image shows a bedroom with a bunk bed. The top bunk is covered in blue and green blankets and pillows. The bottom bunk is empty. There is a large poster on the wall above the bed with a cartoon image of the Teen Titans.  There are other posters and stickers on the wall including one with the name "Daniel". There is a closed white door in the right corner of the image and a window on the left side of the image. The date and time "07/10/2024 11:14:35" is displayed in the top left corner of the image.  The room is brightly lit with a white ceiling.
+Final Description: positive 
+
+Category: close-door
+Save Path: /nfsshare/james_storage/door-tracking/close-door/TNPUSAP-216111-YTYPY_2024Y07M10D15H14M12S00_door_0.jpg
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D11H35M13S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D18H40M23S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D18H59M04S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAE-014820-KZXVF_2024Y07M10D00H01M54S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D07H10M53S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-097811-JFRVD_2024Y07M10D08H35M31S00_door_1.jpg
+Description: The image is a black and white night vision camera shot. It appears to be taken from a home security camera looking out over a garage. It is dark with only a faint light source to the right of the image. There is a car parked in the driveway and a faint outline of what looks to be a second car or an object on the left side of the image. There is a thin white line running diagonally from the right side of the image to the left, possibly a power cord. The top of the image has the date and time, "2024-07-10 04:35:33".
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D04H14M07S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D19H30M03S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D05H12M00S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D10H20M50S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D07H07M07S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-039204-WSMGR_2024Y07M10D05H48M52S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D03H03M50S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H17M18S00_door_2.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-839421-YHUTC_2024Y07M11D00H23M02S00_door_5.jpg
+Description: The image shows a driveway with four cars parked on it. There are two blue recycling bins on the left side of the driveway. The cars are a black sedan, a white pickup truck, a white SUV, and a blue SUV. The white pickup truck is in the center of the driveway, with the black sedan to the left of it and the white SUV to the left of the black sedan. The blue SUV is parked on the right side of the driveway. The driveway is surrounded by grass. The image is taken from a high angle, looking down at the driveway. There are trees in the background. The date and time, 2024-07-10 19:23:10, is displayed at the top left of the image.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D03H28M55S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D07H06M26S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D07H34M53S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D21H12M19S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D07H35M24S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-738051-GMFXE_2024Y07M10D09H33M00S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAT-430826-DMMLE_2024Y07M10D09H20M34S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D11H57M07S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAM-119114-JLXHZ_2024Y07M10D08H10M36S00_door_0.jpg
+Description: The image is a grainy, black and white security camera image. The camera is pointed at a dark room, and the only visible light source is the camera itself, casting a dim glow on the surrounding area. The image is taken from a low angle, looking up at a wall with metal D-rings attached to it. The wall is made of some kind of metal or concrete, and it appears to be rough or textured. The floor is also rough and appears to be made of concrete. In the center of the image, there are a few objects that are difficult to discern. The objects may be tools or equipment, but they are too blurry and dark to be identified with certainty. The image is dated 2024-07-10 03:10:46, indicating that it was captured in the early morning hours. Overall, the image is very dark and difficult to see clearly, giving it a slightly eerie or mysterious feel.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAV-635219-SCUMF_2024Y07M10D02H48M00S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D06H49M00S00_door_9.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D05H29M37S00_door_6.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D02H15M06S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D05H26M04S00_door_5.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D07H16M00S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGBA-340904-JJFWR_2024Y07M10D04H12M21S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D08H31M18S00_door_1.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAL-165062-CBSVS_2024Y07M10D13H25M02S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D06H55M34S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D22H13M10S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAO-747372-RWULK_2024Y07M10D07H38M05S00_door_4.jpg
+Description: The image is a black and white still from a security camera.  The image shows the inside of a cage, with a small, fluffy bed in the foreground. There is a large, dark object, perhaps a bed or a toy, in the middle of the image.  The top of the cage is visible, with a metal grid, and a fan is visible in the upper right corner of the image.  The date and time, "07/10/2024 02:38:10" are printed in the upper left corner of the image.  The image is a bit blurry, likely due to the low-light conditions of the security camera.
+Final Description: negative 
+
+Category: negative
+Save Path: 
+
+File: /nfsshare/zj/fenlei/TNPXGAL-165062-CBSVS_2024Y07M10D19H34M25S00_door_4.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-667251-ZKHHR_2024Y07M10D07H37M59S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAY-820699-GGFWH_2024Y07M10D22H30M13S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D08H25M42S00_door_3.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D09H23M39S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H44M53S00_door_3.jpg
 Description: Error generating description or processing image.
 Final Description: Bad file or duplicate
 

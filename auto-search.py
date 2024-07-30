@@ -63,8 +63,8 @@ def generate_description(media_file, delay=1):
         enhanced_prompt = (
             "You are an advanced image analysis model. Please analyze the following image and determine if it clearly shows an open or closed door. "
             "Respond with 'positive' if the image contains a clear, unobstructed view of an open or closed door. "
-            "Respond with 'negative' if the image is grainy, upside-down, obstructed, or does not clearly show an open or closed door. "
-            "Criteria for 'positive' include: the door must be fully visible, the state (open or closed) must be unmistakable, and the door should not be obscured by objects or poor image quality."
+            "Respond with 'negative' if the image is upside-down, extreme obstructed, or does not clearly show an open or closed door. "
+            "Criteria for 'positive' include: the door must be visible, the state (open or closed), and the door should not be obscured by objects."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 100})
@@ -126,13 +126,16 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
 
 def get_random_files(media_dir, limit=1000):
     media_files = []
+    search_counter = 0  # Initialize the search counter
     for root, dirs, files in os.walk(media_dir):
         jpg_files = [os.path.join(root, file) for file in files if file.endswith('.jpg')]
         media_files.extend(jpg_files)
+        search_counter += 1  # Increment the search counter for each directory searched
     
     if len(media_files) > limit:
         media_files = random.sample(media_files, limit)
     
+    print(f"Took {search_counter} searches to find new files")  # Print the search counter
     return media_files
 
 def load_processed_ids(file_path):
