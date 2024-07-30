@@ -7,6 +7,7 @@ import shutil
 import gc
 import json
 import signal
+from dotenv import load_dotenv
 
 duplicate_counter = [0]
 PROCESSED_IDS_FILE = 'processed_ids.json'
@@ -52,7 +53,6 @@ def upload_and_process_image(image_file_name, delay=1):
 def generate_description(media_file, delay=1):
     try:
         models = list(genai.list_models())
-        # print(models)
         prompt = "Describe this image in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {media_file.name}...")
@@ -82,21 +82,21 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
     if unique_id in processed_ids:
         duplicate_counter[0] += 1
         print(f"Duplicate file detected: {image_file_name}. Skipping upload. Total duplicates: {duplicate_counter[0]}")
-        return image_file_name, None, None, None, None, None
+        return image_file_name, "Duplicate file", None, None, None
 
     processed_ids.add(unique_id)
     
     try:
         image_file = upload_and_process_image(image_file_name)
         if not image_file:
-            return image_file_name, "Error during upload/processing", "Bad file or quota has been exhausted", None, None
+            return image_file_name, "Error during upload/processing", "Bad file or duplicate", None, None
 
         description, final_description = generate_description(image_file)
         if not final_description:
             return image_file_name, description, "Error during description generation", None, None
 
         # Only save the file if it is positively identified as having an open or closed door
-        category = "ambiguous"
+        category = "negative"
         save_path = ""
         if "positive" in final_description.lower():
             if "open" in description.lower():
@@ -122,7 +122,7 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         return result
     except Exception as e:
         print(f"Exception processing image {image_file_name}: {e}")
-        return image_file_name, "Exception occurred", "Bad file or quota has been exhausted", "error", ""
+        return image_file_name, "Exception occurred", "Bad file or duplicate", "error", ""
 
 def get_random_files(media_dir, limit=1000):
     media_files = []
@@ -153,9 +153,14 @@ def signal_handler(sig, frame):
 
 def main():
     global processed_ids
+    load_dotenv()
     processed_ids = load_processed_ids(PROCESSED_IDS_FILE)
-    userdata = {"GOOGLE_API_KEY": "AIzaSyDuBW39CChEUCrer81fc6YTn-UhtAKwAzA"}
-    GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+    
+    if not GOOGLE_API_KEY:
+        print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
+        return
+
     genai.configure(api_key=GOOGLE_API_KEY)
 
     image_dir = "/nfsshare/zj/fenlei"
@@ -184,7 +189,7 @@ def main():
                         else:
                             f.write(f'File: {image_file_name}\n')
                             f.write('Description: Error generating description or processing image.\n')
-                            f.write('Final Description: Bad file or quota has been exhausted\n\n')
+                            f.write('Final Description: Bad file or duplicate\n\n')
             except Exception as exc:
                 print(f'{image_file} generated an exception: {exc}')
                 with open('image_info.txt', 'a') as f:
