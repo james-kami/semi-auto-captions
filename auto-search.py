@@ -33,6 +33,9 @@ def upload_and_process_image(image_file_name):
             else:
                 print("Max retries reached. Skipping file.")
                 return None
+        finally:
+            # Additional delay to slow down the process
+            time.sleep(8) 
 
 def generate_description(media_file):
     try:
@@ -56,6 +59,9 @@ def generate_description(media_file):
     except Exception as e:
         print(f"Error generating description for image {media_file.name}: {e}")
         return None, None
+    finally:
+        # Additional delay to slow down the process
+        time.sleep(8) 
 
 def process_image(image_file_name, save_dir):
     try:
