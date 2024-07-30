@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import shutil
 import gc
 
-def upload_and_process_image(image_file_name):
-    max_retries = 3
+def upload_and_process_image(image_file_name, delay=0.1):
+    max_retries = 1
     for attempt in range(max_retries):
         try:
             print(f"Uploading file {image_file_name}...")
@@ -34,15 +34,16 @@ def upload_and_process_image(image_file_name):
                 print("Max retries reached. Skipping file.")
                 return None
         finally:
-            # Additional delay to slow down the process
-            time.sleep(8) 
+            time.sleep(delay)  # Delay to slow down the process
 
-def generate_description(media_file):
+def generate_description(media_file, delay=0.1):
     try:
+        models = list(genai.list_models())
+        #print(models)
         prompt = "Describe this image in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {media_file.name}...")
-        response = model.generate_content([prompt, media_file], request_options={"timeout": 600})
+        response = model.generate_content([prompt, media_file], request_options={"timeout": 100})
         description = response.text
         print(description)
 
@@ -52,7 +53,7 @@ def generate_description(media_file):
             "IMPORTANT: If the image is grainy, upside-down, or does not mention a clearly open or closed door, respond with 'negative'."
         )
 
-        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
+        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 100})
         final_description = response.text
         print(final_description)
         return description, final_description
@@ -60,8 +61,7 @@ def generate_description(media_file):
         print(f"Error generating description for image {media_file.name}: {e}")
         return None, None
     finally:
-        # Additional delay to slow down the process
-        time.sleep(8) 
+        time.sleep(delay)  # Delay to slow down the process
 
 def process_image(image_file_name, save_dir):
     try:
@@ -115,7 +115,7 @@ def main():
 
     print(f"Found {len(image_files)} files.")
 
-    with ThreadPoolExecutor(max_workers=1) as executor:  # Reduce number of workers to 1
+    with ThreadPoolExecutor(max_workers=1) as executor:  # Start with max_workers=3 and adjust as needed
         future_to_image = {executor.submit(process_image, image_file, save_dir): image_file for image_file in image_files}
         for future in as_completed(future_to_image):
             image_file = future_to_image[future]
