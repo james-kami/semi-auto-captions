@@ -1,22 +1,193 @@
-File: /nfsshare/zj/fenlei/TNPUSAE-014820-KZXVF_2024Y07M10D10H54M44S00_door_1.jpg
-Description: The image shows a garage with two white cars parked inside. The garage has a white ceiling with several lights and a garage door opener system hanging from the ceiling.  The car on the left is a smaller car with the "Kia" logo visible. The car on the right is a larger SUV. The garage door is open revealing a blurred out outdoor view.  A set of ski poles, a hockey stick, and other sports equipment are hanging on the wall to the left of the image. The image is taken at an angle looking into the garage.
+File: /nfsshare/zj/fenlei/TNPUSAQ-121132-EBPGP_2024Y07M10D00H53M40S00_door_5.jpg
+Description: The image is taken from a security camera looking at the side of a building with a slightly angled view. The building is made of brick, and has a brown roof. There are a few windows visible. On the other side of the building, there is a parking lot, and a few cars parked. There is a small fence between the parking lot and the building.  Behind the parking lot are some trees and a white building. The sky is cloudy. The timestamp in the top left corner shows the date and time as 07/09/2024 20:54:03.  The camera's logo is in the lower left corner.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAP-369110-EFHEY_2024Y07M10D05H43M26S00_door_1.jpg
+Description: The image is a black and white night-time shot of a backyard. There is a white post in the foreground, and a building in the background. The image is grainy and blurry. There are some faint lights in the distance. It looks like the shot may be from a security camera. The date and time are displayed in the top left corner of the image: 2024-07-10 01:43:40.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAM-726520-SSNUD_2024Y07M10D04H20M40S00_door_0.jpg
+Description: The image shows a black car parked in front of a house. The car is facing the camera and the front is visible, including the windshield and hood. There is a motorcycle parked next to the car, with its front wheel visible. The motorcycle is facing away from the camera. Behind the motorcycle is a glass door, and a small fountain can be seen in the background on the right side of the image. The area around the fountain is covered in small pebbles, and there are plants on the ground. The house is lit with outdoor lights, and there are some shadows in the image. The image is taken from a security camera, and the time stamp is visible in the top left corner of the image.
+Final Description: Ambiguous description
+
+File: /nfsshare/zj/fenlei/TNPXGAS-437508-XMSUH_2024Y07M10D04H30M34S00_door_3.jpg
+Description: The image shows a close-up shot of a large green pillar, likely part of a bridge or overpass. The pillar is obscured by fog or mist, creating a hazy and ethereal effect. The top of the pillar is not visible, and the background is completely obscured by the fog. 
+
+There are a few faint lights visible in the distance, suggesting that the scene is set at night. The date and time "2024-07-09 21:30:50" are visible in the top left corner, providing context for the image. 
+
+The overall impression is one of a mysterious and atmospheric scene, with the fog adding a sense of intrigue and uncertainty. The image is likely taken from a security camera, as the quality is grainy and the perspective is slightly unusual. 
+
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAO-322175-XTPWX_2024Y07M10D22H10M24S00_door_5.jpg
+Description: The image is taken from a security camera, as indicated by the timestamp in the top left corner: 07/10/2024 17:11:08. The camera is positioned in a narrow hallway or entryway. The walls are painted a light gray. 
+
+On the right wall, there is a white door with a single knob.  To the left of the door is a small white square, which could be an electrical outlet or light switch.  Above the door, on the wall, a wooden sign hangs, with the words "A Little Dirt Don't Hurt" written on it. The sign appears to have been made with distressed wood, giving it a rustic appearance.
+
+On the left wall, there is a white door that is partially visible. It's unclear what's behind the door.  There are also several items hanging on hooks or a rack, including a bright yellow hat, a purple shirt, and a pink jacket. A few other items are obscured by the camera angle. 
+
+The floor of the hallway is not visible in the picture.  In the background, there is a red bag, a box with an orange label and a broomstick leaning against the wall. The  red bag and the box appear to be situated against the wall on the right side of the image. 
+
+The image is well-lit but has a slightly blurry quality, which is common for security cameras. The overall atmosphere is quite plain and utilitarian.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAY-757517-EYLDT_2024Y07M10D03H55M11S00_door_0.jpg
+Description: The image is a black and white security camera shot of a porch.  The camera is pointed down towards the ground.  A white rocking chair is sitting on the porch.  There is a black and white mat on the floor to the right of the chair.  A large dark object is in the lower right corner of the image.  The date and time are visible in the upper left corner of the image, and the camera's lens is visible in the lower right corner. The image is dark and blurry, suggesting it was taken at night.  It seems like the rocking chair has been moved and left in a precarious position, perhaps to prevent someone from entering or exiting through the door.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAX-867482-GVPJH_2024Y07M10D19H22M42S00_eat_0.jpg
+Description: The image shows a white van parked in front of a store. The store has a large glass display case filled with various items.  A person is sitting at a table inside the store,  working on something, with their back to the camera. The table is covered with a white tablecloth and there is a red cup and a few plastic bags on it. The person's face is obscured by their hair but you can see they are wearing a dark jacket.  There is a large white sign behind them and a potted plant off to the right. A potted plant can also be seen on the left side of the image. In the background, a large white sign is visible on the left side of the image. The image was taken on July 10, 2024 at 2:22 PM.  The image is likely captured from a security camera.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAE-014820-KZXVF_2024Y07M10D00H08M31S00_door_6.jpg
+Description: The image is taken from inside a garage. There are two cars parked, one is a white SUV and the other is a white car, with only the front half visible. The garage door is open and there are bushes visible through the doorway. The garage is cluttered with various items, including two office chairs, a rolling dolly, a small table, and a large green bin. There are also two bikes hanging from the ceiling, and various other objects hung on the walls. The ceiling has several overhead lights. The image is taken from a slightly angled perspective.
 Final Description: positive 
 
 
-File: /nfsshare/zj/fenlei/TNPUSAP-422854-KEZTM_2024Y07M10D12H07M42S00_door_0.jpg
-Description: The image is taken from a security camera positioned at a low angle. The foreground features a gray Nissan Altima parked on a gravel driveway. A large, brown palm tree is partially obscured by the car. The base of the tree has a black bag and other debris. To the left is a green and black wooden bench. Behind the bench, a white fence separates the driveway from a grassy area with a few palm trees. Behind the fence is a white house with red trim. The background is a blur of trees and sky. The date and time "07/1/2024 18:07:56" are displayed in the top left corner. The word "kami" is displayed in the bottom left corner.
+File: /nfsshare/zj/fenlei/TNPUSAC-672685-YKVZW_2024Y07M10D21H28M50S00_door_0.jpg
+Description: The image is of a small grocery store. The store has white walls and a metal ceiling. There are fluorescent lights running down the length of the ceiling. In the center of the image, there are shelves stocked with various goods including jars of jam, bags of pasta, and bags of chips. The shelves are arranged in rows down the center of the store. On the left side of the image, there is a large glass-door refrigerator. In front of the refrigerator, there are several shelves, also stocked with jars of jam and other goods. On the right side of the image, there is a cart filled with bananas. The cart is positioned in front of a shelf filled with jars of olives and other goods. In the background, there is a person standing by a counter. The store appears to be well-lit and organized.  There are also two ceiling fans. The store looks relatively empty.  There are three crosses hanging on the wall in the back of the store.
 Final Description: negative 
 
 
-File: /nfsshare/zj/fenlei/TNPUSAP-416110-EBZMM_2024Y07M11D00H03M52S00_door_4.jpg
-Description: The image shows a white wall with a metal shelving unit in the corner, holding a variety of pots and a bowl.  The shelving unit is in the lower left corner of the image and it is made of white metal with four shelves.  On the top shelf is a brown pot, on the second shelf a clear bowl, on the third shelf a black pot, and on the bottom shelf a green pot. There is also a yellow pot on the bottom shelf but it is obscured by the frame. There is a hook on the wall near the shelving unit, hanging from it is what appears to be a black and silver umbrella.
-
-To the right of the shelving unit is a window, with white trim and a white windowsill.  Outside the window is a metal fence and a cat sitting on the windowsill, looking out the window.  The cat is grey and white with a long tail.  There are some electrical cords and a white electrical outlet on the wall beneath the window.  The image is taken from a security camera, and the timestamp in the upper left corner shows the date and time. The bottom left corner of the image contains the word "kami" in a white box.
+File: /nfsshare/zj/fenlei/TNPUSAP-070383-TXKUB_2024Y07M10D16H06M50S00_door_2.jpg
+Description: The image is taken from a security camera and shows a hallway in a house. The camera is pointed towards the end of the hallway, where there is a white fluffy dog lying on the floor. The dog is in focus, while the background is blurry. The walls are painted white and there is a white baseboard along the floor.  On the right wall, there is a framed painting hanging on the wall, with a brown wooden frame. The painting depicts a woman wearing a white dress. To the right of the painting is a light switch. To the left, there is a doorway leading into another room. The doorway has a white trim and a blue wall with a wallpaper pattern of white zebra stripes. Beyond the doorway, we can see a white curtain and a white baby gate, partially obscuring a chair in the room beyond. There is a brown statue on a shelf on the wall to the left of the doorway. The date and time are displayed in the upper left-hand corner of the image: "07/10/2024 09:06:58". The image is taken from a low angle, as if the camera is mounted on the floor. The overall tone of the image is warm and inviting.
 Final Description: negative 
 
 
-File: /nfsshare/zj/fenlei/TNPXGAP-412546-UBNWJ_2024Y07M10D21H26M48S00_door_1.jpg
-Description: The image shows a close-up view of a white surface with a black rubber mat. The mat has a diamond pattern and is covered in dirt. There is a white plastic bag on the mat, and a small bottle of lotion lying on the white surface. The image is taken from a low angle, and the camera is pointing slightly upwards. The timestamp in the top left corner indicates the image was taken on July 10, 2024 at 15:26:52. The image appears to be a still frame from a security camera.
+File: /nfsshare/zj/fenlei/TNPWSAA-639680-YNGNB_2024Y07M10D11H39M37S00_door_3.jpg
+Description: The image is a fisheye view from a security camera, showing a narrow driveway between two white houses. The houses are both clad in horizontal siding, and the driveway is made of concrete. A car can be seen parked in the distance, and some green grass is visible to the left of the driveway. The camera is positioned on the left side of the image, and there is a small "kami" logo visible in the bottom left corner. The date and time stamp "07/10/2024 06:39:34" appears in the top left corner. The overall tone of the image is rather bland and industrial, with the white siding and concrete driveway dominating the scene.
 Final Description: negative 
 
+
+File: /nfsshare/zj/fenlei/TNPUSAE-610043-LGXZY_2024Y07M10D01H27M14S00_door_1.jpg
+Description: The image shows a hallway in a home. The walls are painted a pale yellow color and there is a decorative border of vines and flowers along the top. There are two doorways visible in the image. The doorway on the left leads into another room, while the doorway on the right leads outside.  There is a black dog standing in the doorway on the right. In the doorway on the left there are some items hanging from the door, including a black coat and a blanket. There is also a clock on the wall. In the center of the image is a chandelier hanging from the ceiling. The chandelier is made of metal and glass and has a large, octagonal shape. The chandelier is hanging directly above the doorway on the right. The image is taken from a slightly low angle, looking up at the ceiling. There is a bright light source in the ceiling. There are several items visible in the hallway, including a chair, a clock, a coat, a blanket, and a dog. The image is slightly blurry, but it is still possible to make out the details of the hallway. The image is taken from a security camera.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAW-531984-JZFSB_2024Y07M10D06H06M39S00_door_1.jpg
+Description: The image is a grainy, low-resolution snapshot taken from a security camera. The image is dimly lit, and the only light source appears to be a chandelier with several white opaque glass shades.  The chandelier is in the background of the photo, hanging from the ceiling. The rest of the image is obscured by darkness and shadows. There is a tall white column in the center of the image. To the left of the image, a wall with textured plaster is visible, and a black decorative element with ornate ironwork hangs on the wall. A small piece of white furniture is barely visible to the left of the image in the background. 
+
+The image was taken on July 10, 2024 at 01:06:58. The timestamp is visible in the upper left-hand corner of the image.
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAQ-762919-JFCXH_2024Y07M10D11H51M47S00_door_0.jpg
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAC-224041-LJYBF_2024Y07M10D02H51M48S00_door_0.jpg
+Description: The image shows a living room with a large, black sectional sofa. Two people are relaxing on the sofa. One is sitting upright, and the other is lying down. They appear to be watching something on a TV, which is not visible in the image. There are several pillows and blankets scattered on the sofa, and a small table with a drink and snacks is in front of the sofa. The living room is fairly cluttered, with various objects scattered around. There is a large fan in the corner of the room, a treadmill, and a dart board on the wall. The living room opens up into a hallway, which leads to a kitchen. The kitchen is also cluttered with various items. The image has a blue cast, with the light coming from a blue LED strip. There is a ceiling fan with lights on. The image was likely taken at night, as the lighting is dim and there is a blue light cast from the LED strip.
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPUSAP-398406-YVGPU_2024Y07M10D05H08M18S00_door_5.jpg
+Description: The image is taken from a security camera, mounted on a wall in a hallway. The camera is pointed toward a stairway leading up to a brightly lit landing. The wall is a light beige color and appears to have textured paint. The hallway is dark, with a doorway on the right side of the image that is open and leads into a room that is illuminated with blue light. The image is dated and timestamped, indicating it was captured on July 9, 2024, at 10:08:18 PM.  The bottom left corner of the image contains a small logo for "kami" which may indicate the name of the security camera or its associated software.  The camera's lens has a fisheye effect, which makes the image appear distorted, particularly at the edges.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAR-826952-RUSZB_2024Y07M10D01H17M48S00_door_3.jpg
+Description: The image shows the interior of a store with a large roll-up door open, revealing a wet, gray concrete area outside. Inside, there are several crates of produce, including watermelons, cantaloupes, green peppers, and tomatoes. The lighting is bright and appears to come from overhead lights. The date and time, "2024-07-09 20:17:52", is displayed in the top left corner of the image, suggesting the photo was taken at night. The presence of the produce and the roll-up door suggests this is a grocery store or a produce market. A pickup truck is parked outside the store.  The image is likely captured from a security camera, which is why the quality is grainy and the lighting is uneven. The image appears to have been taken during a period of light rain. The overall tone of the image is a bit eerie and quiet, with the wet concrete outside and the empty store interior contributing to this feeling.  
+
+Final Description: Positive 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-667251-ZKHHR_2024Y07M10D18H35M10S00_door_0.jpg
+Description: The image is taken from a security camera looking out from under the eaves of a house.  A large American flag is in the foreground to the left, covering part of a black sports car parked on the street.  The car is missing its driver's side front fender and has a dent in the front of the hood.  A brown car is parked behind it, covered with a grey car cover. The image is taken from a street, facing a house with a grey car parked in the driveway. There is a green recycling bin in front of the house, and the house appears to be two stories. The grass in the yards is green and well-maintained. The sky is blue, and there are some trees in the background. There is a second house visible on the right side of the image, also with a green yard and a driveway with a car parked in it.  The image is blurry and of low quality. The date and time "2024-07-10 11:35:33" appears in the upper left corner of the image.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAO-435298-SRXUZ_2024Y07M10D16H39M32S00_door_1.jpg
+Description: The image is taken from a low angle, looking up at a room. The floor is covered in light-colored carpet, and a black vacuum cleaner is lying on the floor in the bottom left corner. A toy dollhouse is visible in the background. It is painted pink and white, and has several windows and doors. There are other toys on the floor around the dollhouse. 
+
+The room has white walls and a white ceiling. There is a window in the middle of the wall, and a large, framed picture of a heart hangs to the right of the window. 
+
+The room is well-lit and clean. It is a children's room or playroom, as indicated by the toys and the "happy" theme. There is a date and time stamp in the top left corner of the image. It is 07/10/2024 11:40:11.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGAP-296555-PTMSF_2024Y07M10D15H29M05S00_door_0.jpg
+Description: The image is taken from a security camera. It shows a room with a bed, a door, and a person. The person is wearing a black shirt and pants. The bed is covered with a gray blanket. There is a blue and white rug on the floor and a small lamp. There is a lot of clutter on the bed. The room is dimly lit. The image is taken from a high angle. The timestamp on the image is 2024-07-10 10:29:20.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPXGBA-829295-LKXMJ_2024Y07M10D12H54M10S00_door_0.jpg
+Description: The image shows a bedroom with a bed and a table in the background. A person's leg is in the foreground,  partially obscured by a dark object. The bed is made with a white sheet and a pink blanket. On the table, there is a white tablecloth and a picture frame on the wall behind it. The date and time, "2024-07-10 07:54:21", is displayed at the top left of the image. The image is likely taken from a security camera.
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAX-717761-ZTJTY_2024Y07M10D07H23M18S00_door_3.jpg
+Description: The image shows a dark, nighttime view from inside a building, likely a garage or shed. A single, bright white vertical beam of light, possibly from a streetlamp or another light source, slices through the darkness, illuminating a portion of the ground outside the building. The ground appears to be covered in rough, uneven terrain, possibly gravel or dirt. There are a few faint, indistinct shapes in the background, but their details are obscured by the darkness. The top of the image shows a dark, horizontal structure, perhaps the roof of the building or a part of the ceiling. The left side of the image shows a white vertical beam, possibly the edge of a wall or a doorframe. There is a date and time stamp in the top left corner, suggesting that the image was captured by a security camera. Overall, the image is a simple, straightforward depiction of a dark, outdoor scene captured at night.  The lack of detail and the shadowy nature of the image give it a sense of mystery and intrigue. 
+
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAP-640058-SHFVT_2024Y07M10D05H29M04S00_door_4.jpg
+Description: The image is a grainy, black and white security camera shot of a dimly lit parking lot. On the left side of the image, there is a partially obscured car, likely a truck, and a large, dark object that could be a dumpster. The ground appears to be paved, and there are two light-colored vertical lines on the ground that seem to be painted lines.  The rest of the image is very blurry, with a bright white area towards the top of the frame, possibly caused by a light source outside of the image. The overall image is poorly lit and very difficult to make out much detail.  There is a date and time stamp in the upper left corner of the image, "2024-07-10 00:29:39."
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAY-458584-GJENM_2024Y07M10D14H48M39S00_door_0.jpg
+Description: The image shows a concrete surface with a crack running diagonally across it. The surface is dirty and there are some small pieces of debris scattered around. On the right side of the image, there is a small bush or tree with some brown branches. The image is taken from a high angle, and it looks like it was taken from a security camera. The top left corner of the image has a date and time stamp that says "2024-07-10 09:48:53." There is also a person walking away in the top right corner of the image.
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: /nfsshare/zj/fenlei/TNPXGAS-588111-VRGCP_2024Y07M10D12H27M39S00_door_1.jpg
+Description: The image shows a silver SUV parked next to a white pillar. The car is facing away from the camera, and only the back half of the car is visible. The car has black tinted windows and a black door handle. The car is parked on a red tiled driveway. There is a green palm tree in the background. The date and time are displayed in the top left corner of the image.
+Final Description: negative 
+
+
+File: /nfsshare/zj/fenlei/TNPUSAF-018072-YXCWN_2024Y07M10D14H08M02S00_door_6.jpg
+Description: The image shows the interior of a clock shop.  The shop is well-lit with large windows on the right wall.  The windows have blinds that are drawn but allow some light in.  There is a door to the left of the windows, which leads outside.  There is a checkerboard pattern tile floor, and several tall grandfather clocks lining the walls.  The shop is filled with plants, including a large, leafy plant in the front left corner of the image.  The image is taken from a slightly angled perspective, looking down at the floor.  The image is out of focus and blurry, but it is clear enough to see the details of the shop.
+Final Description: negative 
+
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
+
+File: None
+Description: Error generating description or processing image.
+Final Description: Bad file or duplicate
 

@@ -19,7 +19,7 @@ def extract_unique_id(filename):
     """
     return filename.split('-')[1]
 
-def upload_and_process_image(image_file_name, delay=3):
+def upload_and_process_image(image_file_name, delay=1):
     max_retries = 1
     for attempt in range(max_retries):
         try:
@@ -49,7 +49,7 @@ def upload_and_process_image(image_file_name, delay=3):
         finally:
             time.sleep(delay)  # Delay to slow down the process
 
-def generate_description(media_file, delay=3):
+def generate_description(media_file, delay=1):
     try:
         models = list(genai.list_models())
         # print(models)
@@ -61,9 +61,10 @@ def generate_description(media_file, delay=3):
         print(description)
 
         enhanced_prompt = (
-            "You are an image analysis model. Please review the following image and determine if it clearly shows an open or closed door that is not severely obstructed. "
-            "If the image description mentions a clearly open or closed door, respond with 'positive'. "
-            "IMPORTANT: If the image is grainy, upside-down, or does not mention a clearly open or closed door, respond with 'negative'."
+            "You are an advanced image analysis model. Please analyze the following image and determine if it clearly shows an open or closed door. "
+            "Respond with 'positive' if the image contains a clear, unobstructed view of an open or closed door. "
+            "Respond with 'negative' if the image is grainy, upside-down, obstructed, or does not clearly show an open or closed door. "
+            "Criteria for 'positive' include: the door must be fully visible, the state (open or closed) must be unmistakable, and the door should not be obscured by objects or poor image quality."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 100})
@@ -94,11 +95,22 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         if not final_description:
             return image_file_name, description, "Error during description generation"
 
+        # Only save the file if it is positively identified as having an open or closed door
         if "positive" in final_description.lower():
-            save_path = os.path.join(save_dir, os.path.basename(image_file_name))
+            if "open" in description.lower():
+                category = "open-door"
+            elif "closed" in description.lower():
+                category = "close-door"
+            else:
+                print(f"Ambiguous description for image {image_file_name}. Skipping save.")
+                return image_file_name, description, "Ambiguous description"
+            
+            category_dir = os.path.join(save_dir, category)
+            os.makedirs(category_dir, exist_ok=True)
+            save_path = os.path.join(category_dir, os.path.basename(image_file_name))
             shutil.copy(image_file_name, save_path)
             print(f'Saved image to {save_path}')
-
+        
         result = (image_file_name, description, final_description)
         
         genai.delete_file(image_file.name)
