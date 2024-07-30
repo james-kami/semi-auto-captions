@@ -6,8 +6,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import shutil
 import gc
 import json
+import signal
 
+duplicate_counter = [0]
 PROCESSED_IDS_FILE = 'processed_ids.json'
+processed_ids = set()
 
 def extract_unique_id(filename):
     """
@@ -73,10 +76,11 @@ def generate_description(media_file, delay=3):
     finally:
         time.sleep(delay)  # Delay to slow down the process
 
-def process_image(image_file_name, save_dir, processed_ids):
+def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
     unique_id = extract_unique_id(image_file_name)
     if unique_id in processed_ids:
-        print(f"Duplicate file detected: {image_file_name}. Skipping upload.")
+        duplicate_counter[0] += 1
+        print(f"Duplicate file detected: {image_file_name}. Skipping upload. Total duplicates: {duplicate_counter[0]}")
         return None, None, None
 
     processed_ids.add(unique_id)
@@ -129,7 +133,15 @@ def save_processed_ids(processed_ids, file_path):
     with open(file_path, 'w') as file:
         json.dump(list(processed_ids), file)
 
+def signal_handler(sig, frame):
+    print("Signal received, saving processed IDs...")
+    save_processed_ids(processed_ids, PROCESSED_IDS_FILE)
+    print("Processed IDs saved. Exiting.")
+    exit(0)
+
 def main():
+    global processed_ids
+    processed_ids = load_processed_ids(PROCESSED_IDS_FILE)
     userdata = {"GOOGLE_API_KEY": "AIzaSyDuBW39CChEUCrer81fc6YTn-UhtAKwAzA"}
     GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
     genai.configure(api_key=GOOGLE_API_KEY)
@@ -138,13 +150,12 @@ def main():
     save_dir = "/nfsshare/james_storage/door-tracking"
     os.makedirs(save_dir, exist_ok=True)
 
-    processed_ids = load_processed_ids(PROCESSED_IDS_FILE)
     image_files = get_random_files(image_dir)
 
     print(f"Found {len(image_files)} files.")
 
-    with ThreadPoolExecutor(max_workers=1) as executor:  # Start with max_workers=1 and adjust as needed
-        future_to_image = {executor.submit(process_image, image_file, save_dir, processed_ids): image_file for image_file in image_files}
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        future_to_image = {executor.submit(process_image, image_file, save_dir, processed_ids, duplicate_counter): image_file for image_file in image_files}
         for future in as_completed(future_to_image):
             image_file = future_to_image[future]
             try:
@@ -170,4 +181,6 @@ def main():
     save_processed_ids(processed_ids, PROCESSED_IDS_FILE)
 
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
     main()
