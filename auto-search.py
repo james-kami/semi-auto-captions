@@ -124,7 +124,7 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         print(f"Exception processing image {image_file_name}: {e}")
         return image_file_name, "Exception occurred", "Bad file or duplicate", "error", ""
 
-def get_random_files(media_dir, limit=1000):
+def get_random_files(media_dir, limit=999999999):
     media_files = []
     search_counter = 0  # Initialize the search counter
     for root, dirs, files in os.walk(media_dir):
@@ -188,7 +188,6 @@ def main():
                             f.write(f'Description: {description}\n')
                             f.write(f'Final Description: {final_description}\n')
                             f.write(f'Category: {category}\n')
-                            f.write(f'Save Path: {save_path}\n\n')
                         else:
                             f.write(f'File: {image_file_name}\n')
                             f.write('Description: Error generating description or processing image.\n')
