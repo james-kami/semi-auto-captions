@@ -8,10 +8,16 @@ import gc
 import json
 import signal
 from dotenv import load_dotenv
+from threading import Lock
 
+# Load environment variables
+load_dotenv()
+
+# Global variables
 duplicate_counter = [0]
 PROCESSED_IDS_FILE = 'processed_ids.json'
 processed_ids = set()
+lock = Lock()
 
 def extract_unique_id(filename):
     """
@@ -20,18 +26,16 @@ def extract_unique_id(filename):
     """
     return filename.split('-')[1]
 
-def upload_and_process_image(image_file_name, delay=1):
-    max_retries = 1
+def upload_and_process_image(image_file_name):
+    max_retries = 10
     for attempt in range(max_retries):
         try:
             print(f"Uploading file {image_file_name}...")
             image_file = genai.upload_file(path=image_file_name)
             print(f"Completed upload: {image_file.uri}")
 
-            # Wait for the image to be processed
             while image_file.state.name == "PROCESSING":
                 print(f'Waiting for image {image_file_name} to be processed.')
-                time.sleep(10)
                 image_file = genai.get_file(image_file.name)
 
             if image_file.state.name == "FAILED":
@@ -43,20 +47,16 @@ def upload_and_process_image(image_file_name, delay=1):
             print(f"Error uploading/processing image {image_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(5)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
-        finally:
-            time.sleep(delay)  # Delay to slow down the process
 
 def generate_description(media_file, delay=1):
     try:
-        models = list(genai.list_models())
         prompt = "Describe this image in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {media_file.name}...")
-        response = model.generate_content([prompt, media_file], request_options={"timeout": 100})
+        response = model.generate_content([prompt, media_file], request_options={"timeout": 300})
         description = response.text
         print(description)
 
@@ -67,62 +67,52 @@ def generate_description(media_file, delay=1):
             "Criteria for 'positive' include: the door must be visible, the state (open or closed), and the door should not be obscured by objects."
         )
 
-        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 100})
+        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 300})
         final_description = response.text
         print(final_description)
         return description, final_description
     except Exception as e:
         print(f"Error generating description for image {media_file.name}: {e}")
         return None, None
-    finally:
-        time.sleep(delay)  # Delay to slow down the process
 
-def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
-    unique_id = extract_unique_id(image_file_name)
-    if unique_id in processed_ids:
-        duplicate_counter[0] += 1
-        print(f"Duplicate file detected: {image_file_name}. Skipping upload. Total duplicates: {duplicate_counter[0]}")
-        return image_file_name, "Duplicate file", None, None, None
+def process_image(image_file_name, save_dir):
+    with lock:
+        unique_id = extract_unique_id(image_file_name)
+        if unique_id in processed_ids:
+            duplicate_counter[0] += 1
+            print(f"Duplicate file detected: {image_file_name}. Skipping upload. Total duplicates: {duplicate_counter[0]}")
+            return None
 
-    processed_ids.add(unique_id)
-    
-    try:
-        image_file = upload_and_process_image(image_file_name)
-        if not image_file:
-            return image_file_name, "Error during upload/processing", "Bad file or duplicate", None, None
+        processed_ids.add(unique_id)
 
-        description, final_description = generate_description(image_file)
-        if not final_description:
-            return image_file_name, description, "Error during description generation", None, None
+    image_file = upload_and_process_image(image_file_name)
+    if not image_file:
+        return None
 
-        # Only save the file if it is positively identified as having an open or closed door
-        category = "negative"
-        save_path = ""
-        if "positive" in final_description.lower():
-            if "open" in description.lower():
-                category = "open-door"
-            elif "closed" in description.lower():
-                category = "close-door"
-            
-            if category in ["open-door", "close-door"]:
-                category_dir = os.path.join(save_dir, category)
-                os.makedirs(category_dir, exist_ok=True)
-                save_path = os.path.join(category_dir, os.path.basename(image_file_name))
-                shutil.copy(image_file_name, save_path)
-                print(f'Saved image to {save_path}')
-        
-        result = (image_file_name, description, final_description, category, save_path)
-        
+    description, final_description = generate_description(image_file)
+    if not final_description:
         genai.delete_file(image_file.name)
-        print(f'Deleted file {image_file.uri}')
+        print(f"Deleted file {image_file.uri}")
+        return None
+
+    category = "negative"
+    save_path = ""
+    if "positive" in final_description.lower():
+        if "open" in description.lower():
+            category = "open-door"
+        elif "closed" in description.lower():
+            category = "close-door"
         
-        del image_file, description, final_description
-        gc.collect()
-        
-        return result
-    except Exception as e:
-        print(f"Exception processing image {image_file_name}: {e}")
-        return image_file_name, "Exception occurred", "Bad file or duplicate", "error", ""
+        if category in ["open-door", "close-door"]:
+            category_dir = os.path.join(save_dir, category)
+            os.makedirs(category_dir, exist_ok=True)
+            save_path = os.path.join(category_dir, os.path.basename(image_file_name))
+            shutil.copy(image_file_name, save_path)
+            print(f'Saved image to {save_path}')
+
+    genai.delete_file(image_file.name)
+    print(f"Deleted file {image_file.uri}")
+    return image_file_name, description, final_description, category, save_path
 
 def get_random_files(media_dir, limit=999999999):
     media_files = []
@@ -156,7 +146,6 @@ def signal_handler(sig, frame):
 
 def main():
     global processed_ids
-    load_dotenv()
     processed_ids = load_processed_ids(PROCESSED_IDS_FILE)
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
     
@@ -174,32 +163,22 @@ def main():
 
     print(f"Found {len(image_files)} files.")
 
-    with ThreadPoolExecutor(max_workers=1) as executor:
-        future_to_image = {executor.submit(process_image, image_file, save_dir, processed_ids, duplicate_counter): image_file for image_file in image_files}
-        for future in as_completed(future_to_image):
-            image_file = future_to_image[future]
-            try:
-                data = future.result()
-                if data:
-                    image_file_name, description, final_description, category, save_path = data
-                    with open('image_info.txt', 'a') as f:
-                        if description and final_description:
-                            f.write(f'File: {image_file_name}\n')
-                            f.write(f'Description: {description}\n')
-                            f.write(f'Final Description: {final_description}\n')
-                            f.write(f'Category: {category}\n')
-                        else:
-                            f.write(f'File: {image_file_name}\n')
-                            f.write('Description: Error generating description or processing image.\n')
-                            f.write('Final Description: Bad file or duplicate\n\n')
-            except Exception as exc:
-                print(f'{image_file} generated an exception: {exc}')
-                with open('image_info.txt', 'a') as f:
-                    f.write(f'File: {image_file}\n')
-                    f.write(f'Description: Exception occurred\n')
-                    f.write(f'Final Description: {exc}\n\n')
+    num_workers = 1  # This can be adjusted to your desired concurrency level
+    batch_size = 100  # This can be adjusted based on how many files you want per batch
 
-    save_processed_ids(processed_ids, PROCESSED_IDS_FILE)
+    # Process images in batches
+    for i in range(0, len(image_files), batch_size):
+        with ThreadPoolExecutor(max_workers=num_workers) as executor:
+            futures = [executor.submit(process_image, image_file, save_dir) for image_file in image_files[i:i+batch_size]]
+            results = [future.result() for future in as_completed(futures)]
+            for result in results:
+                if result:
+                    image_file_name, description, final_description, category, save_path = result
+                    with open('image_info.txt', 'a') as f:
+                        f.write(f'File: {image_file_name}\nDescription: {description}\nFinal Description: {final_description}\nCategory: {category}\nPath: {save_path}\n\n')
+        
+        # Sleep after each batch to ensure all processes are complete before starting the next batch
+        time.sleep(5)
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
