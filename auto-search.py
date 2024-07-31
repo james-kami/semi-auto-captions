@@ -37,11 +37,12 @@ def extract_unique_id(filename):
     return filename.split('-')[1]
 
 def upload_and_process_image(image_file_name):
-    max_retries = 3
+    max_retries = 100
     for attempt in range(max_retries):
         try:
             print(f"Uploading file {image_file_name}...")
             image_file = genai.upload_file(path=image_file_name)
+            time.sleep(1)
             print(f"Completed upload: {image_file.uri}")
 
             while image_file.state.name == "PROCESSING":
@@ -66,7 +67,7 @@ def generate_description(media_file, delay=1):
         prompt = "Describe this image in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
         print(f"Making LLM inference request for {media_file.name}...")
-        response = model.generate_content([prompt, media_file], request_options={"timeout": 300})
+        response = model.generate_content([prompt, media_file], request_options={"timeout": 10})
         description = response.text
         print(description)
 
@@ -77,7 +78,7 @@ def generate_description(media_file, delay=1):
             "Criteria for 'positive' include: the door must be visible, the state (open or closed), and the door should not be obscured by objects."
         )
 
-        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 300})
+        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text
         print(final_description)
         return description, final_description
