@@ -44,28 +44,24 @@ def upload_and_process_image(image_file_name, delay=1):
             print(f"Error uploading/processing image {image_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(0.5)
+                time.sleep(delay)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
 
 def generate_description(media_file, delay=1):
     try:
-        models = list(genai.list_models())
-        prompt = "Describe this image in detail."
-        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+        prompt = "Provide a concise overview of this image, highlighting key elements and any visible objects."
+        model = genai.GenerativeModel(model_name="models/gemini-1.5-pro")
         print(f"Making LLM inference request for {media_file.name}...")
         response = model.generate_content([prompt, media_file], request_options={"timeout": 10})
         description = response.text
         print(description)
 
         enhanced_prompt = (
-            "You are an advanced image analysis model. Please analyze the following image and determine if it clearly shows an open or closed door. "
-            "Respond with 'positive' if the image contains a clear, unobstructed view of an open or closed door. "
-            "Respond with 'negative' if the image is upside-down, extreme obstructed, or does not clearly show an open or closed door. "
-            "Criteria for 'positive' include: the door must be visible, the state (open or closed), and the door should not be obscured by objects."
+            "Assess whether this image clearly features a door. Respond with 'positive' if there is a distinct, unobstructed view of an open or closed door. "
+            "Respond with 'negative' if the door is not clearly visible or is obstructed. Specify door status as 'open' or 'close' phrases if positive."
         )
-
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text
         print(final_description)
@@ -96,10 +92,12 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         # Only save the file if it is positively identified as having an open or closed door
         category = "negative"
         save_path = ""
+
+        # Assuming final_description contains the state analysis (e.g., "Positive - close")
         if "positive" in final_description.lower():
-            if "open" in description.lower():
+            if "open" or "opened" in final_description.lower():
                 category = "open-door"
-            elif "closed" in description.lower():
+            elif "close"  or "closed" in final_description.lower():
                 category = "close-door"
             
             if category in ["open-door", "close-door"]:
@@ -185,8 +183,8 @@ def main():
                     with open('image_info.txt', 'a') as f:
                         f.write(f'Usable File: {image_file_name}\n')
                         f.write(f'Description: {description}\n')
-                        f.write(f'Final Description: {final_description}')
-                        f.write(f'Category: {category}\n\n\n')
+                        f.write(f'Detected Door: {final_description}')
+                        f.write(f'Final Category: {category}\n\n\n\n\n\n\n')
 
     # After all processing, log the total number of duplicates and usable files
     with open('image_info.txt', 'a') as f:
