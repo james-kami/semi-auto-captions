@@ -9,6 +9,16 @@ import json
 import signal
 from dotenv import load_dotenv
 from threading import Lock, Event
+import logging
+import http.client as http_client
+
+# Setup detailed logging for HTTP requests to troubleshoot SSL issues
+http_client.HTTPConnection.debuglevel = 1
+logging.basicConfig()
+logging.getLogger().setLevel(logging.DEBUG)
+requests_log = logging.getLogger("urllib3")
+requests_log.setLevel(logging.DEBUG)
+requests_log.propagate = True
 
 # Load environment variables
 load_dotenv()
@@ -27,7 +37,7 @@ def extract_unique_id(filename):
     return filename.split('-')[1]
 
 def upload_and_process_image(image_file_name):
-    max_retries = 10
+    max_retries = 3
     for attempt in range(max_retries):
         try:
             print(f"Uploading file {image_file_name}...")
@@ -102,7 +112,7 @@ def process_image(image_file_name, save_dir):
             category = "open-door"
         elif "closed" in description.lower():
             category = "close-door"
-        
+
         if category in ["open-door", "close-door"]:
             category_dir = os.path.join(save_dir, category)
             os.makedirs(category_dir, exist_ok=True)
@@ -116,16 +126,16 @@ def process_image(image_file_name, save_dir):
 
 def get_random_files(media_dir, limit=999999999):
     media_files = []
-    search_counter = 0  # Initialize the search counter
+    search_counter = 0
     for root, dirs, files in os.walk(media_dir):
         jpg_files = [os.path.join(root, file) for file in files if file.endswith('.jpg')]
         media_files.extend(jpg_files)
-        search_counter += 1  # Increment the search counter for each directory searched
-    
+        search_counter += 1
+
     if len(media_files) > limit:
         media_files = random.sample(media_files, limit)
-    
-    print(f"Took {search_counter} searches to find new files")  # Print the search counter
+
+    print(f"Took {search_counter} searches to find new files")
     return media_files
 
 def load_processed_ids(file_path):
@@ -148,7 +158,7 @@ def main():
     global processed_ids
     processed_ids = load_processed_ids(PROCESSED_IDS_FILE)
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-    
+
     if not GOOGLE_API_KEY:
         print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
         return
@@ -163,23 +173,23 @@ def main():
     print(f"Found {len(image_files)} files.")
 
     batch_size = 100  # Adjust as needed
-    batch_complete = Event()
+    max_workers = 1  # Adjust as needed
 
     # Process images in batches
     for i in range(0, len(image_files), batch_size):
-        with ThreadPoolExecutor(max_workers=1) as executor:
+        with ThreadPoolExecutor(max_workers) as executor:  # Use more workers if necessary
             futures = [executor.submit(process_image, image_file, save_dir) for image_file in image_files[i:i+batch_size]]
+            results = []
             for future in as_completed(futures):
                 result = future.result()
                 if result:
                     image_file_name, description, final_description, category, save_path = result
+                    results.append(result)
                     with open('image_info.txt', 'a') as f:
-                        f.write(f'File: {image_file_name}\nDescription: {description}\nFinal Description: {final_description}\nCategory: {category}\nPath: {save_path}\n\n')
-            batch_complete.set()  # Signal completion of the batch
-
-        batch_complete.wait()  # Wait for the batch to complete
-        batch_complete.clear()  # Prepare for the next batch
-        time.sleep(5)  # Optional additional delay
+                        f.write(f'File: {image_file_name}\nDescription: {description}\nFinal Description: {final_description}\nCategory: {category}\n\n\n\n\n')
+            # Optionally, wait here for all threads to complete
+            print(f"Batch {i//batch_size + 1} completed. Processing next batch.")
+            time.sleep(3)  # Ensures that there's a pause between batches
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
