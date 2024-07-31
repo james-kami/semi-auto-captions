@@ -8,7 +8,7 @@ import gc
 import json
 import signal
 from dotenv import load_dotenv
-from threading import Lock
+from threading import Lock, Event
 
 # Load environment variables
 load_dotenv()
@@ -160,25 +160,26 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     image_files = get_random_files(image_dir)
-
     print(f"Found {len(image_files)} files.")
 
-    num_workers = 1  # This can be adjusted to your desired concurrency level
-    batch_size = 100  # This can be adjusted based on how many files you want per batch
+    batch_size = 100  # Adjust as needed
+    batch_complete = Event()
 
     # Process images in batches
     for i in range(0, len(image_files), batch_size):
-        with ThreadPoolExecutor(max_workers=num_workers) as executor:
+        with ThreadPoolExecutor(max_workers=1) as executor:
             futures = [executor.submit(process_image, image_file, save_dir) for image_file in image_files[i:i+batch_size]]
-            results = [future.result() for future in as_completed(futures)]
-            for result in results:
+            for future in as_completed(futures):
+                result = future.result()
                 if result:
                     image_file_name, description, final_description, category, save_path = result
                     with open('image_info.txt', 'a') as f:
                         f.write(f'File: {image_file_name}\nDescription: {description}\nFinal Description: {final_description}\nCategory: {category}\nPath: {save_path}\n\n')
-        
-        # Sleep after each batch to ensure all processes are complete before starting the next batch
-        time.sleep(5)
+            batch_complete.set()  # Signal completion of the batch
+
+        batch_complete.wait()  # Wait for the batch to complete
+        batch_complete.clear()  # Prepare for the next batch
+        time.sleep(5)  # Optional additional delay
 
 if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
