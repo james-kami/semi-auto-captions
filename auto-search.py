@@ -112,7 +112,7 @@ def get_random_video_files(video_dir, limit=10):
     return video_files
 
 def main():
-    userdata = {"GOOGLE_API_KEY": "AIzaSyDuBW39CChEUCrer81fc6YTn-UhtAKwAzA"}
+    userdata = {"GOOGLE_API_KEY": "INVALID-KEY-CHANGE"}
     GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
     genai.configure(api_key=GOOGLE_API_KEY)
 
