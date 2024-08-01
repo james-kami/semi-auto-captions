@@ -51,7 +51,7 @@ def upload_and_process_image(image_file_name, delay=1):
 
 def generate_description(media_file, delay=1):
     try:
-        prompt = "Provide a concise overview of this image, highlighting key elements and any visible objects."
+        prompt = "Provide a detailed overview of this image, focusing on key elements. Please mention any visible doors, specifying if they are standard house doors and noting their state (open or closed). Highlight other significant objects or features."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-pro")
         print(f"Making LLM inference request for {media_file.name}...")
         response = model.generate_content([prompt, media_file], request_options={"timeout": 10})
@@ -59,8 +59,9 @@ def generate_description(media_file, delay=1):
         print(description)
 
         enhanced_prompt = (
-            "Assess whether this image clearly features a door. Respond with 'positive' if there is a distinct, unobstructed view of an open or closed door. "
-            "Respond with 'negative' if the door is not clearly visible or is obstructed. Specify door status as 'open' or 'close' phrases if positive."
+            "Examine this image to determine if a standard house door is visible. Respond with 'positive' along with 'open' or 'closed' if a clear, unobstructed standard house door is visible. "
+            "Respond with 'negative' if no physical door is present or if it's just an open doorway without a door. "
+            "If you cannot clearly determine the door's state due to obstructions or poor visibility, respond with 'ambiguous'."
         )
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text
@@ -89,23 +90,32 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         if not final_description:
             return image_file_name, description, "Error during description generation", None, None
 
-        # Only save the file if it is positively identified as having an open or closed door
         category = "negative"
         save_path = ""
 
-        # Assuming final_description contains the state analysis (e.g., "Positive - close")
+        # Debug print to check final description
+        print(f"Final Description Analyzed: {final_description}\n\n")
+
         if "positive" in final_description.lower():
-            if "open" or "opened" in final_description.lower():
+            if "open" in final_description.lower() or "opened" in final_description.lower():
                 category = "open-door"
-            elif "close"  or "closed" in final_description.lower():
+            elif "closed" in final_description.lower() or "close" in final_description.lower():
                 category = "close-door"
-            
-            if category in ["open-door", "close-door"]:
-                category_dir = os.path.join(save_dir, category)
-                os.makedirs(category_dir, exist_ok=True)
-                save_path = os.path.join(category_dir, os.path.basename(image_file_name))
-                shutil.copy(image_file_name, save_path)
-                print(f'Saved image to {save_path}')
+            else:
+                category = "ambiguous"
+
+        if category in ["open-door", "close-door"]:
+            category_dir = os.path.join(save_dir, category)
+            os.makedirs(category_dir, exist_ok=True)
+            save_path = os.path.join(category_dir, os.path.basename(image_file_name))
+            shutil.copy(image_file_name, save_path)
+            print(f'Saved image to {save_path}')
+        elif category == "ambiguous":
+            ambiguous_dir = os.path.join(save_dir, "ambiguous")
+            os.makedirs(ambiguous_dir, exist_ok=True)
+            save_path = os.path.join(ambiguous_dir, os.path.basename(image_file_name))
+            shutil.copy(image_file_name, save_path)
+            print(f'Saved image to {save_path} as ambiguous')
         
         result = (image_file_name, description, final_description, category, save_path)
         
