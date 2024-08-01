@@ -4758,3 +4758,327 @@ Final Category: negative
 
 
 
+Usable File: /nfsshare/zj/fenlei/TNPXGAS-314939-JBCTH_2024Y07M10D01H54M26S00_door_1.jpg
+Description: The image is captured from a security camera positioned on a porch, looking out onto a driveway and street. Here's a breakdown:
+
+* **Vehicles:** Two cars are visible. A white SUV is parked closer to the porch, partially obscured by the railing. A red sedan is parked further down the driveway. 
+* **Driveway:** The driveway is made of gravel or dirt. 
+* **Trees:** Several trees are present, one directly behind the red sedan, partially obscuring it. Another tree with a bench underneath is visible in the center of the image.
+* **Street:** A paved street is visible in the background. A silver SUV is parked on the street in the distance.
+* **Porch:** The camera is mounted on what appears to be a wooden porch with railing. 
+* **Doors:** There are no standard house doors visible in the image. The object in the bottom right corner with a handle appears to be part of a storage box or similar item, not a door.
+
+The overall lighting suggests it's dusk or dawn, with the streetlights just starting to illuminate the scene. 
+
+Detected Door: negative 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPXGBA-785523-YZRDG_2024Y07M10D02H47M43S00_door_1.jpg
+Description: The black and white image, likely a still from a security camera, shows a night scene of a residential street with four cars. 
+
+Here's a breakdown:
+
+* **Cars:** The most prominent feature is the black sedan in the foreground, angled slightly towards the right.  Directly behind it is a black SUV with its headlights shining brightly. To the left, a white hatchback and a dark-colored SUV are parked side-by-side. Further down the street, other cars are visible but too far to discern details.
+* **Doors:** No house doors are visible in the image.
+* **Other features:** The image appears to be taken from an elevated position, perhaps a porch or doorbell camera. The lighting suggests it's nighttime, likely illuminated by streetlights and car headlights. The grass is visible in the yards, and a portion of a sidewalk is seen in the bottom right corner. 
+
+The overall impression of the image is a typical suburban street scene at night. 
+
+Detected Door: negative 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAP-432596-BTDUG_2024Y07M10D19H32M39S00_door_4.jpg
+Description: This image is a high-angle view of a child’s bedroom, seemingly captured by a security camera. 
+
+The most prominent feature is a messy bed with blue sheets adorned with dinosaurs and the words "explorer" visible. It's pushed against a wall with a light blue, patterned headboard. The bed is unmade, with pillows and a blue and white stuffed toy resting on it. Several children's books lay open on the bed, suggesting recent use.
+
+To the left of the bed, various toys are scattered across the floor, including a yellow scooter, plastic storage containers overflowing with toys, and miscellaneous smaller playthings. A brown wooden dresser with four drawers stands against the left wall, holding more baskets and containers. A flat-screen television mounted on the wall above the dresser displays what appears to be a paused video.
+
+In the top left corner of the image, we see an **open doorway**. This doesn't appear to be a standard house door but rather an entrance to another room, potentially a bathroom, as a glimpse of a shower stall is visible in the background. 
+
+Overall, the scene conveys the lively disarray typical of a child's bedroom, captured in a candid moment. 
+
+Detected Door: Negative 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAQ-224226-PNDBJ_2024Y07M10D15H56M06S00_door_2.jpg
+Description: This image shows the interior of a house, likely a living room, captured by a fisheye lens camera mounted near the ceiling. The camera angle distorts the perspective, making the edges of the image appear curved. 
+
+Here's a breakdown of the key elements:
+
+* **Doors:** There are two visible doors. 
+    * On the left, a standard house door is closed.
+    * On the right, a standard house door with an "EXIT" sign above it is also closed. 
+* **Flooring:** The entire room features dark brown laminate flooring.
+* **Furniture:** 
+    * A tan armchair and the back of a dark-colored couch are partially visible in the background.
+    * A rug with an intricate design sits on the floor between the furniture.
+* **Lighting:**  A multi-bulb chandelier hangs from the ceiling above the seating area. 
+* **Decor:** 
+    * A framed picture hangs on the wall above the closed door on the left.
+    *  A portion of a decorative screen and the top of a tall decorative object are visible on the left edge of the image. 
+* **Other:**
+    * A small white object, potentially a sensor or device, is on the floor near the left wall. 
+    * The date and time stamp "07/10/2024 10:56:41" indicates when the image was captured. 
+    * A logo, "Yi," likely representing the camera brand, is in the bottom left corner.
+
+The overall impression of the image is a dimly lit but tidy living space. The fisheye lens provides a wide-angle view capturing most of the room. 
+
+Detected Door: Positive - closed 
+Final Category: close-door
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAO-640999-KPJFW_2024Y07M10D16H02M19S00_door_0.jpg
+Description: The image is taken from behind a set of closed, horizontally-slatted blinds. It's daytime, and through the blinds we see a sunny patio. 
+
+The patio is covered by a pale yellow roof supported by wooden beams. A tall palm tree is visible above the roofline on the right. The back wall of the patio area is also pale yellow and partially covered by a bamboo screen.  
+
+No doors are visible in the picture. 
+
+Several decorative items are on the patio:
+* A large, round, metal sign hanging on the back wall reads "Shearer" in a stylized font. 
+* A white birdhouse-shaped planter hangs to the left of the sign. 
+* Two planters, one ceramic and blue, the other white and wicker, are attached to the bamboo screen with metal arms. 
+* A white, wooden sign with the word "Welcome" hangs on the leftmost section of the screen. 
+
+The overall impression is of a bright, welcoming outdoor space. 
+
+Detected Door: **Negative** 
+
+There is no door visible in the description, only a patio and its furnishings. 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAP-216387-WFUNF_2024Y07M10D00H37M27S00_door_3.jpg
+Description: The image shows the interior of a kitchen and dining area, viewed from a corner of the dining table. 
+
+There is one visible door in the image, located on the left side. It appears to be a standard house door with white trim and horizontal blinds. The door is **closed**.
+
+Here are some other significant objects and features:
+
+* **Dining Area:** The foreground shows a portion of a dining table cluttered with plants, gardening supplies, a child's toy, and various other items.
+* **Kitchen:** The kitchen features white cabinetry, a stainless steel refrigerator, and a countertop with a cluttered surface. A watermelon, pots and pans, and a tiered tray are visible on the counter. There are green bar stools placed on the dining area side of the counter.
+* **Living Room:** A glimpse of the living room is visible beyond the kitchen, revealing a couch, a coffee table, and a fireplace partially obscured by a blue curtain.
+* **Decor:** The walls are adorned with artwork, decorative plates, and a clock. A chandelier hangs from the ceiling, providing light to both the kitchen and dining areas.
+
+The overall impression of the space is lived-in and somewhat cluttered, with personal belongings and decor items contributing to a homey atmosphere. 
+
+Detected Door: positive, closed 
+Final Category: close-door
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPXGAX-652448-TNKUF_2024Y07M10D19H27M29S00_door_1.jpg
+Description: The image is captured by a security camera looking down on a driveway and a parked car. 
+
+The car, a dark-colored sedan, is the central element of the image. It is parked with its front facing the viewer and appears to have its hood covered with a white material, likely a car cover or protective sheet. 
+
+The image also shows:
+
+* **Driveway:** The car is parked on a paved driveway. The surface appears worn with visible cracks and discoloration. 
+* **Building Wall:** A white, painted brick wall forms the right boundary of the image. It has no visible doors or windows. 
+* **Vegetation:** Patches of grass and weeds grow along the edge of the driveway and the wall, indicating a lack of regular landscaping.
+* **Blue Container:** A large, blue plastic container, possibly a water butt or storage bin, is visible in the background on the left side of the image.
+* **Rear of Another Vehicle:**  The rear of a white vehicle is just visible at the top right edge of the image, partially obscured by the wall. 
+
+There are **no visible standard house doors** in the image. 
+
+Detected Door: negative 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAP-423472-LWWEN_2024Y07M10D03H55M05S00_door_0.jpg
+Description: The image is a black and white view of a kitchen taken from a high angle. It appears to be night, as indicated by the time stamp and lack of natural light. 
+
+To the right, a shirtless man with his back to the camera is walking out of the kitchen. The kitchen features standard cabinets and countertops. A double-door refrigerator stands against the far wall, but its state (open or closed) is unclear. 
+
+Visible in the center is a kitchen island with a sink, dishwasher, and bar stool seating on the opposite side. A laptop is open on the island counter.  
+
+In the foreground, a dining table partially obscures the view. It's set with a vase of flowers and other items. Further back, we see a doorway leading to another room, likely a patio or sunroom, but there's no visible door frame to determine if it's open or closed. The room contains plants and what appears to be a storage rack. 
+
+Detected Door: Ambiguous 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAP-677745-NKHXY_2024Y07M10D00H49M28S00_door_1.jpg
+Description: This is a black and white, night-vision security camera image of a room. The image is taken from a low angle. 
+
+The most visible features are:
+
+* **Door:** On the right edge of the image, a standard house door is visible but slightly ajar, not fully closed. 
+* **Exercise Bike:** A stationary exercise bike sits prominently in the left-center of the room. 
+* **Bed:**  The bottom part of the image appears to be a bed covered with various items, including clothes or blankets. 
+* **Metal Shelf:** In the background, a tall metal shelf unit with plants on top stands against the wall. 
+* **Dog Crate:**  A dark-colored dog crate is partially visible behind the shelf. 
+* **Wall Decor:**  A wall decal of a tree decorates the wall above the dog crate. 
+* **Unknown Objects:**  Several other objects are scattered around the room, their nature unclear due to the image quality. This includes a small table to the left of the bike, a tall, thin object resembling a poster tube near the center, and various items on the bed and floor. 
+
+The room appears dimly lit, likely by a motion-activated night light, as evidenced by the grainy image quality. 
+
+Detected Door: positive, open 
+Final Category: open-door
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAP-182833-RLZYH_2024Y07M10D03H26M03S00_door_1.jpg
+Description: The image appears to be a security camera view from an outdoor area at night. The camera is angled upwards, showing a dark sky and a section of the building. 
+
+Here's a breakdown:
+
+* **Sky:** The majority of the image shows a dark night sky. 
+* **Building:** A portion of the building's exterior wall and eaves are visible on the right side of the image. The wall appears light in color due to an unseen light source.
+* **Railing:**  White railings, likely belonging to a balcony or deck, are prominent in the lower left portion of the image. They are angled towards the viewer, suggesting the camera's position is on the floor or a lower ledge.
+* **Light Source:** A bright light source, likely a flashlight or camera light, is shining downwards from the top right corner. This light is creating a glare and obscuring details.
+
+Notably, there are **no doors** visible in this image. 
+
+Detected Door: Based on your description, the answer is **negative**. 
+
+The image does not contain a door. 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAO-795583-YSGNH_2024Y07M10D19H13M38S00_door_2.jpg
+Description: The image shows a kitchen captured from a low angle, likely by a camera placed on the countertop. 
+
+A woman in a red shirt and blue pants is seen opening the door of a stainless steel refrigerator with magnets on the front.  The refrigerator door is partially open. There are no other visible doors in the image.
+
+Other notable elements in the scene:
+
+* **Foreground:** Dominated by a drying rack with dirty dishes, including a copper-bottomed pot, white plates, and glassware.
+* **Left side:** A white shelving unit holding various pantry items, a red cooler, and decorative objects.
+* **Right side:** A dark brown kitchen cabinet with a built-in microwave oven situated above the stovetop. A "Thankful & Blessed" kitchen towel hangs on the cabinet handle.
+* **Background:** The woman stands in front of the open refrigerator, its contents are not visible. 
+
+The overall impression is of a busy, lived-in kitchen. 
+
+Detected Door: negative 
+Final Category: negative
+
+
+
+
+
+
+Usable File: /nfsshare/zj/fenlei/TNPUSAO-628866-YVUVR_2024Y07M10D01H07M53S00_door_2.jpg
+Description: This is a high-angle view of a room interior. 
+
+**Doors:**
+* A standard house door is visible in the background on the left. It appears to be **closed**.
+
+**Key Objects & Features:**
+
+* **Staircase:** A wooden staircase with brown banisters dominates the left side of the image, leading up to a higher floor. The wall under the stairs features a faux brick pattern.
+* **Television:** A flat-screen TV is mounted on the far wall, seemingly playing a program.
+* **Furniture:**
+    * A green and blue high chair sits at the bottom of the stairs. 
+    * A wooden rocking chair with a red cushion is placed in the bottom right corner.
+    * A small wooden side table sits next to the rocking chair.
+    * A black suitcase is leaning against the wall in the right background.
+* **Flooring:** The floor is covered in square, off-white tiles with a decorative square rug placed in the center of the room. 
+* **Other:** A red fabric, possibly a hammock or a curtain, hangs on the wall at the right edge of the image. 
+
+The overall impression of the room is somewhat cluttered but lived-in. 
+
+Detected Door: Positive, closed 
+Final Category: close-door
+
+
+
+
+
+
+Total duplicates detected: 11264
+Total usable files processed: 9
+Timestamp: 2024-07-31 17:06:19
+
+
+Total duplicates detected: 11274
+Total usable files processed: 0
+Timestamp: 2024-07-31 17:07:08
+
+
+Total duplicates detected: 11274
+Total usable files processed: 0
+Timestamp: 2024-07-31 17:14:07
+
+
+Total duplicates detected: 11274
+Total usable files processed: 0
+Timestamp: 2024-07-31 17:14:27
+
+
+Total duplicates detected: 11274
+Total usable files processed: 0
+Timestamp: 2024-07-31 17:15:26
+
+
+Usable File: /nfsshare/zj/fenlei/TNPXGAS-456191-WBNVP_2024Y07M10D02H54M18S00_door_2.jpg
+Description: The image shows a view looking down at a red-tiled floor from a high angle, likely from a security camera mounted above a door. 
+
+* **Door:**  While we see the bottom portion of a door frame and the threshold, the door itself isn't visible in this cropped image.
+* **Screen Door:** A metal screen door with a diamond-shaped mesh pattern is prominent on the right side of the image, closed and blocking the view beyond. 
+* **Floor:** The floor is made of square, light red tiles with darker grout lines.
+* **Doormat:** A black rubber doormat with a textured, grid-like pattern is partially visible in the upper left corner of the image.
+
+Overall, the scene appears to be the entrance to a home, with the camera capturing the area just outside the doorway. 
+
+Detected Door: Ambiguous 
+Final Category: negative
+
+
+
+
+
+
+Total duplicates detected: 11273
+Total usable files processed: 1
+Timestamp: 2024-07-31 17:15:53
+
+
+Total duplicates detected: 11274
+Total usable files processed: 0
+Timestamp: 2024-07-31 17:15:58
+
+

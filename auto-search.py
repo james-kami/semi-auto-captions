@@ -7,7 +7,6 @@ import shutil
 import signal
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
-from threading import Lock
 
 import google.generativeai as genai
 
@@ -30,7 +29,6 @@ def upload_and_process_image(image_file_name, delay=1):
             image_file = genai.upload_file(path=image_file_name)
             print(f"Completed upload: {image_file.uri}")
 
-            # Wait for the image to be processed
             while image_file.state.name == "PROCESSING":
                 print(f'Waiting for image {image_file_name} to be processed.')
                 image_file = genai.get_file(image_file.name)
@@ -49,7 +47,7 @@ def upload_and_process_image(image_file_name, delay=1):
                 print("Max retries reached. Skipping file.")
                 return None
 
-def generate_description(media_file, delay=1):
+def generate_description(media_file):
     try:
         prompt = "Provide a detailed overview of this image, focusing on key elements. Please mention any visible doors, specifying if they are standard house doors and noting their state (open or closed). Highlight other significant objects or features."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-pro")
@@ -93,7 +91,6 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
         category = "negative"
         save_path = ""
 
-        # Debug print to check final description
         print(f"Final Description Analyzed: {final_description}\n\n")
 
         if "positive" in final_description.lower():
@@ -132,16 +129,16 @@ def process_image(image_file_name, save_dir, processed_ids, duplicate_counter):
 
 def get_random_files(media_dir, limit=99999999):
     media_files = []
-    search_counter = 0  # Initialize the search counter
+    search_counter = 0  
     for root, dirs, files in os.walk(media_dir):
         jpg_files = [os.path.join(root, file) for file in files if file.endswith('.jpg')]
         media_files.extend(jpg_files)
-        search_counter += 1  # Increment the search counter for each directory searched
+        search_counter += 1 
     
     if len(media_files) > limit:
         media_files = random.sample(media_files, limit)
     
-    print(f"Took {search_counter} searches to find new files")  # Print the search counter
+    print(f"Took {search_counter} searches to find new files")
     return media_files
 
 def load_processed_ids(file_path):
@@ -179,7 +176,7 @@ def main():
     image_files = get_random_files(image_dir)
     print(f"Found {len(image_files)} files.")
 
-    usable_files = 0  # Counter for non-duplicate, successfully processed files
+    usable_files = 0
 
     with ThreadPoolExecutor(max_workers=1) as executor:
         future_to_image = {executor.submit(process_image, image_file, save_dir, processed_ids, duplicate_counter): image_file for image_file in image_files}
@@ -196,7 +193,6 @@ def main():
                         f.write(f'Detected Door: {final_description}')
                         f.write(f'Final Category: {category}\n\n\n\n\n\n\n')
 
-    # After all processing, log the total number of duplicates and usable files
     with open('image_info.txt', 'a') as f:
         
         f.write(f'Total duplicates detected: {duplicate_counter[0]}\n')
