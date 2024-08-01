@@ -1,11 +1,8 @@
-import datetime
 import time
 import gc
-import json
 import os
 import random
 import shutil
-import signal
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
 
@@ -41,20 +38,20 @@ def upload_and_process_video(video_file_name):
 def generate_description(video_file):
     try:
         prompt = "Describe this video in detail."
-        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
-        response = model.generate_content([prompt, video_file], request_options={"timeout": 600})
+        response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
         description = response.text
         print(description)
 
         enhanced_prompt = (
             "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
-            "IMPORTANT: VIDEO MUST NOT BE STILL OR BLACK SCREEN. "
+            "IMPORTANT: VIDEO MUST NOT BE STILL UPSIDE-DOWN, OR BLACK SCREEN. "
             "If the video description mentions people or pets performing actions, respond with 'positive'. "
             "If the video is black, grainy, upside-down, or does not mention people or pets, respond with 'negative'."
         )
 
-        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
+        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text
         print(final_description)
         return description, final_description
@@ -128,10 +125,10 @@ def main():
     genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/valid_dataset"
+    save_dir = "/nfsshare/james_storage/valid_dataset/input-ts"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=4)
+    video_files = get_random_video_files(video_dir, limit=200)
 
     print(f"Found {len(video_files)} video files.")
 
