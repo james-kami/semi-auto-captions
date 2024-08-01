@@ -1,10 +1,15 @@
-import google.generativeai as genai
+import datetime
 import time
+import gc
+import json
 import os
 import random
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import shutil
-import gc
+import signal
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dotenv import load_dotenv
+
+import google.generativeai as genai
 
 def upload_and_process_video(video_file_name):
     max_retries = 3
@@ -45,8 +50,8 @@ def generate_description(video_file):
         enhanced_prompt = (
             "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
             "IMPORTANT: VIDEO MUST NOT BE STILL OR BLACK SCREEN. "
-            "If the video description mentions people or pets performing meaningful actions, respond with 'positive'. "
-            "If the video is grainy, upside-down, or does not mention people or pets, respond with 'negative'."
+            "If the video description mentions people or pets performing actions, respond with 'positive'. "
+            "If the video is black, grainy, upside-down, or does not mention people or pets, respond with 'negative'."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 600})
@@ -89,7 +94,7 @@ def process_video(video_file_name, save_dir):
         print(f"Exception processing video {video_file_name}: {e}")
         return video_file_name, "Exception occurred", "Bad file"
 
-def get_random_video_files(video_dir, limit=10):
+def get_random_video_files(video_dir, limit):
     us_region_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
     if not us_region_dirs:
         return []
@@ -112,15 +117,21 @@ def get_random_video_files(video_dir, limit=10):
     return video_files
 
 def main():
-    userdata = {"GOOGLE_API_KEY": "INVALID-KEY-CHANGE"}
-    GOOGLE_API_KEY = userdata.get('GOOGLE_API_KEY')
+    global processed_ids
+    load_dotenv()
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+    
+    if not GOOGLE_API_KEY:
+        print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
+        return
+
     genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
     save_dir = "/nfsshare/james_storage/valid_dataset"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=200)
+    video_files = get_random_video_files(video_dir, limit=4)
 
     print(f"Found {len(video_files)} video files.")
 
