@@ -32,18 +32,18 @@ def get_api_key(index):
 
 def upload_and_process_video(video_file_name, api_key_index):
     max_retries = 3
-    api_key = get_api_key(api_key_index)
-    genai.configure(api_key=api_key)
-    
     for attempt in range(max_retries):
         try:
+            api_key = get_api_key(api_key_index)
+            genai.configure(api_key=api_key)
+            
             print(f"Uploading file {video_file_name} using API key: {api_key}...")
             video_file = genai.upload_file(path=video_file_name)
             print(f"Completed upload: {video_file.uri}")
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(4)
+                time.sleep(5)  # Reduce sleep time for more frequent checks
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -55,7 +55,7 @@ def upload_and_process_video(video_file_name, api_key_index):
             print(f"Error uploading/processing video {video_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                #time.sleep(5)
+                time.sleep(1)  # Reduced retry wait time
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -151,7 +151,7 @@ def main():
     print(f"Found {len(video_files)} video files.")
 
     # Use ThreadPoolExecutor with 10 workers
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir, index % NUM_KEYS): video_file for index, video_file in enumerate(video_files)}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
