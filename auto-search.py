@@ -52,8 +52,6 @@ def upload_video(video_file_name, api_key_index, queue, semaphore):
     finally:
         semaphore.release()
 
-
-
 def process_video(queue, save_dir):
     while True:
         video_file = None
@@ -76,15 +74,14 @@ def process_video(queue, save_dir):
                 shutil.copy(original_file_path, save_path)
                 print(f'Saved video to {save_path}')
 
-            result = (video_file.name, description, final_description)
             # Write result to file
             with open('video_info.txt', 'a') as f:
                 if description and final_description:
-                    f.write(f'File: {video_file.name}\n')
+                    f.write(f'File: {original_file_path}\n')
                     f.write(f'Description: {description}\n')
                     f.write(f'Final Description: {final_description}\n\n')
                 else:
-                    f.write(f'File: {video_file.name}\n')
+                    f.write(f'File: {original_file_path}\n')
                     f.write('Description: Error generating description or processing video.\n')
                     f.write('Final Description: Bad file\n\n')
 
@@ -103,8 +100,6 @@ def process_video(queue, save_dir):
             queue.task_done()
             if video_file:
                 print(f"Task done for {video_file.uri}")
-
-
 
 def generate_description(video_file, api_key_index):
     try:
@@ -160,7 +155,7 @@ def main():
     save_dir = "/nfsshare/james_storage/test2"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=10)
+    video_files = get_random_video_files(video_dir, limit=16)
 
     print(f"Found {len(video_files)} video files.")
 
@@ -186,4 +181,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
