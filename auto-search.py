@@ -8,11 +8,33 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
+load_dotenv()
+
+# List of API keys
+API_KEYS = [
+    os.getenv("API_KEY_1"),
+    os.getenv("API_KEY_2"),
+    os.getenv("API_KEY_3"),
+    # Add more keys as needed
+]
+
+NUM_KEYS = len(API_KEYS)
+current_key_index = 0
+
+def get_api_key():
+    global current_key_index
+    api_key = API_KEYS[current_key_index]
+    current_key_index = (current_key_index + 1) % NUM_KEYS
+    return api_key
+
 def upload_and_process_video(video_file_name):
     max_retries = 3
     for attempt in range(max_retries):
         try:
-            print(f"Uploading file {video_file_name}...")
+            api_key = get_api_key()
+            genai.configure(api_key=api_key)
+
+            print(f"Uploading file {video_file_name} using API key: {api_key}...")
             video_file = genai.upload_file(path=video_file_name)
             print(f"Completed upload: {video_file.uri}")
 
@@ -37,9 +59,12 @@ def upload_and_process_video(video_file_name):
 
 def generate_description(video_file):
     try:
+        api_key = get_api_key()
+        genai.configure(api_key=api_key)
+
         prompt = "Describe this video in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
-        print(f"Making LLM inference request for {video_file.name}...")
+        print(f"Making LLM inference request for {video_file.name} using API key: {api_key}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
         description = response.text
         print(description)
@@ -114,18 +139,8 @@ def get_random_video_files(video_dir, limit):
     return video_files
 
 def main():
-    global processed_ids
-    load_dotenv()
-    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-    
-    if not GOOGLE_API_KEY:
-        print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
-        return
-
-    genai.configure(api_key=GOOGLE_API_KEY)
-
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/valid_dataset/input-ts"
+    save_dir = "/nfsshare/james_storage/test2"
     os.makedirs(save_dir, exist_ok=True)
 
     video_files = get_random_video_files(video_dir, limit=200)
