@@ -16,24 +16,27 @@ API_KEYS = [
     os.getenv("API_KEY_1"),
     os.getenv("API_KEY_2"),
     os.getenv("API_KEY_3"),
+    os.getenv("API_KEY_4"),
+    os.getenv("API_KEY_5"),
+    os.getenv("API_KEY_6"),
+    os.getenv("API_KEY_7"),
+    os.getenv("API_KEY_8"),
+    os.getenv("API_KEY_9"),
+    os.getenv("API_KEY_10"),
     # Add more keys as needed
 ]
 NUM_KEYS = len(API_KEYS)
-current_key_index = 0
 
-def get_api_key():
-    global current_key_index
-    api_key = API_KEYS[current_key_index]
-    current_key_index = (current_key_index + 1) % NUM_KEYS
-    return api_key
+def get_api_key(index):
+    return API_KEYS[index % NUM_KEYS]
 
-def upload_and_process_video(video_file_name):
+def upload_and_process_video(video_file_name, api_key_index):
     max_retries = 3
+    api_key = get_api_key(api_key_index)
+    genai.configure(api_key=api_key)
+    
     for attempt in range(max_retries):
         try:
-            api_key = get_api_key()
-            genai.configure(api_key=api_key)
-
             print(f"Uploading file {video_file_name} using API key: {api_key}...")
             video_file = genai.upload_file(path=video_file_name)
             print(f"Completed upload: {video_file.uri}")
@@ -50,9 +53,6 @@ def upload_and_process_video(video_file_name):
             return video_file
         except Exception as e:
             print(f"Error uploading/processing video {video_file_name}: {e}")
-            if "rate limit" in str(e).lower() or "quota exceeded" in str(e).lower():
-                # Switch to the next API key
-                get_api_key()
             if attempt < max_retries - 1:
                 print("Retrying...")
                 time.sleep(5)
@@ -60,9 +60,9 @@ def upload_and_process_video(video_file_name):
                 print("Max retries reached. Skipping file.")
                 return None
 
-def generate_description(video_file):
+def generate_description(video_file, api_key_index):
     try:
-        api_key = get_api_key()
+        api_key = get_api_key(api_key_index)
         genai.configure(api_key=api_key)
 
         prompt = "Describe this video in detail."
@@ -85,20 +85,17 @@ def generate_description(video_file):
         return description, final_description
     except Exception as e:
         print(f"Error generating description for video {video_file.name}: {e}")
-        if "rate limit" in str(e).lower() or "quota exceeded" in str(e).lower():
-            # Switch to the next API key
-            get_api_key()
         return None, None
 
-def process_video(video_file_name, save_dir):
+def process_video(video_file_name, save_dir, api_key_index):
     try:
         # Upload and process video
-        video_file = upload_and_process_video(video_file_name)
+        video_file = upload_and_process_video(video_file_name, api_key_index)
         if not video_file:
             return video_file_name, "Error during upload/processing", "Bad file"
 
         # Generate description
-        description, final_description = generate_description(video_file)
+        description, final_description = generate_description(video_file, api_key_index)
         if not final_description:
             return video_file_name, description, "Error during description generation"
 
@@ -153,8 +150,9 @@ def main():
 
     print(f"Found {len(video_files)} video files.")
 
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
+    # Use ThreadPoolExecutor with 10 workers
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_video = {executor.submit(process_video, video_file, save_dir, index): video_file for index, video_file in enumerate(video_files)}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
             try:
