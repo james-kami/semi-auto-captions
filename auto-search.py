@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
+# Load API keys from .env file
 load_dotenv()
 
 # List of API keys
@@ -17,7 +18,6 @@ API_KEYS = [
     os.getenv("API_KEY_3"),
     # Add more keys as needed
 ]
-
 NUM_KEYS = len(API_KEYS)
 current_key_index = 0
 
@@ -50,6 +50,9 @@ def upload_and_process_video(video_file_name):
             return video_file
         except Exception as e:
             print(f"Error uploading/processing video {video_file_name}: {e}")
+            if "rate limit" in str(e).lower() or "quota exceeded" in str(e).lower():
+                # Switch to the next API key
+                get_api_key()
             if attempt < max_retries - 1:
                 print("Retrying...")
                 time.sleep(5)
@@ -82,6 +85,9 @@ def generate_description(video_file):
         return description, final_description
     except Exception as e:
         print(f"Error generating description for video {video_file.name}: {e}")
+        if "rate limit" in str(e).lower() or "quota exceeded" in str(e).lower():
+            # Switch to the next API key
+            get_api_key()
         return None, None
 
 def process_video(video_file_name, save_dir):
@@ -147,7 +153,7 @@ def main():
 
     print(f"Found {len(video_files)} video files.")
 
-    with ThreadPoolExecutor(max_workers=1) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
