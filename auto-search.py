@@ -26,7 +26,8 @@ def load_previously_selected_videos(json_log):
 
 def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
-        json.dump({'selected': selected_videos, 'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
+        # JSON now only includes 'processed' videos and 'directory_usage', not 'selected'
+        json.dump({'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
 
 def upload_and_process_video(video_file_name):
     max_retries = 3
@@ -112,50 +113,39 @@ def process_video(video_file_name, save_dir):
         print(f"Exception processing video {video_file_name}: {e}")
         return (video_file_name, "Exception occurred", "Bad file")
 
-def get_random_video_files(video_dir, total_limit, max_directory_usage, directory_usage):
+def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directory_usage, directory_usage):
     global selected_videos, processed_videos
 
     all_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
-    random.shuffle(all_dirs)  # Shuffle to ensure a random start
+    random.shuffle(all_dirs)  # Shuffle top level directories to vary the selection order
 
     video_files = []
 
-    # Iterate over directories to maximize the spread of directory usage
     for dir_path in all_dirs:
         if len(video_files) >= total_limit:
-            break  # Stop if the desired number of files has been selected
+            break  # Stop if we've reached the total limit for this batch
 
         if directory_usage.get(dir_path, 0) >= max_directory_usage:
-            continue  # Skip this directory if its usage limit is reached
+            continue  # Skip this directory if it has reached its usage limit
 
-        # Get all subdirectories and shuffle them to randomize access
         subdirs = [os.path.join(dir_path, d) for d in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, d))]
-        random.shuffle(subdirs)
+        random.shuffle(subdirs)  # Shuffle subdirectories to further randomize file access
 
-        selected_from_this_directory = False
         for subdir in subdirs:
-            if selected_from_this_directory:
-                break  # Break if we have already selected a file from this directory
+            files = [os.path.join(subdir, f) for f in os.listdir(subdir) if f.endswith('.ts') or f.endswith('.mp4')]
+            random.shuffle(files)  # Shuffle files to randomize selection
 
-            files = [os.path.join(subdir, f) for f in os.listdir(subdir) if (f.endswith('.ts') or f.endswith('.mp4')) and f not in processed_videos.get(subdir, []) and f not in selected_videos.get(subdir, [])]
-            random.shuffle(files)  # Shuffle files to prevent bias
+            eligible_files = [f for f in files if f not in processed_videos.get(subdir, []) and f not in selected_videos.get(subdir, [])]
+            count_to_select = min(limit_per_folder, len(eligible_files), total_limit - len(video_files))
 
-            for file in files:
-                if file not in selected_videos.get(subdir, []):
-                    video_files.append(file)
-                    selected_videos.setdefault(subdir, []).append(file)
-                    directory_usage[dir_path] = directory_usage.get(dir_path, 0) + 1
-                    selected_from_this_directory = True
-                    break  # Break after selecting one file to ensure we only select one per directory
-
-        if selected_from_this_directory:
-            # Increment directory usage only if a file was actually selected
-            if dir_path not in directory_usage:
-                directory_usage[dir_path] = 1
-            else:
-                directory_usage[dir_path] += 1
+            if eligible_files and count_to_select > 0:
+                selected_files = random.sample(eligible_files, count_to_select)
+                video_files.extend(selected_files)
+                selected_videos.setdefault(subdir, []).extend(selected_files)
+                directory_usage[dir_path] = directory_usage.get(dir_path, 0) + 1  # Increment usage once per directory accessed per function call
 
     return video_files, directory_usage
+
 
 def main():
     global selected_videos, processed_videos
@@ -186,7 +176,7 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 20, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     with ThreadPoolExecutor(max_workers=1) as executor:
