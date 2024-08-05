@@ -1,5 +1,4 @@
 import time
-import gc
 import os
 import random
 import shutil
