@@ -173,7 +173,7 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 4, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
