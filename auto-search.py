@@ -60,7 +60,7 @@ def generate_description(video_file):
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
-        description = response.text.replace('\n', ' ')
+        description = response.text.replace('\n', '')
         print(description)
 
         enhanced_prompt = (
@@ -144,7 +144,6 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
 
     return video_files, directory_usage
 
-
 def main():
     global selected_videos, processed_videos
     load_dotenv()
@@ -174,10 +173,17 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 2, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
-    video_results = []
+    # Load existing data from video_info.json if it exists
+    try:
+        with open('video_info.json', 'r') as file:
+            existing_results = json.load(file)
+    except (IOError, ValueError):
+        existing_results = []  # If no file exists or error in reading, start with an empty list
+
+    video_results = existing_results  # Start with existing data
     with ThreadPoolExecutor(max_workers=1) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
@@ -197,11 +203,11 @@ def main():
                     "final_description": str(exc)
                 })
 
-    # Save results to JSON
+    # Save updated results to JSON
     with open('video_info.json', 'w') as f:
         json.dump(video_results, f, indent=4)
 
-    # save and track processed videos to JSON to avoid future duplicates
+    # Save the selected and processed videos to JSON file to avoid duplicates in future runs
     save_selected_videos(json_log, directory_usage)
 
 if __name__ == "__main__":
