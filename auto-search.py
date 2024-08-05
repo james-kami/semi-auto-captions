@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
+#random.seed(1234)
+
 # Load API keys from .env file
 load_dotenv()
 
@@ -19,6 +21,7 @@ API_KEYS = [
     os.getenv("API_KEY_2"),
     os.getenv("API_KEY_3"),
     os.getenv("API_KEY_4"),
+    os.getenv("API_KEY_5"),
     # Add more keys as needed
 ]
 NUM_KEYS = len(API_KEYS)
@@ -31,75 +34,90 @@ def upload_video(video_file_name, api_key_index, queue, semaphore):
     api_key = get_api_key(api_key_index)
     genai.configure(api_key=api_key)
 
+    semaphore.acquire()
     try:
-        with semaphore:
-            for attempt in range(max_retries):
-                try:
-                    print(f"Uploading file {video_file_name} using API key: {api_key}...")
-                    video_file = genai.upload_file(path=video_file_name)
-                    print(f"Completed upload: {video_file.uri}")
-
-                    queue.put((video_file, api_key_index, video_file_name))
-                    return
-                except Exception as e:
-                    print(f"Error uploading video {video_file_name}: {e}")
-                    if attempt < max_retries - 1:
-                        print("Retrying...")
-                        time.sleep(1)
-                    else:
-                        print("Max retries reached. Skipping file.")
-                        return
+        for attempt in range(max_retries):
+            try:
+                print(f"Attempting to upload {video_file_name}, Attempt {attempt + 1}")
+                video_file = genai.upload_file(path=video_file_name)
+                print(f"Completed upload: {video_file.uri}")
+                queue.put((video_file, api_key_index, video_file_name))
+                return  # Successfully uploaded and enqueued
+            except Exception as e:
+                print(f"Error uploading video {video_file_name} on Attempt {attempt + 1}: {e}")
+                if attempt < max_retries - 1:
+                    print("Retrying upload...")
+                    time.sleep(1)
+                else:
+                    print("Max retries reached. Skipping file.")
     finally:
         semaphore.release()
+        print(f"Semaphore released for {video_file_name}")
 
 def process_video(queue, save_dir):
     while True:
         video_file = None
-        video_file, api_key_index, original_file_path = queue.get()
+        api_key_index = None
+        original_file_path = None
+
+        item = queue.get()
+        if item is None:
+            print("Received None, terminating the processing thread.")
+            queue.task_done()
+            break  # Stop processing if None is received as a signal to terminate
+
+        video_file, api_key_index, original_file_path = item
+        print(f"Processing started for {original_file_path}")
+
         try:
+            # Check the initial state of the video_file
+            if not hasattr(video_file, 'state') or not hasattr(video_file.state, 'name'):
+                raise AttributeError("Video file object is missing 'state' attributes.")
+
+            # Wait for video processing to complete
             while video_file.state.name == "PROCESSING":
-                print(f'Waiting for video {video_file.uri} to be processed.')
+                print(f'Waiting for video {video_file.uri} to be processed...')
                 time.sleep(1)
-                video_file = genai.get_file(video_file.name)
+                video_file = genai.get_file(video_file.name)  # Re-fetch the video file status
 
             if video_file.state.name == "FAILED":
                 raise ValueError(f"Video processing failed: {video_file.uri}")
 
-            print(f'Video processing complete: {video_file.uri}')
+            print(f'Video processing completed: {video_file.uri}')
 
             # Generate description
             description, final_description = generate_description(video_file, api_key_index)
+            print(f"Generated descriptions: Brief - {description}, Final - {final_description}")
+
             if final_description and "positive" in final_description.lower():
                 save_path = os.path.join(save_dir, os.path.basename(original_file_path))
                 shutil.copy(original_file_path, save_path)
-                print(f'Saved video to {save_path}')
+                print(f'Video saved to: {save_path}')
 
             # Write result to file
             with open('video_info.txt', 'a') as f:
-                if description and final_description:
-                    f.write(f'File: {original_file_path}\n')
-                    f.write(f'Description: {description}\n')
-                    f.write(f'Final Description: {final_description}\n\n')
-                else:
-                    f.write(f'File: {original_file_path}\n')
-                    f.write('Description: Error generating description or processing video.\n')
-                    f.write('Final Description: Bad file\n\n')
+                f.write(f'File: {original_file_path}\n')
+                f.write(f'Description: {description}\n')
+                f.write(f'Final Description: {final_description}\n\n')
 
-            # Delete the file from the server
+            # Attempt to delete the file from the server
             try:
                 genai.delete_file(video_file.name)
-                print(f'Deleted file {video_file.uri}')
+                print(f'Deleted file: {video_file.uri}')
             except Exception as e:
                 print(f"Failed to delete file {video_file.uri}: {e}")
 
-            del video_file, description, final_description
-            gc.collect()
         except Exception as e:
-            print(f"Exception processing video {video_file.uri if video_file else 'unknown'}: {e}")
+            print(f"Exception during processing video {original_file_path}: {e}")
+
         finally:
-            queue.task_done()
-            if video_file:
-                print(f"Task done for {video_file.uri}")
+            queue.task_done()  # Signal that this task is complete
+            print(f"Task completed for {original_file_path}")
+            del video_file, description, final_description  # Clean up to avoid memory leaks
+            gc.collect()  # Collect garbage if there's any unreferenced data
+
+
+
 
 def generate_description(video_file, api_key_index):
     try:
