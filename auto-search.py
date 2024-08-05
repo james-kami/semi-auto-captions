@@ -11,9 +11,22 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
-def save_selected_videos(selected_videos, json_log):
+selected_videos = {}  # Global variable to keep track of selected videos
+processed_videos = {}  # Global variable to keep track of processed videos
+
+def load_previously_selected_videos(json_log):
+    if os.path.exists(json_log):
+        with open(json_log, 'r') as f:
+            try:
+                data = json.load(f)
+                return data.get('selected', {}), data.get('processed', {}), data.get('directory_usage', {})
+            except (json.JSONDecodeError, ValueError):
+                return {}, {}, {}
+    return {}, {}, {}
+
+def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
-        json.dump(selected_videos, f, indent=4)
+        json.dump({'selected': selected_videos, 'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
 
 def upload_and_process_video(video_file_name):
     max_retries = 3
@@ -25,7 +38,7 @@ def upload_and_process_video(video_file_name):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(10)
+                time.sleep(4)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -37,7 +50,7 @@ def upload_and_process_video(video_file_name):
             print(f"Error uploading/processing video {video_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(5)
+                time.sleep(2)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -84,85 +97,71 @@ def process_video(video_file_name, save_dir):
             shutil.copy(video_file_name, save_path)
             print(f'Saved video to {save_path}')
 
-        result = (video_file_name, description, final_description)
-        
         # Delete the file from the server
         genai.delete_file(video_file.name)
         print(f'Deleted file {video_file.uri}')
         
-        del video_file, description, final_description
-        gc.collect()
-        
-        return result
+        # Record processed video and update JSON
+        folder = os.path.dirname(video_file_name)
+        if folder not in processed_videos:
+            processed_videos[folder] = []
+        processed_videos[folder].append(video_file_name)
+
+        return (video_file_name, description, final_description)
     except Exception as e:
         print(f"Exception processing video {video_file_name}: {e}")
-        return video_file_name, "Exception occurred", "Bad file"
+        return (video_file_name, "Exception occurred", "Bad file")
 
-def get_random_video_files(video_dir, limit_per_folder=10, total_limit=200, json_log='selected_videos.json'):
-    # Load previously selected files to avoid duplicates
-    if os.path.exists(json_log):
-        with open(json_log, 'r') as f:
-            try:
-                selected_videos = json.load(f)
-            except (json.JSONDecodeError, ValueError):
-                selected_videos = {}
-    else:
-        selected_videos = {}
+def get_random_video_files(video_dir, total_limit, max_directory_usage, directory_usage):
+    global selected_videos, processed_videos
 
-    # Signal handler to save selected videos on interrupt
-    def signal_handler(sig, frame):
-        print('Interrupted! Saving progress to JSON file...')
-        save_selected_videos(selected_videos, json_log)
-        sys.exit(0)
-
-    # Set the signal handler for interrupt signal
-    signal.signal(signal.SIGINT, signal_handler)
-
-    us_region_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
-    if not us_region_dirs:
-        return []
+    all_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
+    random.shuffle(all_dirs)  # Shuffle to ensure a random start
 
     video_files = []
-    total_count = 0
 
-    for random_dir in us_region_dirs:
-        subdirs = [os.path.join(random_dir, d) for d in os.listdir(random_dir) if os.path.isdir(os.path.join(random_dir, d))]
-        for random_subdir in subdirs:
-            if total_count >= total_limit:
-                break
+    # Iterate over directories to maximize the spread of directory usage
+    for dir_path in all_dirs:
+        if len(video_files) >= total_limit:
+            break  # Stop if the desired number of files has been selected
 
-            files = [os.path.join(random_subdir, f) for f in os.listdir(random_subdir) if f.endswith('.ts') or f.endswith('.mp4')]
-            if not files:
-                continue
+        if directory_usage.get(dir_path, 0) >= max_directory_usage:
+            continue  # Skip this directory if its usage limit is reached
 
-            # Initialize the count if this directory hasn't been processed before
-            if random_subdir not in selected_videos:
-                selected_videos[random_subdir] = []
+        # Get all subdirectories and shuffle them to randomize access
+        subdirs = [os.path.join(dir_path, d) for d in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, d))]
+        random.shuffle(subdirs)
 
-            # Pick up to limit_per_folder new files from this subdir
-            new_files = [f for f in files if f not in selected_videos[random_subdir]]
-            if new_files:
-                to_select = min(limit_per_folder - len(selected_videos[random_subdir]), len(new_files))
-                selected = random.sample(new_files, to_select)
-                selected_videos[random_subdir].extend(selected)
-                video_files.extend(selected)
-                total_count += len(selected)
-                if total_count >= total_limit:
-                    break
+        selected_from_this_directory = False
+        for subdir in subdirs:
+            if selected_from_this_directory:
+                break  # Break if we have already selected a file from this directory
 
-        if total_count >= total_limit:
-            break
+            files = [os.path.join(subdir, f) for f in os.listdir(subdir) if (f.endswith('.ts') or f.endswith('.mp4')) and f not in processed_videos.get(subdir, []) and f not in selected_videos.get(subdir, [])]
+            random.shuffle(files)  # Shuffle files to prevent bias
 
-    # Save the selected videos to JSON file to avoid duplicates in future runs
-    save_selected_videos(selected_videos, json_log)
+            for file in files:
+                if file not in selected_videos.get(subdir, []):
+                    video_files.append(file)
+                    selected_videos.setdefault(subdir, []).append(file)
+                    directory_usage[dir_path] = directory_usage.get(dir_path, 0) + 1
+                    selected_from_this_directory = True
+                    break  # Break after selecting one file to ensure we only select one per directory
 
-    return video_files
+        if selected_from_this_directory:
+            # Increment directory usage only if a file was actually selected
+            if dir_path not in directory_usage:
+                directory_usage[dir_path] = 1
+            else:
+                directory_usage[dir_path] += 1
+
+    return video_files, directory_usage
 
 def main():
-    global processed_ids
+    global selected_videos, processed_videos
     load_dotenv()
     GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
-    
+
     if not GOOGLE_API_KEY:
         print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
         return
@@ -171,10 +170,23 @@ def main():
 
     video_dir = "/nfsshare/vidarchives/us_region"
     save_dir = "/nfsshare/james_storage/valid_dataset/test2"
+    json_log = 'selected_videos.json'
+
+    # Load previously selected and processed videos and directory usage
+    previously_selected_videos, previously_processed_videos, directory_usage = load_previously_selected_videos(json_log)
+    selected_videos.update(previously_selected_videos)
+    processed_videos.update(previously_processed_videos)
+
+    # Signal handler to save selected videos on interrupt
+    def signal_handler(sig, frame):
+        print('Interrupted! Saving progress to JSON file...')
+        save_selected_videos(json_log, directory_usage)
+        sys.exit(0)
+
+    signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit_per_folder=10, total_limit=100)
-
+    video_files, directory_usage = get_random_video_files(video_dir, 20, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     with ThreadPoolExecutor(max_workers=1) as executor:
@@ -202,6 +214,9 @@ def main():
                     f.write(f'File: {video_file}\n')
                     f.write(f'Description: Exception occurred\n')
                     f.write(f'Final Description: {exc}\n\n')
+
+    # Save the selected and processed videos to JSON file to avoid duplicates in future runs
+    save_selected_videos(json_log, directory_usage)
 
 if __name__ == "__main__":
     main()
