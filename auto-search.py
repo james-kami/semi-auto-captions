@@ -61,7 +61,7 @@ def generate_description(video_file):
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
-        description = response.text
+        description = response.text.replace('\n', ' ')  # Replacing newlines with space
         print(description)
 
         enhanced_prompt = (
@@ -72,7 +72,7 @@ def generate_description(video_file):
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
-        final_description = response.text
+        final_description = response.text.replace('\n', '')  # Replacing newlines with space
         print(final_description)
         return description, final_description
     except Exception as e:
@@ -158,7 +158,7 @@ def main():
     genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/valid_dataset/test2"
+    save_dir = "/nfsshare/james_storage/test2"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage
@@ -175,34 +175,32 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 2, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
+    video_results = []
     with ThreadPoolExecutor(max_workers=1) as executor:
         future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
             try:
-                data = future.result()
-                if data:
-                    # Open the file in append mode for each result and write it immediately
-                    with open('video_info.txt', 'a') as f:
-                        video_file_name, description, final_description = data
-                        if description and final_description:
-                            f.write(f'File: {video_file_name}\n')
-                            f.write(f'Description: {description}\n')
-                            f.write(f'Final Description: {final_description}\n\n')
-                        else:
-                            f.write(f'File: {video_file_name}\n')
-                            f.write('Description: Error generating description or processing video.\n')
-                            f.write('Final Description: Bad file\n\n')
+                video_file_name, description, final_description = future.result()
+                video_results.append({
+                    "file": video_file_name,
+                    "description": description,
+                    "final_description": final_description
+                })
             except Exception as exc:
                 print(f'{video_file} generated an exception: {exc}')
-                # Handle exceptions by writing them immediately to the file as well
-                with open('video_info.txt', 'a') as f:
-                    f.write(f'File: {video_file}\n')
-                    f.write(f'Description: Exception occurred\n')
-                    f.write(f'Final Description: {exc}\n\n')
+                video_results.append({
+                    "file": video_file,
+                    "description": "Exception occurred",
+                    "final_description": str(exc)
+                })
+
+    # Save the video results to a JSON file
+    with open('video_info.json', 'w') as f:
+        json.dump(video_results, f, indent=4)
 
     # Save the selected and processed videos to JSON file to avoid duplicates in future runs
     save_selected_videos(json_log, directory_usage)
