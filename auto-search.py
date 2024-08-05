@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
-selected_videos = {}  # Global variable to keep track of selected videos
-processed_videos = {}  # Global variable to keep track of processed videos
+selected_videos = {}  # keep track of selected videos
+processed_videos = {}  # keep track of processed videos
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
@@ -25,7 +25,6 @@ def load_previously_selected_videos(json_log):
 
 def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
-        # JSON now only includes 'processed' videos and 'directory_usage', not 'selected'
         json.dump({'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
 
 def upload_and_process_video(video_file_name):
@@ -61,7 +60,7 @@ def generate_description(video_file):
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
-        description = response.text.replace('\n', ' ')  # Replacing newlines with space
+        description = response.text.replace('\n', ' ')
         print(description)
 
         enhanced_prompt = (
@@ -72,7 +71,7 @@ def generate_description(video_file):
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
-        final_description = response.text.replace('\n', '')  # Replacing newlines with space
+        final_description = response.text.replace('\n', '')
         print(final_description)
         return description, final_description
     except Exception as e:
@@ -168,14 +167,14 @@ def main():
 
     # Signal handler to save selected videos on interrupt
     def signal_handler(sig, frame):
-        print('Interrupted! Saving progress to JSON file...')
+        print('Interrupted! Must run CLTR+C **2 times** to save progress to JSON file...')
         save_selected_videos(json_log, directory_usage)
         sys.exit(0)
 
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 2, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 2, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     video_results = []
@@ -198,11 +197,11 @@ def main():
                     "final_description": str(exc)
                 })
 
-    # Save the video results to a JSON file
+    # Save results to JSON
     with open('video_info.json', 'w') as f:
         json.dump(video_results, f, indent=4)
 
-    # Save the selected and processed videos to JSON file to avoid duplicates in future runs
+    # save and track processed videos to JSON to avoid future duplicates
     save_selected_videos(json_log, directory_usage)
 
 if __name__ == "__main__":
