@@ -53,7 +53,7 @@ def generate_description(video_file):
 
         enhanced_prompt = (
             "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
-            "IMPORTANT: VIDEO MUST NOT BE STILL UPSIDE-DOWN, OR BLACK SCREEN. "
+            "IMPORTANT: VIDEO MUST NOT BE STILL, UPSIDE-DOWN, OR BLACK SCREEN. "
             "If the video description mentions people or pets performing actions, respond with 'positive'. "
             "If the video is black, grainy, upside-down, or does not mention people or pets, respond with 'negative'."
         )
@@ -98,7 +98,7 @@ def process_video(video_file_name, save_dir):
         print(f"Exception processing video {video_file_name}: {e}")
         return video_file_name, "Exception occurred", "Bad file"
 
-def get_random_video_files(video_dir, limit_per_folder=10, json_log='selected_videos.json'):
+def get_random_video_files(video_dir, limit_per_folder=10, total_limit=200, json_log='selected_videos.json'):
     # Load previously selected files to avoid duplicates
     if os.path.exists(json_log):
         with open(json_log, 'r') as f:
@@ -123,10 +123,14 @@ def get_random_video_files(video_dir, limit_per_folder=10, json_log='selected_vi
         return []
 
     video_files = []
+    total_count = 0
 
     for random_dir in us_region_dirs:
         subdirs = [os.path.join(random_dir, d) for d in os.listdir(random_dir) if os.path.isdir(os.path.join(random_dir, d))]
         for random_subdir in subdirs:
+            if total_count >= total_limit:
+                break
+
             files = [os.path.join(random_subdir, f) for f in os.listdir(random_subdir) if f.endswith('.ts') or f.endswith('.mp4')]
             if not files:
                 continue
@@ -138,9 +142,16 @@ def get_random_video_files(video_dir, limit_per_folder=10, json_log='selected_vi
             # Pick up to limit_per_folder new files from this subdir
             new_files = [f for f in files if f not in selected_videos[random_subdir]]
             if new_files:
-                selected = random.sample(new_files, min(limit_per_folder - len(selected_videos[random_subdir]), len(new_files)))
+                to_select = min(limit_per_folder - len(selected_videos[random_subdir]), len(new_files))
+                selected = random.sample(new_files, to_select)
                 selected_videos[random_subdir].extend(selected)
                 video_files.extend(selected)
+                total_count += len(selected)
+                if total_count >= total_limit:
+                    break
+
+        if total_count >= total_limit:
+            break
 
     # Save the selected videos to JSON file to avoid duplicates in future runs
     save_selected_videos(selected_videos, json_log)
@@ -159,10 +170,10 @@ def main():
     genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/valid_dataset/input-ts"
+    save_dir = "/nfsshare/james_storage/valid_dataset/test2"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=200)
+    video_files = get_random_video_files(video_dir, limit_per_folder=10, total_limit=100)
 
     print(f"Found {len(video_files)} video files.")
 
