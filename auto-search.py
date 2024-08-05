@@ -3,133 +3,53 @@ import gc
 import os
 import random
 import shutil
+import json
+import signal
+import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from queue import Queue
-from threading import Semaphore, Thread
 from dotenv import load_dotenv
 
 import google.generativeai as genai
 
-#random.seed(1234)
+def save_selected_videos(selected_videos, json_log):
+    with open(json_log, 'w') as f:
+        json.dump(selected_videos, f, indent=4)
 
-# Load API keys from .env file
-load_dotenv()
-
-# List of API keys
-API_KEYS = [
-    os.getenv("API_KEY_1"),
-    os.getenv("API_KEY_2"),
-    os.getenv("API_KEY_3"),
-    os.getenv("API_KEY_4"),
-    os.getenv("API_KEY_5"),
-    # Add more keys as needed
-]
-NUM_KEYS = len(API_KEYS)
-
-def get_api_key(index):
-    return API_KEYS[index % NUM_KEYS]
-
-def upload_video(video_file_name, api_key_index, queue, semaphore):
-    max_retries = 1
-    api_key = get_api_key(api_key_index)
-    genai.configure(api_key=api_key)
-
-    semaphore.acquire()
-    try:
-        for attempt in range(max_retries):
-            try:
-                print(f"Attempting to upload {video_file_name}, Attempt {attempt + 1}")
-                video_file = genai.upload_file(path=video_file_name)
-                print(f"Completed upload: {video_file.uri}")
-                queue.put((video_file, api_key_index, video_file_name))
-                return  # Successfully uploaded and enqueued
-            except Exception as e:
-                print(f"Error uploading video {video_file_name} on Attempt {attempt + 1}: {e}")
-                if attempt < max_retries - 1:
-                    print("Retrying upload...")
-                    time.sleep(1)
-                else:
-                    print("Max retries reached. Skipping file.")
-    finally:
-        semaphore.release()
-        print(f"Semaphore released for {video_file_name}")
-
-def process_video(queue, save_dir):
-    while True:
-        video_file = None
-        api_key_index = None
-        original_file_path = None
-
-        item = queue.get()
-        if item is None:
-            print("Received None, terminating the processing thread.")
-            queue.task_done()
-            break  # Stop processing if None is received as a signal to terminate
-
-        video_file, api_key_index, original_file_path = item
-        print(f"Processing started for {original_file_path}")
-
+def upload_and_process_video(video_file_name):
+    max_retries = 3
+    for attempt in range(max_retries):
         try:
-            # Check the initial state of the video_file
-            if not hasattr(video_file, 'state') or not hasattr(video_file.state, 'name'):
-                raise AttributeError("Video file object is missing 'state' attributes.")
+            print(f"Uploading file {video_file_name}...")
+            video_file = genai.upload_file(path=video_file_name)
+            print(f"Completed upload: {video_file.uri}")
 
-            # Wait for video processing to complete
             while video_file.state.name == "PROCESSING":
-                print(f'Waiting for video {video_file.uri} to be processed...')
-                time.sleep(1)
-                video_file = genai.get_file(video_file.name)  # Re-fetch the video file status
+                print(f'Waiting for video {video_file_name} to be processed.')
+                time.sleep(10)
+                video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
-                raise ValueError(f"Video processing failed: {video_file.uri}")
+                raise ValueError(f"Video processing failed: {video_file_name}")
 
-            print(f'Video processing completed: {video_file.uri}')
-
-            # Generate description
-            description, final_description = generate_description(video_file, api_key_index)
-            print(f"Generated descriptions: Brief - {description}, Final - {final_description}")
-
-            if final_description and "positive" in final_description.lower():
-                save_path = os.path.join(save_dir, os.path.basename(original_file_path))
-                shutil.copy(original_file_path, save_path)
-                print(f'Video saved to: {save_path}')
-
-            # Write result to file
-            with open('video_info.txt', 'a') as f:
-                f.write(f'File: {original_file_path}\n')
-                f.write(f'Description: {description}\n')
-                f.write(f'Final Description: {final_description}\n\n')
-
-            # Attempt to delete the file from the server
-            try:
-                genai.delete_file(video_file.name)
-                print(f'Deleted file: {video_file.uri}')
-            except Exception as e:
-                print(f"Failed to delete file {video_file.uri}: {e}")
-
+            print(f'Video processing complete: {video_file.uri}')
+            return video_file
         except Exception as e:
-            print(f"Exception during processing video {original_file_path}: {e}")
+            print(f"Error uploading/processing video {video_file_name}: {e}")
+            if attempt < max_retries - 1:
+                print("Retrying...")
+                time.sleep(5)
+            else:
+                print("Max retries reached. Skipping file.")
+                return None
 
-        finally:
-            queue.task_done()  # Signal that this task is complete
-            print(f"Task completed for {original_file_path}")
-            del video_file, description, final_description  # Clean up to avoid memory leaks
-            gc.collect()  # Collect garbage if there's any unreferenced data
-
-
-
-
-def generate_description(video_file, api_key_index):
+def generate_description(video_file):
     try:
-        api_key = get_api_key(api_key_index)
-        genai.configure(api_key=api_key)
-
         prompt = "Describe this video in detail."
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
-        print(f"Making LLM inference request for {video_file.name} using API key: {api_key}...")
-        response = model.generate_content([prompt, video_file], request_options={"timeout": 100})
+        print(f"Making LLM inference request for {video_file.name}...")
+        response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
         description = response.text
-        #print(description)
+        print(description)
 
         enhanced_prompt = (
             "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
@@ -138,7 +58,7 @@ def generate_description(video_file, api_key_index):
             "If the video is black, grainy, upside-down, or does not mention people or pets, respond with 'negative'."
         )
 
-        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 100})
+        response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text
         print(final_description)
         return description, final_description
@@ -146,56 +66,131 @@ def generate_description(video_file, api_key_index):
         print(f"Error generating description for video {video_file.name}: {e}")
         return None, None
 
-def get_random_video_files(video_dir, limit):
+def process_video(video_file_name, save_dir):
+    try:
+        # Upload and process video
+        video_file = upload_and_process_video(video_file_name)
+        if not video_file:
+            return video_file_name, "Error during upload/processing", "Bad file"
+
+        # Generate description
+        description, final_description = generate_description(video_file)
+        if not final_description:
+            return video_file_name, description, "Error during description generation"
+
+        # Save valid video
+        if "positive" in final_description.lower():
+            save_path = os.path.join(save_dir, os.path.basename(video_file_name))
+            shutil.copy(video_file_name, save_path)
+            print(f'Saved video to {save_path}')
+
+        result = (video_file_name, description, final_description)
+        
+        # Delete the file from the server
+        genai.delete_file(video_file.name)
+        print(f'Deleted file {video_file.uri}')
+        
+        del video_file, description, final_description
+        gc.collect()
+        
+        return result
+    except Exception as e:
+        print(f"Exception processing video {video_file_name}: {e}")
+        return video_file_name, "Exception occurred", "Bad file"
+
+def get_random_video_files(video_dir, limit_per_folder=10, json_log='selected_videos.json'):
+    # Load previously selected files to avoid duplicates
+    if os.path.exists(json_log):
+        with open(json_log, 'r') as f:
+            try:
+                selected_videos = json.load(f)
+            except (json.JSONDecodeError, ValueError):
+                selected_videos = {}
+    else:
+        selected_videos = {}
+
+    # Signal handler to save selected videos on interrupt
+    def signal_handler(sig, frame):
+        print('Interrupted! Saving progress to JSON file...')
+        save_selected_videos(selected_videos, json_log)
+        sys.exit(0)
+
+    # Set the signal handler for interrupt signal
+    signal.signal(signal.SIGINT, signal_handler)
+
     us_region_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
     if not us_region_dirs:
         return []
 
     video_files = []
-    for _ in range(limit):
-        random_dir = random.choice(us_region_dirs)
+
+    for random_dir in us_region_dirs:
         subdirs = [os.path.join(random_dir, d) for d in os.listdir(random_dir) if os.path.isdir(os.path.join(random_dir, d))]
-        if not subdirs:
-            continue
+        for random_subdir in subdirs:
+            files = [os.path.join(random_subdir, f) for f in os.listdir(random_subdir) if f.endswith('.ts') or f.endswith('.mp4')]
+            if not files:
+                continue
 
-        random_subdir = random.choice(subdirs)
-        files = [os.path.join(random_subdir, f) for f in os.listdir(random_subdir) if f.endswith('.ts') or f.endswith('.mp4')]
-        if not files:
-            continue
+            # Initialize the count if this directory hasn't been processed before
+            if random_subdir not in selected_videos:
+                selected_videos[random_subdir] = []
 
-        random_file = random.choice(files)
-        video_files.append(random_file)
+            # Pick up to limit_per_folder new files from this subdir
+            new_files = [f for f in files if f not in selected_videos[random_subdir]]
+            if new_files:
+                selected = random.sample(new_files, min(limit_per_folder - len(selected_videos[random_subdir]), len(new_files)))
+                selected_videos[random_subdir].extend(selected)
+                video_files.extend(selected)
+
+    # Save the selected videos to JSON file to avoid duplicates in future runs
+    save_selected_videos(selected_videos, json_log)
 
     return video_files
 
 def main():
+    global processed_ids
+    load_dotenv()
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+    
+    if not GOOGLE_API_KEY:
+        print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
+        return
+
+    genai.configure(api_key=GOOGLE_API_KEY)
+
     video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/test2"
+    save_dir = "/nfsshare/james_storage/valid_dataset/input-ts"
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files = get_random_video_files(video_dir, limit=16)
+    video_files = get_random_video_files(video_dir, limit=200)
 
     print(f"Found {len(video_files)} video files.")
 
-    # Queue for video processing
-    queue = Queue()
-
-    # Semaphore to limit concurrent uploads and processing
-    semaphore = Semaphore(4)
-
-    # Start processing thread
-    for _ in range(4):  # Number of processing threads
-        worker = Thread(target=process_video, args=(queue, save_dir))
-        worker.daemon = True
-        worker.start()
-
-    # Use ThreadPoolExecutor to upload videos
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        for index, video_file in enumerate(video_files):
-            semaphore.acquire()
-            executor.submit(upload_video, video_file, index % NUM_KEYS, queue, semaphore)
-
-    queue.join()
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
+        for future in as_completed(future_to_video):
+            video_file = future_to_video[future]
+            try:
+                data = future.result()
+                if data:
+                    # Open the file in append mode for each result and write it immediately
+                    with open('video_info.txt', 'a') as f:
+                        video_file_name, description, final_description = data
+                        if description and final_description:
+                            f.write(f'File: {video_file_name}\n')
+                            f.write(f'Description: {description}\n')
+                            f.write(f'Final Description: {final_description}\n\n')
+                        else:
+                            f.write(f'File: {video_file_name}\n')
+                            f.write('Description: Error generating description or processing video.\n')
+                            f.write('Final Description: Bad file\n\n')
+            except Exception as exc:
+                print(f'{video_file} generated an exception: {exc}')
+                # Handle exceptions by writing them immediately to the file as well
+                with open('video_info.txt', 'a') as f:
+                    f.write(f'File: {video_file}\n')
+                    f.write(f'Description: Exception occurred\n')
+                    f.write(f'Final Description: {exc}\n\n')
 
 if __name__ == "__main__":
     main()
