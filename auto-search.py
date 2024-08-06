@@ -43,7 +43,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(.8)
+                time.sleep(.5)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -72,8 +72,8 @@ def generate_description(video_file):
         enhanced_prompt = (
             "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
             "IMPORTANT: VIDEO MUST NOT BE STILL, UPSIDE-DOWN, OR BLACK SCREEN. "
-            "If the video description mentions people or pets performing actions, respond with 'positive'. "
-            "If the video is black, grainy, upside-down, or does not mention people or pets, respond with 'negative'."
+            "If the video description mentions people or pets performing significant actions, respond with 'positive'. "
+            "If the video is black, grainy, upside-down, or does not mention significant actions with people or pets, respond with 'negative'."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
@@ -151,6 +151,7 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
     return video_files, directory_usage
 
 def main():
+    start_time = time.time()
     global selected_videos, processed_videos
     load_dotenv()
 
@@ -179,7 +180,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # run below will find 100 files from devices/cameras but not more than 4 files from each device/camera
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 4, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 200, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
@@ -222,6 +223,9 @@ def main():
 
     # Save the selected and processed videos to JSON file to avoid duplicates in future runs
     save_selected_videos(json_log, directory_usage)
+
+    end_time = time.time()  # End timing
+    print(f"Execution time: {end_time - start_time:.2f} seconds")
 
 if __name__ == "__main__":
     main()
