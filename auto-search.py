@@ -7,6 +7,8 @@ import signal
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
+from threading import Lock
+from itertools import cycle
 
 import google.generativeai as genai
 
@@ -27,7 +29,8 @@ def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
         json.dump({'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
 
-def upload_and_process_video(video_file_name):
+def upload_and_process_video(video_file_name, api_key):
+    genai.configure(api_key=api_key)  # Configure API key
     max_retries = 3
     for attempt in range(max_retries):
         try:
@@ -78,10 +81,10 @@ def generate_description(video_file):
         print(f"Error generating description for video {video_file.name}: {e}")
         return None, None
 
-def process_video(video_file_name, save_dir):
+def process_video(video_file_name, save_dir, api_key):
     try:
-        # Upload and process video
-        video_file = upload_and_process_video(video_file_name)
+        # Ensure api_key is passed correctly here
+        video_file = upload_and_process_video(video_file_name, api_key)
         if not video_file:
             return video_file_name, "Error during upload/processing", "Bad file"
 
@@ -147,13 +150,12 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
 def main():
     global selected_videos, processed_videos
     load_dotenv()
-    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 
-    if not GOOGLE_API_KEY:
-        print("No GOOGLE_API_KEY found. Please set the API key in the environment or in a .env file.")
+    # Load multiple API keys
+    api_keys = [os.getenv(f'API_KEY_{i}') for i in range(1, 6)]
+    if not any(api_keys):
+        print("No API keys found. Please set the API keys in the environment.")
         return
-
-    genai.configure(api_key=GOOGLE_API_KEY)
 
     video_dir = "/nfsshare/vidarchives/us_region"
     save_dir = "/nfsshare/james_storage/test2"
@@ -184,8 +186,15 @@ def main():
         existing_results = []  # If no file exists or error in reading, start with an empty list
 
     video_results = existing_results  # Start with existing data
-    with ThreadPoolExecutor(max_workers=1) as executor:
-        future_to_video = {executor.submit(process_video, video_file, save_dir): video_file for video_file in video_files}
+    with ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+        future_to_video = {}
+        api_key_cycle = cycle(api_keys)  # Create a cycle of API keys for round-robin usage
+
+        for video_file in video_files:
+            api_key = next(api_key_cycle)  # Get the next API key in the cycle
+            future = executor.submit(process_video, video_file, save_dir, api_key)
+            future_to_video[future] = video_file
+
         for future in as_completed(future_to_video):
             video_file = future_to_video[future]
             try:
