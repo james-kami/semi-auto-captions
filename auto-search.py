@@ -14,6 +14,7 @@ import google.generativeai as genai
 
 selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
+end_time = 0
 
 #os.remove("/home/james/semi-auto-captions/video_info.json")
 #os.remove("/home/james/semi-auto-captions/selected_videos.json")
@@ -27,6 +28,27 @@ def load_previously_selected_videos(json_log):
             except (json.JSONDecodeError, ValueError):
                 return {}, {}, {}
     return {}, {}, {}
+
+def save_run_time(json_file, start_time, end_time, interrupted=False):
+    run_time_data = {
+        "start_time": start_time,
+        "end_time": end_time,
+        "elapsed_time": end_time - start_time,
+        "interrupted": interrupted
+    }
+    try:
+        with open(json_file, 'r') as file:
+            data = json.load(file)
+    except (IOError, ValueError):
+        data = []  # Initialize as empty list if file doesn't exist or error occurs
+
+    data.append(run_time_data)
+    with open(json_file, 'w') as file:
+        json.dump(data, file, indent=4)
+
+def save_video_info(json_file, video_results):
+    with open(json_file, 'w') as f:
+        json.dump(video_results, f, indent=4)
 
 def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
@@ -43,7 +65,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(.5)
+                time.sleep(1.5)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -55,7 +77,7 @@ def upload_and_process_video(video_file_name, api_key):
             print(f"Error uploading/processing video {video_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(.5)
+                time.sleep(1.5)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -151,8 +173,8 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
     return video_files, directory_usage
 
 def main():
+    global selected_videos, processed_videos, end_time
     start_time = time.time()
-    global selected_videos, processed_videos
     load_dotenv()
 
     # Load multiple API keys
@@ -172,15 +194,19 @@ def main():
 
     # Signal handler to save selected videos on interrupt
     def signal_handler(sig, frame):
-        print('Interrupted! Must run CLTR+C **2 TIMES** to stop program and save progress to JSON file...')
-        save_selected_videos(json_log, directory_usage)
+        global end_time
+        end_time = time.time()  # End timing
+        print('Interrupted! Saving progress and preparing to exit...')
+        save_selected_videos('selected_videos.json', directory_usage)  # Save progress of selected videos
+        save_video_info('video_info.json', video_results)  # Save progress of video info
+        save_run_time('script_run_times.json', start_time, end_time, interrupted=True)
         sys.exit(0)
 
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
     # run below will find 100 files from devices/cameras but not more than 4 files from each device/camera
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 4, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 10, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
@@ -223,8 +249,8 @@ def main():
 
     # Save the selected and processed videos to JSON file to avoid duplicates in future runs
     save_selected_videos(json_log, directory_usage)
-
-    end_time = time.time()  # End timing
+    end_time = time.time()
+    save_run_time('script_run_times.json', start_time, end_time, interrupted=False)
     print(f"Execution time: {end_time - start_time:.2f} seconds")
 
 if __name__ == "__main__":

@@ -1,157 +1,46 @@
 {
     "processed": {
-        "/nfsshare/vidarchives/us_region/TNPXGAO-623485-RLREW/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAO-623485-RLREW/20240528/2024Y05M28D08H39M51S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE/20240528/2024Y05M28D06H02M54S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPWSAA-613317-HSYHH/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPWSAA-613317-HSYHH/20240528/2024Y05M28D10H02M13S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG/20240528/2024Y05M28D15H29M34S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPXGAX-114229-WDKWJ/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAX-114229-WDKWJ/20240528/2024Y05M28D17H23M13S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM/20240528/2024Y05M28D22H08M34S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-839513-LWYWS/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-839513-LWYWS/20240528/2024Y05M28D12H44M25S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM/20240528/2024Y05M28D14H38M58S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528/2024Y05M28D04H15M39S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW/20240528/2024Y05M28D22H42M18S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-813449-JYBBC/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-813449-JYBBC/20240528/2024Y05M28D04H44M46S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP/20240528/2024Y05M28D22H07M07S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPXGAW-872903-XMMXG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAW-872903-XMMXG/20240528/2024Y05M28D14H43M10S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR/20240528/2024Y05M28D11H54M50S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPUSAH-663377-SSJJY/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAH-663377-SSJJY/20240528/2024Y05M28D21H58M20S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG/20240528/2024Y05M28D10H03M48S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPUSAC-242391-CUTJT/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAC-242391-CUTJT/20240528/2024Y05M28D01H51M22S00.30.ts",
-            "/nfsshare/vidarchives/us_region/TNPUSAC-242391-CUTJT/20240528/2024Y05M28D09H09M46S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR/20240528/2024Y05M28D20H53M39S00.30.ts"
         ],
-        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D04H07M56S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK/20240528/2024Y05M28D10H40M48S00.30.ts",
-            "/nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK/20240528/2024Y05M28D18H44M10S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAQ-218173-TGUCY/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAQ-218173-TGUCY/20240528/2024Y05M28D01H36M19S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528/2024Y05M28D11H22M10S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAY-352594-MYGFX/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAY-352594-MYGFX/20240528/2024Y05M28D00H53M31S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAS-735933-GJRGJ/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAS-735933-GJRGJ/20240528/2024Y05M28D00H47M12S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAP-855093-FHTFD/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAP-855093-FHTFD/20240528/2024Y05M28D11H35M39S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAJ-522209-JGSBL/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAJ-522209-JGSBL/20240528/2024Y05M28D11H46M31S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-206830-STCDL/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-206830-STCDL/20240528/2024Y05M28D22H41M46S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAT-043918-FXNFG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAT-043918-FXNFG/20240528/2024Y05M28D06H46M08S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAR-206649-LFNMT/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAR-206649-LFNMT/20240528/2024Y05M28D04H21M26S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAZ-707853-BGJEG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAZ-707853-BGJEG/20240528/2024Y05M28D04H53M15S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGBA-600741-TREML/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGBA-600741-TREML/20240528/2024Y05M28D21H20M44S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAT-892437-XCFVW/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAT-892437-XCFVW/20240528/2024Y05M28D17H38M52S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAO-494026-LDDRK/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAO-494026-LDDRK/20240528/2024Y05M28D20H07M03S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAP-765661-TRPGW/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAP-765661-TRPGW/20240528/2024Y05M28D13H58M56S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAX-029094-NRGGW/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAX-029094-NRGGW/20240528/2024Y05M28D20H49M47S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAC-413766-ZMMYG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAC-413766-ZMMYG/20240528/2024Y05M28D02H45M58S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAM-878703-PFTPH/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAM-878703-PFTPH/20240528/2024Y05M28D07H18M51S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAN-476106-DCGNP/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAN-476106-DCGNP/20240528/2024Y05M28D02H04M34S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAC-609723-FBTFN/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAC-609723-FBTFN/20240528/2024Y05M28D14H03M01S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAP-542475-YWUBK/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAP-542475-YWUBK/20240528/2024Y05M28D18H30M24S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGBA-383347-TMVNG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGBA-383347-TMVNG/20240528/2024Y05M28D22H36M37S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAP-398999-YHGHY/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAP-398999-YHGHY/20240528/2024Y05M28D02H28M39S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPWSAA-598873-DVSKM/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPWSAA-598873-DVSKM/20240528/2024Y05M28D20H58M17S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-633052-GXGKX/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-633052-GXGKX/20240528/2024Y05M29D00H20M27S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGBA-541214-UVVHX/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGBA-541214-UVVHX/20240528/2024Y05M28D14H08M21S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAU-311030-XSNJN/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAU-311030-XSNJN/20240528/2024Y05M28D06H46M59S00.30.ts"
+        "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD/20240528/2024Y05M28D21H14M24S00.30.ts"
         ]
     },
     "directory_usage": {
-        "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAX-114229-WDKWJ": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAH-663377-SSJJY": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAO-623485-RLREW": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAM-320449-YNWMK": 2,
-        "/nfsshare/vidarchives/us_region/TNPWSAA-613317-HSYHH": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAS-735933-GJRGJ": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-839513-LWYWS": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-813449-JYBBC": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAW-872903-XMMXG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-206830-STCDL": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAC-242391-CUTJT": 2,
-        "/nfsshare/vidarchives/us_region/TNPUSAC-060418-EBBWU": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAQ-218173-TGUCY": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAT-043918-FXNFG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAJ-522209-JGSBL": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAY-352594-MYGFX": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAP-855093-FHTFD": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGBA-600741-TREML": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAR-206649-LFNMT": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAO-494026-LDDRK": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAT-892437-XCFVW": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAZ-707853-BGJEG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAP-765661-TRPGW": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAC-609723-FBTFN": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGBA-383347-TMVNG": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-633052-GXGKX": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAX-029094-NRGGW": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAC-413766-ZMMYG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAM-878703-PFTPH": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAN-476106-DCGNP": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGBA-541214-UVVHX": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAP-542475-YWUBK": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAU-311030-XSNJN": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAP-398999-YHGHY": 1,
-        "/nfsshare/vidarchives/us_region/TNPWSAA-598873-DVSKM": 1
+        "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR": 1
     }
 }
