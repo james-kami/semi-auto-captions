@@ -15,6 +15,9 @@ import google.generativeai as genai
 selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 
+#os.remove("/home/james/semi-auto-captions/video_info.json")
+#os.remove("/home/james/semi-auto-captions/selected_videos.json")
+
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
         with open(json_log, 'r') as f:
@@ -40,7 +43,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(4)
+                time.sleep(.8)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -52,7 +55,7 @@ def upload_and_process_video(video_file_name, api_key):
             print(f"Error uploading/processing video {video_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(2)
+                time.sleep(.5)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -168,14 +171,15 @@ def main():
 
     # Signal handler to save selected videos on interrupt
     def signal_handler(sig, frame):
-        print('Interrupted! Must run CLTR+C **2 times** to save progress to JSON file...')
+        print('Interrupted! Must run CLTR+C **2 TIMES** to stop program and save progress to JSON file...')
         save_selected_videos(json_log, directory_usage)
         sys.exit(0)
 
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 4, directory_usage)
+    # run below will find 100 files from devices/cameras but not more than 4 files from each device/camera
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
