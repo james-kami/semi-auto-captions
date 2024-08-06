@@ -180,7 +180,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # run below will find 100 files from devices/cameras but not more than 4 files from each device/camera
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 200, 4, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 4, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
