@@ -16,8 +16,17 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-#os.remove("/home/james/semi-auto-captions/video_info.json")
-#os.remove("/home/james/semi-auto-captions/selected_videos.json")
+files_to_remove = [
+    "/home/ubuntu/semi-auto-captions/video_info.json",
+    "/home/ubuntu/semi-auto-captions/selected_videos.json",
+    "/home/ubuntu/semi-auto-captions/categorization_results.json"
+]
+
+for file_path in files_to_remove:
+    try:
+        os.remove(file_path)
+    except FileNotFoundError:
+        pass  # Ignore the error if the file is not found
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):

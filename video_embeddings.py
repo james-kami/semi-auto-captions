@@ -57,7 +57,7 @@ def process_videos(video_data, category_embeddings, categories_base_path):
     save_results_to_file(results, 'categorization_results.json')
 
 def main():
-    api_key = 'REDACTED'
+    api_key = 'NULL'
     configure_api(api_key)
     video_data = load_json_data('video_info.json')
     category_embeddings = [np.array(emb) for emb in load_json_data('category_embeddings.json')]
