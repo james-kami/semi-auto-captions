@@ -6,11 +6,11 @@ import json
 import signal
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 from threading import Lock
 from itertools import cycle
 
-import google.generativeai as genai
+import google.generativeai as genai # type: ignore
 
 selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
