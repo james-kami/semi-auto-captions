@@ -1,46 +1,19 @@
 {
     "processed": {
-        "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE/20240528/2024Y05M28D06H02M54S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG/20240528/2024Y05M28D15H29M34S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM/20240528/2024Y05M28D22H08M34S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM/20240528/2024Y05M28D14H38M58S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW/20240528/2024Y05M28D22H42M18S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP/20240528/2024Y05M28D22H07M07S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR/20240528/2024Y05M28D11H54M50S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG/20240528/2024Y05M28D10H03M48S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR/20240528/2024Y05M28D20H53M39S00.30.ts"
-        ],
-        "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD/20240528": [
-            "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD/20240528/2024Y05M28D21H14M24S00.30.ts"
+        "/home/ubuntu/videos/not-processed/20240528": [
+            "/home/ubuntu/videos/not-processed/20240528/sample_video3.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video10.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video7.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video9.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video1.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video4.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video8.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video6.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video2.mp4",
+            "/home/ubuntu/videos/not-processed/20240528/sample_video5.mp4"
         ]
     },
     "directory_usage": {
-        "/nfsshare/vidarchives/us_region/TNPXGAW-483348-SSEJE": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-804155-SYRHR": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-764113-KNUPD": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAO-805102-VNBDG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAU-026871-VYPPG": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAX-027180-TKSBM": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAB-117535-UKFBM": 1,
-        "/nfsshare/vidarchives/us_region/TNPUSAP-418870-YYFNW": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAX-766724-TCCVP": 1,
-        "/nfsshare/vidarchives/us_region/TNPXGAO-020976-KULPR": 1
+        "/home/ubuntu/videos/not-processed/20240528": 10
     }
 }

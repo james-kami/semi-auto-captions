@@ -1,8 +1,14 @@
 [
     {
-        "start_time": 1722980572.2806497,
-        "end_time": 1722980634.4558773,
-        "elapsed_time": 62.175227642059326,
+        "start_time": 1723054729.4688113,
+        "end_time": 1723054762.3177183,
+        "elapsed_time": 32.84890699386597,
+        "interrupted": false
+    },
+    {
+        "start_time": 1723054813.7529087,
+        "end_time": 1723054813.7538626,
+        "elapsed_time": 0.0009539127349853516,
         "interrupted": false
     }
 ]

@@ -142,35 +142,32 @@ def process_video(video_file_name, save_dir, api_key):
 def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directory_usage, directory_usage):
     global selected_videos, processed_videos
 
-    all_dirs = [os.path.join(video_dir, d) for d in os.listdir(video_dir) if os.path.isdir(os.path.join(video_dir, d))]
-    random.shuffle(all_dirs)  # Shuffle top level directories to vary the selection order
+    print(f"Scanning directory: {video_dir}")
 
-    video_files = []
+    all_files = []
+    for root, dirs, files in os.walk(video_dir):
+        for file in files:
+            if file.endswith('.ts') or file.endswith('.mp4'):
+                all_files.append(os.path.join(root, file))
 
-    for dir_path in all_dirs:
-        if len(video_files) >= total_limit:
-            break  # Stop if we've reached the total limit for this batch
+    print(f"Found video files: {all_files}")
 
+    selected_files = []
+    random.shuffle(all_files)  # Shuffle all files to randomize selection
+
+    for file in all_files:
+        if len(selected_files) >= total_limit:
+            break
+        dir_path = os.path.dirname(file)
         if directory_usage.get(dir_path, 0) >= max_directory_usage:
-            continue  # Skip this directory if it has reached its usage limit
+            print(f"Skipping directory {dir_path} due to max usage")
+            continue
+        if file not in processed_videos and file not in selected_videos:
+            selected_files.append(file)
+            selected_videos[file] = True
+            directory_usage[dir_path] = directory_usage.get(dir_path, 0) + 1  # Increment usage per directory
 
-        subdirs = [os.path.join(dir_path, d) for d in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, d))]
-        random.shuffle(subdirs)  # Shuffle subdirectories to further randomize file access
-
-        for subdir in subdirs:
-            files = [os.path.join(subdir, f) for f in os.listdir(subdir) if f.endswith('.ts') or f.endswith('.mp4')]
-            random.shuffle(files)  # Shuffle files to randomize selection
-
-            eligible_files = [f for f in files if f not in processed_videos.get(subdir, []) and f not in selected_videos.get(subdir, [])]
-            count_to_select = min(limit_per_folder, len(eligible_files), total_limit - len(video_files))
-
-            if eligible_files and count_to_select > 0:
-                selected_files = random.sample(eligible_files, count_to_select)
-                video_files.extend(selected_files)
-                selected_videos.setdefault(subdir, []).extend(selected_files)
-                directory_usage[dir_path] = directory_usage.get(dir_path, 0) + 1  # Increment usage once per directory accessed per function call
-
-    return video_files, directory_usage
+    return selected_files, directory_usage
 
 def main():
     global selected_videos, processed_videos, end_time
@@ -183,8 +180,8 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsshare/james_storage/test2"
+    video_dir = "/home/ubuntu/videos/not-processed"
+    save_dir = "/home/ubuntu/videos/processed"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage
@@ -205,8 +202,8 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    # run below will find 100 files from devices/cameras but not more than 4 files from each device/camera
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 10, 4, directory_usage)
+    # Find 10 files from devices/cameras but not more than 4 files from each device/camera
+    video_files, directory_usage = get_random_video_files(video_dir, 10, 10, 10, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
