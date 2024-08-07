@@ -180,8 +180,8 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    video_dir = "/home/ubuntu/videos/not-processed"
-    save_dir = "/home/ubuntu/videos/processed"
+    video_dir = "/nfsmain/james_workplace/video_samples"
+    save_dir = "/nfsmain/james_workplace/processed_videos"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage

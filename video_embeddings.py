@@ -33,11 +33,16 @@ def copy_video_to_category(video_path, category_path):
     if not os.path.exists(category_path):
         os.makedirs(category_path)
     shutil.copy(video_path, os.path.join(category_path, os.path.basename(video_path)))
-    #shutil.move(video_path, os.path.join(category_path, os.path.basename(video_path)))
     print(f"Copied {video_path} to {category_path}")
+
+def save_results_to_file(results, output_file):
+    """Save categorization results to a JSON file."""
+    with open(output_file, 'w') as file:
+        json.dump(results, file, indent=4)
 
 def process_videos(video_data, category_embeddings, categories_base_path):
     """Process and categorize videos based on their descriptions."""
+    results = []
     for video in video_data:
         if video['final_description'].strip().lower() == "positive":
             embedding = generate_embedding(video['description'])
@@ -45,13 +50,18 @@ def process_videos(video_data, category_embeddings, categories_base_path):
                 best_category_idx = calculate_similarity(embedding, category_embeddings)
                 target_dir = os.path.join(categories_base_path, f"Category_{best_category_idx + 1}")
                 copy_video_to_category(video['file'], target_dir)
+                results.append({
+                    'video_file': video['file'],
+                    'category': f"Category_{best_category_idx + 1}"
+                })
+    save_results_to_file(results, 'categorization_results.json')
 
 def main():
     api_key = 'REDACTED'
     configure_api(api_key)
     video_data = load_json_data('video_info.json')
     category_embeddings = [np.array(emb) for emb in load_json_data('category_embeddings.json')]
-    categories_base_path = '/home/ubuntu/videos/categories'
+    categories_base_path = '/nfsmain/james_workplace/categorized_videos'
     
     process_videos(video_data, category_embeddings, categories_base_path)
 

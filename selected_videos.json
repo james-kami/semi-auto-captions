@@ -1,19 +1,19 @@
 {
     "processed": {
-        "/home/ubuntu/videos/not-processed/20240528": [
-            "/home/ubuntu/videos/not-processed/20240528/sample_video3.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video10.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video7.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video9.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video1.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video4.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video8.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video6.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video2.mp4",
-            "/home/ubuntu/videos/not-processed/20240528/sample_video5.mp4"
+        "/nfsmain/james_workplace/video_samples/20240528": [
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video10.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video8.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video1.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video2.mp4"
         ]
     },
     "directory_usage": {
-        "/home/ubuntu/videos/not-processed/20240528": 10
+        "/nfsmain/james_workplace/video_samples/20240528": 10
     }
 }
