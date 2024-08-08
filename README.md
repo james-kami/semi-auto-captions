@@ -1,4 +1,4 @@
-
+# ***NOTE***: INFO BELOW IS OUTDATED
 # Video Processing System
 
 ## Overview
