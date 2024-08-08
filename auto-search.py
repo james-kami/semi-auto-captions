@@ -5,6 +5,7 @@ import shutil
 import json
 import signal
 import sys
+import mimetypes
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv # type: ignore
 from threading import Lock
@@ -16,17 +17,18 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-# files_to_remove = [
-#     "/home/ubuntu/semi-auto-captions/video_info.json",
-#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
-#     "/home/ubuntu/semi-auto-captions/categorization_results.json"
-# ]
+files_to_remove = [
+    "/home/ubuntu/semi-auto-captions/video_info.json",
+    "/home/ubuntu/semi-auto-captions/selected_videos.json",
+    "/home/ubuntu/semi-auto-captions/categorization_results.json",
+    "/home/ubuntu/semi-auto-captions/script_run_times.json",
+]
 
-# for file_path in files_to_remove:
-#     try:
-#         os.remove(file_path)
-#     except FileNotFoundError:
-#         pass  # Ignore the error if the file is not found
+for file_path in files_to_remove:
+    try:
+        os.remove(file_path)
+    except FileNotFoundError:
+        pass  # Ignore the error if the file is not found
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
@@ -37,6 +39,11 @@ def load_previously_selected_videos(json_log):
             except (json.JSONDecodeError, ValueError):
                 return {}, {}, {}
     return {}, {}, {}
+
+def get_mime_type(file_path):
+    if file_path.endswith('.ts'):
+        return 'video/MP2T'
+    return mimetypes.guess_type(file_path)[0]
 
 def save_run_time(json_file, start_time, end_time, interrupted=False):
     run_time_data = {
@@ -66,10 +73,11 @@ def save_selected_videos(json_log, directory_usage):
 def upload_and_process_video(video_file_name, api_key):
     genai.configure(api_key=api_key)  # Configure API key
     max_retries = 3
+    mime_type = get_mime_type(video_file_name)  # Get the correct MIME type
     for attempt in range(max_retries):
         try:
-            print(f"Uploading file {video_file_name}...")
-            video_file = genai.upload_file(path=video_file_name)
+            print(f"Uploading file {video_file_name} with MIME type {mime_type}...")
+            video_file = genai.upload_file(path=video_file_name, mime_type=mime_type)
             print(f"Completed upload: {video_file.uri}")
 
             while video_file.state.name == "PROCESSING":
@@ -166,7 +174,7 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
             if file.endswith('.ts') or file.endswith('.mp4'):
                 all_files.append(os.path.join(root, file))
 
-    print(f"Found video files: {all_files}")
+    #print(f"Found video files: {all_files}")
 
     selected_files = []
     random.shuffle(all_files)  # Shuffle all files to randomize selection
@@ -196,8 +204,9 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    video_dir = "/nfsmain/james_workplace/video_samples"
-    save_dir = "/nfsmain/james_workplace/processed_videos"
+    #video_dir = "/nfsmain/james_workplace/video_samples"
+    video_dir = "/nfsshare/vidarchives/us_region"
+    save_dir = "/nfsmain/james_workplace/processed_us_region/ts"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage
@@ -219,7 +228,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 50 files
-    video_files, directory_usage = get_random_video_files(video_dir, 999999, 50, 999999, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 10, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
