@@ -16,17 +16,17 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-files_to_remove = [
-    "/home/ubuntu/semi-auto-captions/video_info.json",
-    "/home/ubuntu/semi-auto-captions/selected_videos.json",
-    "/home/ubuntu/semi-auto-captions/categorization_results.json"
-]
+# files_to_remove = [
+#     "/home/ubuntu/semi-auto-captions/video_info.json",
+#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
+#     "/home/ubuntu/semi-auto-captions/categorization_results.json"
+# ]
 
-for file_path in files_to_remove:
-    try:
-        os.remove(file_path)
-    except FileNotFoundError:
-        pass  # Ignore the error if the file is not found
+# for file_path in files_to_remove:
+#     try:
+#         os.remove(file_path)
+#     except FileNotFoundError:
+#         pass  # Ignore the error if the file is not found
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
@@ -61,7 +61,7 @@ def save_video_info(json_file, video_results):
 
 def save_selected_videos(json_log, directory_usage):
     with open(json_log, 'w') as f:
-        json.dump({'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
+        json.dump({'selected': selected_videos, 'processed': processed_videos, 'directory_usage': directory_usage}, f, indent=4)
 
 def upload_and_process_video(video_file_name, api_key):
     genai.configure(api_key=api_key)  # Configure API key
@@ -74,7 +74,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(1.5)
+                time.sleep(1)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -86,7 +86,7 @@ def upload_and_process_video(video_file_name, api_key):
             print(f"Error uploading/processing video {video_file_name}: {e}")
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(1.5)
+                time.sleep(1)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -116,6 +116,13 @@ def generate_description(video_file):
         return None, None
 
 def process_video(video_file_name, save_dir, api_key):
+    global processed_videos
+
+    # Check if the video has already been processed
+    for folder, files in processed_videos.items():
+        if video_file_name in files:
+            print(f"Skipping already processed video: {video_file_name}")
+            return video_file_name, "Already processed", "Skipped"
     try:
         # Ensure api_key is passed correctly here
         video_file = upload_and_process_video(video_file_name, api_key)
@@ -184,7 +191,7 @@ def main():
     load_dotenv()
 
     # Load multiple API keys
-    api_keys = [os.getenv(f'API_KEY_{i}') for i in range(1, 6)]
+    api_keys = [os.getenv(f'API_KEY_{i}') for i in range(1, 11)]
     if not any(api_keys):
         print("No API keys found. Please set the API keys in the environment.")
         return
@@ -211,8 +218,8 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    # Find 10 files from devices/cameras but not more than 4 files from each device/camera
-    video_files, directory_usage = get_random_video_files(video_dir, 10, 10, 10, directory_usage)
+    # Process max 50 files
+    video_files, directory_usage = get_random_video_files(video_dir, 999999, 50, 999999, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists

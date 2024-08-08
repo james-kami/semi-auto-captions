@@ -1,9 +1,10 @@
 import json
 import os
 import shutil
-import google.generativeai as genai
-from scipy.spatial.distance import cosine
-import numpy as np
+import google.generativeai as genai # type: ignore
+from scipy.spatial.distance import cosine # type: ignore
+import numpy as np # type: ignore
+from dotenv import load_dotenv # type: ignore
 
 def load_json_data(file_path):
     """Load data from a JSON file."""
@@ -57,7 +58,8 @@ def process_videos(video_data, category_embeddings, categories_base_path):
     save_results_to_file(results, 'categorization_results.json')
 
 def main():
-    api_key = 'NULL'
+    load_dotenv()
+    api_key = os.getenv('API_KEY_1')
     configure_api(api_key)
     video_data = load_json_data('video_info.json')
     category_embeddings = [np.array(emb) for emb in load_json_data('category_embeddings.json')]

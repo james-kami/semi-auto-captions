@@ -1,19 +1,56 @@
 {
+    "selected": {
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video8.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_1068eac8009e488998cd4bbfdcbcfc5a.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_6ff0e7ea5b794c9c9e6879e909381a2a.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_b6947dc600d4457580d4e8daa2fc6696.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_770339e9f7784f348e179a7102bf5a60.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_fa63edf207d64331b4986a9a402ee5aa.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_18c0b41f7b1b4a118b95682def1d3d46.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_0baf3682d9bf48818db9c4941af86b8d.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_eb1c210247f8497f8a53f68c9a90c4f2.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_4aee18acfae14521a4409086f1dd2bcf.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_650a320699bc4bfab38bf9a96e3c29d6.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video1.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_cd5d3ae629094ab39e2e3db5cdb17324.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_1c6684a4fc294906a8fc44ee4e7ba0cf.mp4": true,
+        "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4": true,
+        "/nfsmain/james_workplace/video_samples/youtube/clipped_61e651d4fc6a4ba8aab8ab170e42c49e.mp4": true
+    },
     "processed": {
+        "/nfsmain/james_workplace/video_samples/youtube": [
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_18c0b41f7b1b4a118b95682def1d3d46.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_0baf3682d9bf48818db9c4941af86b8d.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_eb1c210247f8497f8a53f68c9a90c4f2.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_b6947dc600d4457580d4e8daa2fc6696.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_6ff0e7ea5b794c9c9e6879e909381a2a.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_650a320699bc4bfab38bf9a96e3c29d6.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_cd5d3ae629094ab39e2e3db5cdb17324.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_4aee18acfae14521a4409086f1dd2bcf.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_1c6684a4fc294906a8fc44ee4e7ba0cf.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_61e651d4fc6a4ba8aab8ab170e42c49e.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_1068eac8009e488998cd4bbfdcbcfc5a.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_770339e9f7784f348e179a7102bf5a60.mp4",
+            "/nfsmain/james_workplace/video_samples/youtube/clipped_fa63edf207d64331b4986a9a402ee5aa.mp4"
+        ],
         "/nfsmain/james_workplace/video_samples/20240528": [
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video2.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video10.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4",
             "/nfsmain/james_workplace/video_samples/20240528/sample_video1.mp4",
             "/nfsmain/james_workplace/video_samples/20240528/sample_video8.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4"
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4",
+            "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4"
         ]
     },
     "directory_usage": {
-        "/nfsmain/james_workplace/video_samples/20240528": 10
+        "/nfsmain/james_workplace/video_samples/20240528": 8,
+        "/nfsmain/james_workplace/video_samples/youtube": 13
     }
 }

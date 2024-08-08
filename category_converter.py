@@ -1,5 +1,7 @@
 import json
+import os
 import google.generativeai as genai # type: ignore
+from dotenv import load_dotenv # type: ignore
 
 def load_categories(file_path):
     """Load category descriptions from a JSON file."""
@@ -35,7 +37,8 @@ def save_embeddings(embeddings, output_file):
         json.dump(embeddings, file, indent=4)
 
 def main():
-    api_key = 'REDACTED'  # Replace with your actual API key
+    load_dotenv()
+    api_key = os.getenv('API_KEY_1')
     categories_file = '24categories.json'
     output_file = 'category_embeddings.json'
     

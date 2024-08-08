@@ -1,7 +1,8 @@
 import os
 import uuid
+import shutil
 from yt_dlp import YoutubeDL
-from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.io.VideoFileClip import VideoFileClip # type: ignore
 
 def generate_random_filename(extension='mp4'):
     return f"{uuid.uuid4().hex}.{extension}"
@@ -10,7 +11,7 @@ def ensure_directory_exists(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-def download_youtube_video(url, download_path='/nfsmain/james_workplace/video_samples/youtube'):
+def download_youtube_video(url, download_path='/tmp'):
     ensure_directory_exists(download_path)
     random_filename = generate_random_filename()
     ydl_opts = {
@@ -41,7 +42,8 @@ def clip_video(video_path, start_time, duration, output_path='/nfsmain/james_wor
         print(f"Error processing {video_path}: {e}")
         return None
 
-def process_videos(urls, download_path='/nfsmain/james_workplace/video_samples/youtube', output_path='/nfsmain/james_workplace/video_samples/youtube'):
+def process_videos(urls, download_path='/tmp', output_path='/nfsmain/james_workplace/video_samples/youtube'):
+    ensure_directory_exists(download_path)
     for url in urls:
         downloaded_path = download_youtube_video(url, download_path)
         if downloaded_path:
@@ -50,19 +52,22 @@ def process_videos(urls, download_path='/nfsmain/james_workplace/video_samples/y
                 print(f'Clipped video saved to {clipped_video_path}')
             else:
                 print(f"Failed to clip video for {url}")
+            os.remove(downloaded_path)  # Remove the original downloaded video
         else:
             print(f"Failed to download video for {url}")
 
 if __name__ == "__main__":
     youtube_urls = [
-        'https://www.youtube.com/watch?v=GCKbsutmHi8',
-        'https://www.youtube.com/watch?v=Wxht49eww7Q',
-        'https://www.youtube.com/watch?v=aBZ00P1rKl0',
-        'https://www.youtube.com/watch?v=Sk2Uk8hExhc',
-        'https://www.youtube.com/watch?v=sq8i8C_W4_o',
-        'https://www.youtube.com/watch?v=IZpsFbtw2Cs',
-        'https://www.youtube.com/watch?v=w1XxSzcGnX0',
-        'https://www.youtube.com/watch?v=xlCKhJBDkVg',
+        'https://www.youtube.com/watch?v=spOZDxBwOEY',
+        'https://www.youtube.com/watch?v=xoGjz_xC2aE',
+        'https://www.youtube.com/watch?v=x3YYBxN775E',
+        'https://www.youtube.com/watch?v=wv1IOnidzQs',
+        'https://www.youtube.com/watch?v=bsLJOFq7l0I'
+        'https://www.youtube.com/watch?v=FPgm5aWg7qM',
+
+
         # Add more URLs as needed
     ]
     process_videos(youtube_urls)
+
+    
