@@ -228,7 +228,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 50 files
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 10, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists

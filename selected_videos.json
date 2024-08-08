@@ -1,56 +1,93 @@
 {
     "selected": {
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video8.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_1068eac8009e488998cd4bbfdcbcfc5a.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_6ff0e7ea5b794c9c9e6879e909381a2a.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_b6947dc600d4457580d4e8daa2fc6696.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_770339e9f7784f348e179a7102bf5a60.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_fa63edf207d64331b4986a9a402ee5aa.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_18c0b41f7b1b4a118b95682def1d3d46.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_0baf3682d9bf48818db9c4941af86b8d.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_eb1c210247f8497f8a53f68c9a90c4f2.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_4aee18acfae14521a4409086f1dd2bcf.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_650a320699bc4bfab38bf9a96e3c29d6.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video1.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_cd5d3ae629094ab39e2e3db5cdb17324.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_1c6684a4fc294906a8fc44ee4e7ba0cf.mp4": true,
-        "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4": true,
-        "/nfsmain/james_workplace/video_samples/youtube/clipped_61e651d4fc6a4ba8aab8ab170e42c49e.mp4": true
+        "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D00H40M29S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528/2024Y05M28D00H15M47S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528/2024Y05M28D08H15M35S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528/2024Y05M28D06H58M24S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPUSAH-248612-CHRNL/20240528/2024Y05M28D03H42M38S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528/2024Y05M28D09H15M02S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528/2024Y05M28D23H15M08S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D20H45M18S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAP-752535-NSRVC/20240528/2024Y05M28D22H09M10S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528/2024Y05M28D22H20M50S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAW-297425-KMGJH/20240528/2024Y05M28D18H38M21S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAU-057988-LBRLZ/20240528/2024Y05M28D19H09M31S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D15H37M13S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAO-628829-ZUGZY/20240528/2024Y05M28D23H46M05S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAT-808338-ZYECB/20240528/2024Y05M28D17H57M29S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D01H03M00S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D03H37M52S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528/2024Y05M29D00H02M51S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAZ-401709-PJJDZ/20240528/2024Y05M28D08H34M55S00.30.ts": true,
+        "/nfsshare/vidarchives/us_region/TNPXGAT-302106-VGUSV/20240528/2024Y05M28D20H58M29S00.30.ts": true
     },
     "processed": {
-        "/nfsmain/james_workplace/video_samples/youtube": [
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_18c0b41f7b1b4a118b95682def1d3d46.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_0baf3682d9bf48818db9c4941af86b8d.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_eb1c210247f8497f8a53f68c9a90c4f2.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_b6947dc600d4457580d4e8daa2fc6696.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_6ff0e7ea5b794c9c9e6879e909381a2a.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_650a320699bc4bfab38bf9a96e3c29d6.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_cd5d3ae629094ab39e2e3db5cdb17324.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_4aee18acfae14521a4409086f1dd2bcf.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_1c6684a4fc294906a8fc44ee4e7ba0cf.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_61e651d4fc6a4ba8aab8ab170e42c49e.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_1068eac8009e488998cd4bbfdcbcfc5a.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_770339e9f7784f348e179a7102bf5a60.mp4",
-            "/nfsmain/james_workplace/video_samples/youtube/clipped_fa63edf207d64331b4986a9a402ee5aa.mp4"
+        "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528/2024Y05M28D23H15M08S00.30.ts",
+            "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528/2024Y05M28D00H15M47S00.30.ts"
         ],
-        "/nfsmain/james_workplace/video_samples/20240528": [
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video7.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video1.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video8.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video6.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video9.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video5.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video4.mp4",
-            "/nfsmain/james_workplace/video_samples/20240528/sample_video3.mp4"
+        "/nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528/2024Y05M28D06H58M24S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAW-297425-KMGJH/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAW-297425-KMGJH/20240528/2024Y05M28D18H38M21S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528/2024Y05M28D08H15M35S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528/2024Y05M28D22H20M50S00.30.ts",
+            "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528/2024Y05M29D00H02M51S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAP-752535-NSRVC/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAP-752535-NSRVC/20240528/2024Y05M28D22H09M10S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAO-628829-ZUGZY/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAO-628829-ZUGZY/20240528/2024Y05M28D23H46M05S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAU-057988-LBRLZ/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAU-057988-LBRLZ/20240528/2024Y05M28D19H09M31S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D00H40M29S00.30.ts",
+            "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528/2024Y05M28D15H37M13S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPUSAH-248612-CHRNL/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAH-248612-CHRNL/20240528/2024Y05M28D03H42M38S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D20H45M18S00.30.ts",
+            "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D03H37M52S00.30.ts",
+            "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528/2024Y05M28D01H03M00S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAT-808338-ZYECB/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAT-808338-ZYECB/20240528/2024Y05M28D17H57M29S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528/2024Y05M28D09H15M02S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAZ-401709-PJJDZ/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAZ-401709-PJJDZ/20240528/2024Y05M28D08H34M55S00.30.ts"
+        ],
+        "/nfsshare/vidarchives/us_region/TNPXGAT-302106-VGUSV/20240528": [
+            "/nfsshare/vidarchives/us_region/TNPXGAT-302106-VGUSV/20240528/2024Y05M28D20H58M29S00.30.ts"
         ]
     },
     "directory_usage": {
-        "/nfsmain/james_workplace/video_samples/20240528": 8,
-        "/nfsmain/james_workplace/video_samples/youtube": 13
+        "/nfsshare/vidarchives/us_region/TNPXGAV-720251-VXXET/20240528": 2,
+        "/nfsshare/vidarchives/us_region/TNPXGAW-729401-GHTMT/20240528": 2,
+        "/nfsshare/vidarchives/us_region/TNPXGAR-690505-NKCYZ/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAF-571859-UFKHV/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAH-248612-CHRNL/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAI-147890-FPNSP/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAC-848380-LEGJX/20240528": 3,
+        "/nfsshare/vidarchives/us_region/TNPXGAP-752535-NSRVC/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPUSAE-547468-DHBLP/20240528": 2,
+        "/nfsshare/vidarchives/us_region/TNPXGAW-297425-KMGJH/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAU-057988-LBRLZ/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAO-628829-ZUGZY/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAT-808338-ZYECB/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAZ-401709-PJJDZ/20240528": 1,
+        "/nfsshare/vidarchives/us_region/TNPXGAT-302106-VGUSV/20240528": 1
     }
 }
