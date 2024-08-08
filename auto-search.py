@@ -17,18 +17,18 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-files_to_remove = [
-    "/home/ubuntu/semi-auto-captions/video_info.json",
-    "/home/ubuntu/semi-auto-captions/selected_videos.json",
-    "/home/ubuntu/semi-auto-captions/categorization_results.json",
-    "/home/ubuntu/semi-auto-captions/script_run_times.json",
-]
+# files_to_remove = [
+#     "/home/ubuntu/semi-auto-captions/video_info.json",
+#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
+#     "/home/ubuntu/semi-auto-captions/categorization_results.json",
+#     "/home/ubuntu/semi-auto-captions/script_run_times.json",
+# ]
 
-for file_path in files_to_remove:
-    try:
-        os.remove(file_path)
-    except FileNotFoundError:
-        pass  # Ignore the error if the file is not found
+# for file_path in files_to_remove:
+#     try:
+#         os.remove(file_path)
+#     except FileNotFoundError:
+#         pass  # Ignore the error if the file is not found
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
@@ -102,7 +102,7 @@ def upload_and_process_video(video_file_name, api_key):
 def generate_description(video_file):
     try:
         prompt = "Describe this video in detail."
-        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
+        model = genai.GenerativeModel(model_name="models/gemini-1.5-pro-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
         description = response.text.replace('\n', '')
@@ -228,7 +228,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 50 files
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 20, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
