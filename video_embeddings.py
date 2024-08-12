@@ -30,11 +30,15 @@ def calculate_similarity(video_embedding, category_embeddings):
     return np.argmin(similarities)  # Return index of the category with the highest similarity (lowest distance)
 
 def copy_video_to_category(video_path, category_path):
-    """Copy the video file to the specified category directory."""
+    """Copy the video file to the specified category directory if it doesn't already exist."""
     if not os.path.exists(category_path):
         os.makedirs(category_path)
-    shutil.copy(video_path, os.path.join(category_path, os.path.basename(video_path)))
-    print(f"Copied {video_path} to {category_path}")
+    target_file_path = os.path.join(category_path, os.path.basename(video_path))
+    if not os.path.exists(target_file_path):
+        shutil.copy(video_path, target_file_path)
+        print(f"Copied {video_path} to {category_path}")
+    #else:
+        #print(f"File {video_path} already exists in {category_path}")
 
 def save_results_to_file(results, output_file):
     """Save categorization results to a JSON file."""

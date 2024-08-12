@@ -72,7 +72,7 @@ def save_selected_videos(json_log, directory_usage):
 
 def upload_and_process_video(video_file_name, api_key):
     genai.configure(api_key=api_key)  # Configure API key
-    max_retries = 3
+    max_retries = 10
     mime_type = get_mime_type(video_file_name)  # Get the correct MIME type
     for attempt in range(max_retries):
         try:
@@ -228,7 +228,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 50 files
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 50, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
