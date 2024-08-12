@@ -9,7 +9,7 @@ import mimetypes
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv # type: ignore
 from threading import Lock
-from itertools import cycle
+from itertools import cycle, islice
 
 import google.generativeai as genai # type: ignore
 
@@ -29,6 +29,36 @@ end_time = 0
 #         os.remove(file_path)
 #     except FileNotFoundError:
 #         pass  # Ignore the error if the file is not found
+
+def process_batch(video_files, save_dir, api_keys):
+    video_results = []
+    future_to_video = {}
+    api_key_cycle = cycle(api_keys)
+    
+    with ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+        for video_file in video_files:
+            api_key = next(api_key_cycle)
+            future = executor.submit(process_video, video_file, save_dir, api_key)
+            future_to_video[future] = video_file
+        
+        for future in as_completed(future_to_video):
+            video_file = future_to_video[future]
+            try:
+                video_file_name, description, final_description = future.result()
+                video_results.append({
+                    "file": video_file_name,
+                    "description": description,
+                    "final_description": final_description
+                })
+            except Exception as exc:
+                print(f'{video_file} generated an exception: {exc}')
+                video_results.append({
+                    "file": video_file,
+                    "description": "Exception occurred",
+                    "final_description": str(exc)
+                })
+
+    return video_results
 
 def load_previously_selected_videos(json_log):
     if os.path.exists(json_log):
@@ -204,7 +234,6 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    #video_dir = "/nfsmain/james_workplace/video_samples"
     video_dir = "/nfsshare/vidarchives/us_region"
     save_dir = "/nfsmain/james_workplace/processed_us_region/ts"
     json_log = 'selected_videos.json'
@@ -227,8 +256,8 @@ def main():
     signal.signal(signal.SIGINT, signal_handler)
     os.makedirs(save_dir, exist_ok=True)
 
-    # Process max 50 files
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 100, 30, directory_usage)
+    # Process max 500 files, but in batches of x
+    video_files, directory_usage = get_random_video_files(video_dir, 1, 500, 30, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
@@ -239,31 +268,39 @@ def main():
         existing_results = []  # If no file exists or error in reading, start with an empty list
 
     video_results = existing_results  # Start with existing data
-    with ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+
+    batch_size = 10  # Adjust this value as needed to control the number of concurrent tasks
+    for i in range(0, len(video_files), batch_size):
+        batch_files = video_files[i:i + batch_size]
+        print(f"Processing batch {i // batch_size + 1} with {len(batch_files)} videos...")
+        
         future_to_video = {}
         api_key_cycle = cycle(api_keys)  # Create a cycle of API keys for round-robin usage
 
-        for video_file in video_files:
-            api_key = next(api_key_cycle)  # Get the next API key in the cycle
-            future = executor.submit(process_video, video_file, save_dir, api_key)
-            future_to_video[future] = video_file
+        with ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+            for video_file in batch_files:
+                api_key = next(api_key_cycle)  # Get the next API key in the cycle
+                future = executor.submit(process_video, video_file, save_dir, api_key)
+                future_to_video[future] = video_file
 
-        for future in as_completed(future_to_video):
-            video_file = future_to_video[future]
-            try:
-                video_file_name, description, final_description = future.result()
-                video_results.append({
-                    "file": video_file_name,
-                    "description": description,
-                    "final_description": final_description
-                })
-            except Exception as exc:
-                print(f'{video_file} generated an exception: {exc}')
-                video_results.append({
-                    "file": video_file,
-                    "description": "Exception occurred",
-                    "final_description": str(exc)
-                })
+            for future in as_completed(future_to_video):
+                video_file = future_to_video[future]
+                try:
+                    video_file_name, description, final_description = future.result()
+                    video_results.append({
+                        "file": video_file_name,
+                        "description": description,
+                        "final_description": final_description
+                    })
+                except Exception as exc:
+                    print(f'{video_file} generated an exception: {exc}')
+                    video_results.append({
+                        "file": video_file,
+                        "description": "Exception occurred",
+                        "final_description": str(exc)
+                    })
+        
+        print(f"Batch {i // batch_size + 1} complete.")
 
     # Save updated results to JSON
     with open('video_info.json', 'w') as f:
