@@ -17,18 +17,19 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-# files_to_remove = [
-#     "/home/ubuntu/semi-auto-captions/video_info.json",
-#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
-#     "/home/ubuntu/semi-auto-captions/categorization_results.json",
-#     "/home/ubuntu/semi-auto-captions/script_run_times.json",
-# ]
+files_to_remove = [
+    "/home/ubuntu/semi-auto-captions/video_info.json",
+    "/home/ubuntu/semi-auto-captions/selected_videos.json",
+    "/home/ubuntu/semi-auto-captions/script_run_times.json",
+    "/home/ubuntu/semi-auto-captions/categorization_results.json",
+    
+]
 
-# for file_path in files_to_remove:
-#     try:
-#         os.remove(file_path)
-#     except FileNotFoundError:
-#         pass  # Ignore the error if the file is not found
+for file_path in files_to_remove:
+    try:
+        os.remove(file_path)
+    except FileNotFoundError:
+        pass  # Ignore the error if the file is not found
 
 def process_batch(video_files, save_dir, api_keys):
     video_results = []
@@ -112,7 +113,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(1)
+                time.sleep(3)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -132,17 +133,17 @@ def upload_and_process_video(video_file_name, api_key):
 def generate_description(video_file):
     try:
         prompt = "Describe this video in detail."
-        model = genai.GenerativeModel(model_name="models/gemini-1.5-pro-latest")
+        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
         description = response.text.replace('\n', '')
         print(description)
 
         enhanced_prompt = (
-            "You are a video analysis model. Please review the following video description and determine if it contains any significant activities involving people or pets. "
-            "IMPORTANT: VIDEO MUST NOT BE STILL, UPSIDE-DOWN, OR BLACK SCREEN. "
-            "If the video description mentions people or pets performing significant actions, respond with 'positive'. "
-            "If the video is black, grainy, upside-down, or does not mention significant actions with people or pets, respond with 'negative'."
+            "You are a video analysis model. Review the following video description and determine if it describes significant activities involving people or pets."
+            "IMPORTANT: The video must show clear and meaningful movement. It must not be still, upside-down, black screen, or contain only minimal movement."
+            "If the description mentions significant actions involving people or pets with clear movement, respond with 'positive'."
+            "If the video is black, grainy, upside-down, still, or contains only minimal or irrelevant movement, or if it does not describe significant actions involving people or pets, respond with 'negative'."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
@@ -234,8 +235,8 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    video_dir = "/nfsshare/vidarchives/us_region"
-    save_dir = "/nfsmain/james_workplace/processed_us_region/ts"
+    video_dir = "/nfsmain/videos"
+    save_dir = "/nfsmain/janderson/new_us_region/processed"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage
@@ -257,7 +258,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 500 files, but in batches of x
-    video_files, directory_usage = get_random_video_files(video_dir, 1, 500, 30, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 10, 99999999, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
