@@ -2,9 +2,9 @@ import json
 import os
 import shutil
 import re
-import google.generativeai as genai
-import numpy as np
-from dotenv import load_dotenv
+import google.generativeai as genai # type: ignore
+import numpy as np # type: ignore
+from dotenv import load_dotenv # type: ignore
 
 def load_json_data(file_path):
     with open(file_path, 'r') as file:
