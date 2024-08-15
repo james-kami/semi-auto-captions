@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import re
 import google.generativeai as genai
 import numpy as np
 from dotenv import load_dotenv
@@ -20,141 +21,148 @@ def generate_embedding(description, model="models/text-embedding-004", task_type
         print(f"Failed to generate embedding: {e}")
         return None
 
+import re
+
 def exclude_specific_categories(description, category_embeddings):
     description_lower = description.lower()
 
-    # Category 1
-    if not any(keyword in description_lower for keyword in ["return", "coming home", "arrive home", "enters house", "back home", "house", "home"]):
+    # Category 1: Returning home (specific to returning home context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["return", "coming home", "arrive home", "enters house", "back home"]):
         if len(category_embeddings) >= 1:
-            category_embeddings[0] = -1  
+            category_embeddings[0] = None  
 
-    # Category 2
-    if not any(keyword in description_lower for keyword in ["leave", "leaving", "depart", "exit", "go out", "house", "home"]):
+    # Category 2: Leaving home (specific to leaving home context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["leave house", "leaves house", "leave home", "leaves home", "depart", "exit building", "go out"]):
         if len(category_embeddings) >= 2:
-            category_embeddings[1] = -1  
+            category_embeddings[1] = None  
 
-    # Category 3
-    if not any(keyword in description_lower for keyword in ["visitor", "guest", "arrive", "approach", "enter", "ring bell", "doorbell", "knock"]):
+    # Category 3: Visitor or guest arrival (specific to visitor/guest context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["visitor", "guest", "arrive", "approach", "enter", "ring bell", "doorbell", "knock"]):
         if len(category_embeddings) >= 3:
-            category_embeddings[2] = -1  
+            category_embeddings[2] = None  
 
-    # Category 4
-    if not any(keyword in description_lower for keyword in ["stairs", "staircase", "upstairs", "downstairs", "steps", "walks past stairs", "climb"]):
+    # Category 4: Stairs interaction (specific to stairs-related activities)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["stairs", "staircase", "upstairs", "downstairs", "steps", "walks past stairs", "climb"]):
         if len(category_embeddings) >= 4:
-            category_embeddings[3] = -1 
+            category_embeddings[3] = None 
 
-    # Category 5
-    if not any(keyword in description_lower for keyword in ["pet", "dog", "cat", "fetch", "feeding", "petting"]):
+    # Category 5: Pets playing (must involve pet and playing activity)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["play", "playing"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["dog", "cat", "pet"])):
         if len(category_embeddings) >= 5:
-            category_embeddings[4] = -1  
+            category_embeddings[4] = None        
 
-    # Category 6
-    if not any(keyword in description_lower for keyword in ["fight", "fighting"]):
+    # Category 6: Fighting (specific to fighting context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["fight", "fighting"]):
         if len(category_embeddings) >= 6:
-            category_embeddings[5] = -1  
+            category_embeddings[5] = None  
 
-    # Category 7
-    if not any(keyword in description_lower for keyword in ["eat", "eating", "ate", "meal"]):
+    # Category 7: Eating (must involve eating activity)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["eat", "eating", "ate", "meal", "dining", "food"]):
         if len(category_embeddings) >= 7:
-            category_embeddings[6] = -1 
+            category_embeddings[6] = None 
 
-    # Category 8
-    if not any(keyword in description_lower for keyword in ["plant", "watering", "garden"]):
+    # Category 8: Gardening (must involve gardening activities or plants as the main focus)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["watering", "garden", "gardening", "planting"]) or
+            (re.search(r'\bpotted plant\b', description_lower) and re.search(r'\b(garden|outdoor|yard)\b', description_lower))):  # Ensure "potted plant" only triggers with gardening context
         if len(category_embeddings) >= 8:
-            category_embeddings[7] = -1
+            category_embeddings[7] = None
 
-    # Category 9:
-    if not any(keyword in description_lower for keyword in ["phone", "call", "piano", "guitar", "drum", "drums", "book", "books", "reading", "horse", "horses","horseback", "riding", "bike", "bikes", "biking", "run", "runs", "running", "walk", "walking", "jump", "jumps", "jumping", "sleep", "sleeps", "sleeping", "photo", "computer", "photo", "computers"]):
+    # Category 9: Activities (focus on human or specific activities, exclude generic uses)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in [
+        "phone", "call", "piano", "guitar", "drum", "drums", "book", "books", 
+        "reading", "horse", "horses", "horseback", "riding", "bike", "bikes", 
+        "biking", "jogging", "exercise", "jump", "jumping", "sleep", 
+        "sleeping", "photo", "computer", "computers"]) and \
+       not re.search(r'\brunning(?! water)\b', description_lower):  # Exclude "running water"
         if len(category_embeddings) >= 9:
-            category_embeddings[8] = -1
+            category_embeddings[8] = None
 
-    # Category 10: 
-    if not any(keyword in description_lower for keyword in ["barking", "meowing", "bark", "meow"]):
+    # Category 10: Animal sounds (focus on pet-related sounds)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["barking", "meowing", "bark", "meow"]):
         if len(category_embeddings) >= 10:
-            category_embeddings[9] = -1 
+            category_embeddings[9] = None 
 
-    # Category 11: 
-    if not any(keyword in description_lower for keyword in ["door"]):
-        if not any(keyword in description_lower for keyword in ["cat", "dog", "pet"]):
-            if len(category_embeddings) >= 11:
-                category_embeddings[10] = -1 
+    # Category 11: Door interaction with pets (must involve both door and pet interaction)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["cat", "dog", "pet"])):
+        if len(category_embeddings) >= 11:
+            category_embeddings[10] = None 
 
-    # Category 12: 
-    if not any(keyword in description_lower for keyword in ["couch"]):
-        if not any(keyword in description_lower for keyword in ["cat", "dog", "pet"]):
-            if len(category_embeddings) >= 12:
-                category_embeddings[11] = -1 
+    # Category 12: Couch interaction with pets (must involve both couch and pet interaction)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["couch"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["cat", "dog", "pet"])):
+        if len(category_embeddings) >= 12:
+            category_embeddings[11] = None 
 
-    # Category 13: 
-    if not any(keyword in description_lower for keyword in ["mischief", "mess"]):
-            if not any(keyword in description_lower for keyword in ["dog", "cat", "pet"]):
-                if len(category_embeddings) >= 13:
-                    category_embeddings[12] = -1
+    # Category 13: Pet mischief (must involve both pet and mischief)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["mischief", "mess"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["dog", "cat", "pet"])):
+        if len(category_embeddings) >= 13:
+            category_embeddings[12] = None
 
-    # Category 14: Car comes home/leaves home
-    if not any(keyword in description_lower for keyword in ["car", "vehicle", "home", "leaves", "back"]):
+    # Category 14: Car comes/leaves home (specific to vehicles)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle", "home", "leaves", "back"]):
         if len(category_embeddings) >= 14:
-            category_embeddings[13] = -1
+            category_embeddings[13] = None
 
-    # Category 15: Car parks in the garage
-    if not any(keyword in description_lower for keyword in ["car", "vehicle", "park", "garage"]):
+    # Category 15: Car parks in the garage (must involve parking in a garage)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle", "park", "garage"]):
         if len(category_embeddings) >= 15:
-            category_embeddings[14] = -1
+            category_embeddings[14] = None
 
-    # Category 16: Car horn honking
-    if not any(keyword in description_lower for keyword in ["horn", "honking"]):
+    # Category 16: Car horn honking (specific to honking)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["horn", "honking"]):
         if len(category_embeddings) >= 16:
-            category_embeddings[15] = -1
+            category_embeddings[15] = None
 
-    # Category 17: Types of cars passing by the door, involving car types
-    if not any(keyword in description_lower for keyword in ["car", "fire truck", "ambulance", "truck", "police car", "passed", "door"]):
+    # Category 17: Types of cars passing by (focus on specific vehicles)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "fire truck", "ambulance", "truck", "police car", "passed", "door"]):
         if len(category_embeddings) >= 17:
-            category_embeddings[16] = -1
+            category_embeddings[16] = None
 
-    # Category 18: Someone approaches the car/someone is stealing the car
-    if not any(keyword in description_lower for keyword in ["car", "stealing", "approaches", "theft"]):
+    # Category 18: Someone approaches/steals car (must involve both car and approach/steal context)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["stealing", "approaches", "theft"])):
         if len(category_embeddings) >= 18:
-            category_embeddings[17] = -1
+            category_embeddings[17] = None
 
-    # Category 19: Door opens
-    if not any(keyword in description_lower for keyword in ["door", "open"]):
+    # Category 19: Door opens (specific to door opening)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door", "open"]):
         if len(category_embeddings) >= 19:
-            category_embeddings[18] = -1
+            category_embeddings[18] = None
 
-    # Category 20: Door closes
-    if not any(keyword in description_lower for keyword in ["door", "close", "closed"]):
+    # Category 20: Door closes (specific to door closing)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door", "close", "closed"]):
         if len(category_embeddings) >= 20:
-            category_embeddings[19] = -1
+            category_embeddings[19] = None
 
-    # Category 21: Package delivery
-    if not any(keyword in description_lower for keyword in ["package", "parcel", "delivered", "delivery"]):
+    # Category 21: Package delivery (specific to delivery context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["package", "parcel", "delivered", "delivery"]):
         if len(category_embeddings) >= 21:
-            category_embeddings[20] = -1
+            category_embeddings[20] = None
 
-    # Category 22: Outdoor garbage collection
-    if not any(keyword in description_lower for keyword in ["garbage", "truck", "removal", "waste", "collection"]):
+    # Category 22: Outdoor garbage collection (specific to garbage collection context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["garbage", "truck", "removal", "waste", "collection"]):
         if len(category_embeddings) >= 22:
-            category_embeddings[21] = -1
+            category_embeddings[21] = None
 
-    # Category 23: Falling event
-    if not any(keyword in description_lower for keyword in ["fall", "falling", "trip", "down"]):
+    # Category 23: Falling event (specific to falling or tripping)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["fall", "falling", "trip", "down"]):
         if len(category_embeddings) >= 23:
-            category_embeddings[22] = -1
+            category_embeddings[22] = None
 
-    # Category 24: Getting off the bed event
-    if not any(keyword in description_lower for keyword in ["bed", "getting off", "sleep", "rise", "get up"]):
+    # Category 24: Getting off the bed event (specific to getting off the bed context)
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["bed", "getting off", "sleep", "rise", "get up"]):
         if len(category_embeddings) >= 24:
-            category_embeddings[23] = -1
+            category_embeddings[23] = None
 
-    # Final check for unmatched categories
-    if all(embedding == -1 for embedding in category_embeddings[:24]):
-        category_embeddings = [-1] * 24  
+    # Category 25: Catch-all for unmatched categories
+    if all(embedding is None for embedding in category_embeddings[:24]):  # All categories are None
+        category_embeddings = [None] * 24  # Set all to None except Category 25
         print("No suitable match found. Assigning to Category 25.")
 
-
-
     return category_embeddings
-
 
 def copy_video_to_category(video_path, category_path):
     os.makedirs(category_path, exist_ok=True)
@@ -177,7 +185,9 @@ def process_videos(video_data, category_embeddings, categories_base_path):
             if embedding is not None:
                 filtered_category_embeddings = exclude_specific_categories(video['description'], category_embeddings.copy())
                 
+                # Debug: Check if Category 25 should be assigned
                 best_category_idx = next((i for i, emb in enumerate(filtered_category_embeddings) if emb is not None), -1)
+                print(f"Best category index found: {best_category_idx}")
 
                 if best_category_idx == -1:
                     target_dir = os.path.join(categories_base_path, "Category_25")
@@ -193,6 +203,7 @@ def process_videos(video_data, category_embeddings, categories_base_path):
                 })
                 print(f"Assigned category: {assigned_category}")
     save_results_to_file(results, 'categorization_results.json')
+
 
 def main():
     load_dotenv()
