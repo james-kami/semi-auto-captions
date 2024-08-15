@@ -21,7 +21,6 @@ def generate_embedding(description, model="models/text-embedding-004", task_type
         print(f"Failed to generate embedding: {e}")
         return None
 
-import re
 
 def exclude_specific_categories(description, category_embeddings):
     description_lower = description.lower()
@@ -46,7 +45,7 @@ def exclude_specific_categories(description, category_embeddings):
         if len(category_embeddings) >= 4:
             category_embeddings[3] = None 
 
-    # Category 5: Pets playing (must involve pet and playing activity)
+    # Category 5: Pets playing (must involve both pet and playing activity)
     if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["play", "playing"]) and 
             any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["dog", "cat", "pet"])):
         if len(category_embeddings) >= 5:
@@ -83,11 +82,12 @@ def exclude_specific_categories(description, category_embeddings):
         if len(category_embeddings) >= 10:
             category_embeddings[9] = None 
 
-    # Category 11: Door interaction with pets (must involve both door and pet interaction)
-    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door"]) and 
-            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["cat", "dog", "pet"])):
+    # Category 11: Door interaction with pets (must involve interaction between door and pet)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door", "doors", "doorway", "gate", "entryway"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["dog", "cat", "pet"]) and
+            re.search(r'\b(interaction|open|close|through|scratch|paw|bark at)\b', description_lower)):
         if len(category_embeddings) >= 11:
-            category_embeddings[10] = None 
+            category_embeddings[10] = None
 
     # Category 12: Couch interaction with pets (must involve both couch and pet interaction)
     if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["couch"]) and 
@@ -101,8 +101,9 @@ def exclude_specific_categories(description, category_embeddings):
         if len(category_embeddings) >= 13:
             category_embeddings[12] = None
 
-    # Category 14: Car comes/leaves home (specific to vehicles)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle", "home", "leaves", "back"]):
+    # Category 14: Car comes/leaves home (specific to vehicles returning to or leaving home)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["arrive", "depart", "back", "leaves", "returns", "comes home", "drives away", "driving"])):
         if len(category_embeddings) >= 14:
             category_embeddings[13] = None
 
@@ -116,8 +117,9 @@ def exclude_specific_categories(description, category_embeddings):
         if len(category_embeddings) >= 16:
             category_embeddings[15] = None
 
-    # Category 17: Types of cars passing by (focus on specific vehicles)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "fire truck", "ambulance", "truck", "police car", "passed", "door"]):
+    # Category 17: Types of cars passing by (must involve both a vehicle and passing by or movement context)
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "fire truck", "ambulance", "truck", "police car", "vehicle", "motorcycle", "bus"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["passed", "passing", "driving by", "moves past", "goes by", "drives past", "travels past"])):
         if len(category_embeddings) >= 17:
             category_embeddings[16] = None
 
@@ -148,7 +150,7 @@ def exclude_specific_categories(description, category_embeddings):
             category_embeddings[21] = None
 
     # Category 23: Falling event (specific to falling or tripping)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["fall", "falling", "trip", "down"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["fall", "falling"]):
         if len(category_embeddings) >= 23:
             category_embeddings[22] = None
 
@@ -163,6 +165,7 @@ def exclude_specific_categories(description, category_embeddings):
         print("No suitable match found. Assigning to Category 25.")
 
     return category_embeddings
+
 
 def copy_video_to_category(video_path, category_path):
     os.makedirs(category_path, exist_ok=True)

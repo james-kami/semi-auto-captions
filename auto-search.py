@@ -17,19 +17,19 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-files_to_remove = [
-    "/home/ubuntu/semi-auto-captions/video_info.json",
-    "/home/ubuntu/semi-auto-captions/selected_videos.json",
-    "/home/ubuntu/semi-auto-captions/script_run_times.json",
-    "/home/ubuntu/semi-auto-captions/categorization_results.json",
+# files_to_remove = [
+#     "/home/ubuntu/semi-auto-captions/video_info.json",
+#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
+#     "/home/ubuntu/semi-auto-captions/script_run_times.json",
+#     "/home/ubuntu/semi-auto-captions/categorization_results.json",
     
-]
+# ]
 
-for file_path in files_to_remove:
-    try:
-        os.remove(file_path)
-    except FileNotFoundError:
-        pass  # Ignore the error if the file is not found
+# for file_path in files_to_remove:
+#     try:
+#         os.remove(file_path)
+#     except FileNotFoundError:
+#         pass  # Ignore the error if the file is not found
 
 def process_batch(video_files, save_dir, api_keys):
     video_results = []
@@ -141,14 +141,18 @@ def generate_description(video_file):
 
         enhanced_prompt = (
             "You are a video analysis model. Review the following video description and determine if it describes significant activities involving people or pets."
-            "IMPORTANT: The video must show clear and meaningful movement. It must not be still, upside-down, black screen, or contain only minimal movement."
-            "If the description mentions significant actions involving people or pets with clear movement, respond with 'positive'."
-            "If the video is black, grainy, upside-down, still, or contains only minimal or irrelevant movement, or if it does not describe significant actions involving people or pets, respond with 'negative'."
+            "IMPORTANT: The video must show clear, well-lit, and meaningful movement. It must not be still, upside-down, black screen, grainy, poorly lit, or contain only minimal movement."
+            "If the description mentions clear and significant actions involving people or pets with well-defined movement, respond with 'positive'."
+            "If the video is black, grainy, upside-down, still, poorly lit, or contains only minimal or irrelevant movement, or if it does not describe significant actions involving people or pets, respond with 'negative'."
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
         final_description = response.text.replace('\n', '')
         print(final_description)
+        # Post-processing check
+        if "grainy" in description.lower() or "poorly lit" in description.lower():
+            final_description = "negative"
+        
         return description, final_description
     except Exception as e:
         print(f"Error generating description for video {video_file.name}: {e}")
@@ -258,7 +262,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 500 files, but in batches of x
-    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 10, 99999999, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 50, 99999999, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
@@ -270,7 +274,7 @@ def main():
 
     video_results = existing_results  # Start with existing data
 
-    batch_size = 10  # Adjust this value as needed to control the number of concurrent tasks
+    batch_size = 50  # Adjust this value as needed to control the number of concurrent tasks
     for i in range(0, len(video_files), batch_size):
         batch_files = video_files[i:i + batch_size]
         print(f"Processing batch {i // batch_size + 1} with {len(batch_files)} videos...")
