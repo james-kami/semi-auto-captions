@@ -104,35 +104,29 @@ def save_selected_videos(json_log, directory_usage):
 
 def upload_and_process_video(video_file_name, api_key):
     genai.configure(api_key=api_key)  # Configure API key
-    max_retries = 10
-    mime_type = get_mime_type(video_file_name)  # Get the correct MIME type
-    for attempt in range(max_retries):
-        try:
-            print(f"Uploading file {video_file_name} with MIME type {mime_type}...")
-            video_file = genai.upload_file(path=video_file_name, mime_type=mime_type)
-            print(f"Completed upload: {video_file.uri}")
+    try:
+        print(f"Uploading file {video_file_name} with MIME type {get_mime_type(video_file_name)}...")
+        video_file = genai.upload_file(path=video_file_name, mime_type=get_mime_type(video_file_name))
+        print(f"Completed upload: {video_file.uri}")
 
-            while video_file.state.name == "PROCESSING":
-                print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(10)
-                video_file = genai.get_file(video_file.name)
+        while video_file.state.name == "PROCESSING":
+            print(f'Waiting for video {video_file_name} to be processed.')
+            time.sleep(10)
+            video_file = genai.get_file(video_file.name)
 
-            if video_file.state.name == "FAILED":
-                raise ValueError(f"Video processing failed: {video_file_name}")
+        if video_file.state.name == "FAILED":
+            raise ValueError(f"Video processing failed: {video_file_name}")
 
-            print(f'Video processing complete: {video_file.uri}')
-            return video_file
-        except Exception as e:
-            print(f"Error uploading/processing video {video_file_name}: {e}")
-            if "SSL" in str(e):
-                print("Detected SSL error, pausing for 60 seconds before retrying...")
-                time.sleep(60)
-            if attempt < max_retries - 1:
-                print("Retrying...")
-                time.sleep(10)
-            else:
-                print("Max retries reached. Skipping file.")
-                return None
+        print(f'Video processing complete: {video_file.uri}')
+        return video_file
+    except Exception as e:
+        error_message = str(e)
+        if "SSL" in error_message:
+            print(f"Detected SSL error for {video_file_name}. Skipping this file.")
+            return None
+        print(f"Error uploading/processing video {video_file_name}: {e}")
+        return None
+
 
 def generate_description(video_file):
     try:
@@ -141,9 +135,10 @@ def generate_description(video_file):
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
 
-        if not response.text:
-            raise ValueError("Empty response from the model")
-        
+        # Check if the response is blocked or invalid
+        if not response or not response.text:
+            raise ValueError("Invalid response: The response is blocked or empty. Skipping this video.")
+
         description = response.text.replace('\n', '')
         print(description)
 
@@ -156,8 +151,9 @@ def generate_description(video_file):
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
 
-        if not response.text:
-            raise ValueError("Empty response from the model during enhanced prompt")
+        # Check if the enhanced response is blocked or invalid
+        if not response or not response.text:
+            raise ValueError("Invalid response: The response is blocked or empty during enhanced prompt. Skipping this video.")
 
         final_description = response.text.replace('\n', '')
         print(final_description)
@@ -168,8 +164,14 @@ def generate_description(video_file):
         
         return description, final_description
     except Exception as e:
+        error_message = str(e)
+        if "Invalid response" in error_message or "The `response.text` quick accessor requires the response to contain a valid `Part`" in error_message:
+            print(f"Skipping video {video_file.name} due to blocked or invalid response.")
+            return "Explicit content detected", "Skipped"
         print(f"Error generating description for video {video_file.name}: {e}")
         return None, None  # Ensure failure is handled consistently
+
+
 
 def process_video(video_file_name, save_dir, api_key):
     global processed_videos, selected_videos, failed_videos
@@ -187,9 +189,9 @@ def process_video(video_file_name, save_dir, api_key):
 
         # Generate description
         description, final_description = generate_description(video_file)
-        if not final_description:
+        if not final_description or final_description == "Skipped":
             failed_videos.add(video_file_name)  # Mark as failed
-            return video_file_name, description, "Error during description generation"
+            return video_file_name, description, "Skipped"
 
         # Save valid video
         if "positive" in final_description.lower():
@@ -213,6 +215,7 @@ def process_video(video_file_name, save_dir, api_key):
         print(f"Exception processing video {video_file_name}: {e}")
         failed_videos.add(video_file_name)  # Mark as failed
         return video_file_name, "Exception occurred", "Bad file"
+
 
 def load_failed_videos(failed_videos_file):
     if os.path.exists(failed_videos_file):
