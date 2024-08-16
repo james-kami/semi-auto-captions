@@ -1,252 +1,32 @@
 [
     {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAN-723788-YVFYN/20240811/2024Y08M11D09H00M39S00.30.ts",
-        "description": "The video shows a black and white image of a residential street at night. There are two cars parked in the street. One of the cars has its headlights on.  A large bush is in the foreground. A tree branch is seen in the upper left corner of the video. At 0:19, a loud dog barking sound is heard. ",
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H18M01S00.30.mp4",
+        "description": "The video shows a living room with two people, a woman and a man, sitting on a couch and one person, a man, sitting in a recliner. A security camera in the upper left-hand corner of the room is recording the scene. The man in the recliner is holding a pair of gardening clippers and saying to the other man on the couch, \u201cGo. Just Just Just I just want you to know I couldn't be more pleased. My knitting group brought  \u201d. The other man is nodding in agreement, and the woman on the couch is listening. The sound is poor and most of the words are difficult to hear. The video is in black and white and the lighting is dark. The image is grainy. ",
+        "final_description": "negative"
+    },
+    {
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D22H06M36S00.30.mp4",
+        "description": "The video is a still image of a bar. It shows a bar counter with a few people seated at it, a pool table in the background, and a lot of liquor bottles and glasses on a shelf behind the counter. There is a sign above the bar counter that reads \"Jack Daniel's\" and a sign above that reads \"Vanilla\".  There is a light above the bar counter and there is a sign that reads \"5/28/2024 18:36\" at the top of the screen. The time on the sign is updated every second, showing the passage of time.  The video is 45 seconds long, and the only sound is the ticking of the time on the sign.  The video shows a bar in the middle of the day, and the bar seems to be pretty empty. The video makes the viewer feel like they're in the bar, with the quiet hum of the sign ticking away. ",
         "final_description": "negative "
     },
     {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAO-309550-TFWPU/20240807/2024Y08M07D21H00M10S00.30.ts",
-        "description": "The video shows a security camera view of a backyard. There is a black metal gate in the foreground, followed by a small patio. A broom is leaning against the wall of the patio. A green trash can is to the right. The patio floor has a pattern of gray and white tiles. The wall behind the patio is a light blue color. A window ledge is visible above the wall. In the distance, through the gate, there is green grass. A bird is sitting on the patio floor near the wall and is making a \"peep\" noise. The time and date are displayed in the upper left corner of the video. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAP-219695-MTDUS/20240811/2024Y08M11D12H46M35S00.30.ts",
-        "description": "The video is a black and white recording from a security camera. The camera is mounted in a narrow hallway. To the left of the camera is a closed door with slatted blinds. To the right, there is a post supporting a wall. There are several items in the hallway behind the post including: a walker, a mirror, a large piece of particleboard, and an empty basket. At the beginning of the video, a faint noise can be heard. The noise sounds like someone trying to force open a door and can be heard for 2-3 seconds.  There is no other movement in the video, and the camera remains in the same position for the duration of the clip. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAP-431453-BZMTP/20240811/2024Y08M11D16H03M48S00.30.ts",
-        "description": "The video is a close-up shot of a security camera, with the timestamp showing August 11, 2024 at 09:03:48. The camera is positioned in a house with a woman in a black shirt and long hair walking up the stairs in the background. The focus is on the camera itself, with the \"kami\" logo visible in the bottom left corner.  The audio is unclear but includes someone speaking about a doctor and a phone number. The video ends at 00:28, with a series of beeping noises. ",
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H04M38S00.30.mp4",
+        "description": "The video is a security camera footage. It shows two African-American women talking in a hallway of a building. The camera is positioned inside the doorway, angled slightly to the right, making it difficult to see what the women are discussing. Both women are dressed casually. The woman on the left is wearing a white blouse with a dark blue sweater, dark pants, and black shoes. She has her back to the camera, holding a brown bag with her right hand and a dark jacket in her left hand. She is looking at the woman on the right. The woman on the right is wearing a black tank top, black pants, and black shoes. She has a blue backpack and a white shopping bag with a brown box inside. She is standing with her right side to the camera and is holding the box with her right hand. She is looking at the other woman. You can hear the sound of the two women talking in a low voice.  It is impossible to understand what they are talking about. ",
         "final_description": "positive "
     },
     {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAC-159578-RFPSK/20240811/2024Y08M11D14H15M56S00.30.ts",
-        "description": "The video is a close-up shot of a window with pleated shades. The shades are pulled down, creating a series of horizontal folds. The shades are white, and the folds are visible due to the way light is shining through them. You can hear a slight breeze rustling through the trees outside the window and a soft \"p\" sound. The video is shot from inside the room, looking out towards the window.  There is a window screen in front of the shades. The screen is black and has a diamond pattern.  A  white handle can be seen at the bottom of the window shades. In the background, green trees and a fence can be seen through the screen.  The video is short, lasting only 21 seconds.  The focus is entirely on the window blinds and does not shift. ",
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H16M39S00.30.mp4",
+        "description": "The video shows three young men standing in a dimly lit, unfinished room. It appears to be some sort of workshop or garage. They are talking to each other, and the one in the middle is holding a red object in his hand. The walls are made of brick, and there are tools and materials scattered around the room. The audio is unclear, but the men seem to be discussing some sort of work project. The video is low quality and the lighting is poor, but the scene is clear enough to see what is happening. ",
         "final_description": "negative "
     },
     {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAL-360383-LBSTT/20240807/2024Y08M07D12H00M18S00.30.ts",
-        "description": "The video is a still image of a living room, focused on a table set with four chairs and dishes. The camera is positioned in the far end of the room, looking towards the dining room table. The person behind the camera is obscured from view, but their presence can be felt through the subtle movement of the camera. There is a green hutch in the background, as well as a coat rack with a jacket hanging on it. A small ceramic dog figurine is on the back of one of the chairs. The date and time are displayed in the top left-hand corner of the screen: 2024-08-07 08:00:18. The video begins with the camera panning slightly to the right, then slowly settles back down. A faint *beep* sound is heard towards the end of the video. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAI-475172-ESNYZ/20240807/2024Y08M07D21H00M06S00.30.ts",
-        "description": "The video is a security camera recording of a person walking down a narrow street. The camera is mounted high up on a building and facing down the street. The person is wearing a black jacket and black pants, and they are walking towards the camera. The street is made of asphalt and there are houses and fences on both sides. There is a utility pole on the right side of the video and a few branches on the left. The time and date are displayed in the upper left corner of the video. ",
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D23H29M55S00.30.mp4",
+        "description": "The video shows a black and white security camera recording inside a home.  A child is on the couch with an adult. Another child walks through the kitchen. They are making a lot of noise, yelling and playing. The second child is seen going to the fridge and grabbing a drink. There are many items on the kitchen counter and a large mixing bowl in the sink. The audio is difficult to understand, but the second child is telling the first child to be quiet. ",
         "final_description": "positive "
     },
     {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAP-422754-EBBPJ/20240811/2024Y08M11D17H27M28S00.30.ts",
-        "description": "The video shows a security camera feed from a house. The camera is looking through a window with blinds that are closed, so the view is obscured. We can see two people talking to each other outside the window. The person in the foreground is wearing a plaid shirt. The person in the background is wearing a green t-shirt. The person in the foreground appears to be a young girl, while the person in the background appears to be an adult. The time stamp on the video shows that the video was taken on 08/11/2021 at 11:27:29. The two people are talking to each other, but their conversation is not audible. The video ends with the two people still talking to each other. ",
+        "file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H07M56S00.30.mp4",
+        "description": "The video shows a living room with a couch, a television, a fireplace, and lots of clutter scattered around the floor.  A woman is sitting in a chair in the living room.  A large, white dog is walking around, barking and jumping up on the woman in the chair.  A brown and white dog is lying in the floor nearby.  A third, smaller, white dog is sitting on the couch near a man who is out of frame and appears to be watching the TV.  There's an open door to the hallway leading to another room, but the man is blocked from view. The woman is saying something about her dogs and how they're not going to eat the appetizers she's made.  The white dog barks again. ",
         "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAN-503161-HLDFZ/20240811/2024Y08M11D13H38M50S00.30.ts",
-        "description": "The video is a security camera footage from the front yard of a house. A person wearing a black shirt and shorts walks towards the camera with a small, white dog on a leash. There is a black car parked in the driveway. The yard has a white wooden sidewalk, green grass, and a black object covered with a black cloth. The video continues to show the person and dog walking for about a minute. There are green and orange hoses at the bottom of the video. The date and time stamp on the video is 2021-08-11 08:38:51.  The dog is making a squeaking sound during the video. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAO-402307-WNWUE/20240807/2024Y08M07D09H07M51S00.30.ts",
-        "description": "The video is a black and white security camera footage taken at night. The camera is pointed at a driveway with two cars parked in it. The car closest to the camera is a sedan and the one further away is a minivan. A third vehicle, a truck, is parked behind the minivan. A car drives into the driveway from the left side of the frame. It stops in front of the minivan and the driver exits the car. The driver is standing in the middle of the driveway for a few moments before getting back into the car. The car then reverses out of the driveway.  The driver then stops the car and exits again.  The driver is standing in the driveway for a few moments before getting back into the car and driving away to the left. The video ends with the two parked cars still in the driveway. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAM-895576-NJGGD/20240807/2024Y08M07D21H00M26S00.30.ts",
-        "description": "The video shows a living room with a dog inside. The camera is positioned in a corner of the room and looks toward the center of the room, showing a tan couch on the right, a TV on the left, and a large rug in the center. The dog walks around the room and then lays down on the rug. The camera is mounted on a wall. The video is a little shaky. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAN-494305-WWWJK/20240811/2024Y08M11D13H49M29S00.30.ts",
-        "description": "The video is a black and white grainy shot of a concrete wall with electrical wires running along the top. There is a faint grey cloud in the top left corner of the screen that may or may not be moving. The camera remains stationary throughout the video and is only focused on the wall. The date and time are displayed in the upper left corner. At 1:07 a very quiet \"P\" sound is audible.  This video appears to be security footage. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAL-243865-SSNGG/20240807/2024Y08M07D09H01M45S00.30.ts",
-        "description": "The video is taken at night and shows a white Jeep Cherokee SUV parked in front of a black car, possibly a BMW. The camera is pointed at the front of the Jeep. The headlights of the black car are on, and the Jeep has an \u201cF\u201d emblem on the back. There is a small amount of light coming from the front of the Jeep and a faint glow around the edges of the car. The video has a timestamp of August 07, 2024, at 05:01:45 and runs for 27 seconds.  A loud beeping sound comes from the Jeep, followed by a series of loud, repetitive beeps that continue until the video ends. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAO-246980-LJZHX/20240811/2024Y08M11D21H00M09S00.30.ts",
-        "description": "The video shows a living room with two people in it. The room has a light brown wooden floor, cream walls, and is furnished with a brown leather sectional sofa, a coffee table, and a small sofa. A small pink pillow lies on the small sofa. The coffee table has a vase of pink flowers, a water bottle, and some books and papers on it. One person is sitting on the sectional sofa and is wearing a plaid blue shirt. The other person is lying down on the sofa.  The person on the sofa is wearing a blue and white pajama top with a blue and red pattern on the shirt. The person is wearing a white phone headset and is talking into the phone. The person on the sofa looks to be listening to the person on the sectional sofa, nodding occasionally. The sun is shining brightly through the window and is illuminating the room. The person on the sectional sofa is talking about car prices and how they have increased over time. The person on the sofa is looking at the phone. The person on the sectional sofa continues to talk, and the other person looks up to look at the person.  The person on the sofa nods again, and the person on the sectional sofa continues talking. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAF-008119-JTBJV/20240807/2024Y08M07D09H02M36S00.30.ts",
-        "description": "The video shows a black and white surveillance footage of a garage. The garage has a variety of items in it, including:* Two large tanks in the front left* A large machine in the center that is producing a loud noise* A garbage can and a cart in the center right* A washing machine in the far rightThe footage is recorded in the early hours of the morning. The machine in the center of the room appears to be a generator, with a noticeable \"P\" sound.  It is running and shining a bright light around the garage. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAH-351287-PPLGM/20240807/2024Y08M07D12H01M58S00.30.ts",
-        "description": "The video shows a deserted suburban street at night. There are two houses with garages in the background. A small bush is in the foreground. A faint \"beep\" sound is heard. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAL-835844-NYMZZ/20240811/2024Y08M11D12H00M16S00.30.ts",
-        "description": null,
-        "final_description": "Error during description generation"
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAO-039504-EZESV/20240807/2024Y08M07D21H01M56S00.30.ts",
-        "description": "The video is a recording from a security camera positioned under an awning of a house.  The camera is pointing at a backyard with a wooded area on the left. There is a tall tree in the center and some grass and small shrubs. To the right is a small area of grass with some small trees.  There are also power lines visible in the upper right corner of the frame. The camera captures some rustling sounds in the bushes for about 19 seconds, then at the end of the clip, there are a few bird sounds. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAM-752099-NEFDZ/20240807/2024Y08M07D21H08M51S00.30.ts",
-        "description": "The video shows a security camera footage of a patio outside a home. The camera is positioned to face the street and the patio is visible with a garage door on the left and a white door to the right. There is a cardboard box on the ground of the patio. A dog barks loudly in the background. The time on the camera is 2021-08-07 16:09:51.  The video is 50 seconds long. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAP-633336-BEBDD/20240807/2024Y08M07D21H04M13S00.30.ts",
-        "description": "The video shows a security camera shot of a dark grey composite deck. A green-handled black broom lies on the deck. The camera is mounted to the side of a white door, looking down at the deck.  The date and time are displayed in the upper left corner of the screen. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAO-758883-VBFKE/20240807/2024Y08M07D09H00M10S00.30.ts",
-        "description": "The video shows a black and white, grainy night vision recording of a tarantula inside a glass jar covered in a layer of wood shavings. The time stamp in the upper left corner says 08/07/2024 02:00:11. The tarantula is visible inside the glass jar as it remains still for the entirety of the 30 second video. The word \"kami\" is visible in the lower left corner of the video. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAM-332180-JMWSG/20240807/2024Y08M07D11H25M32S00.30.ts",
-        "description": null,
-        "final_description": "Error during description generation"
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAF-485654-WRLTZ/20240807/2024Y08M07D09H00M46S00.30.ts",
-        "description": "The video is a black and white night vision recording of a room with several dog crates, a baby gate, two trash cans, a cart with shelves, and a closed white door. There is a distinct sound of a dog barking in the background. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAF-033616-HGGJU/20240811/2024Y08M11D12H00M05S00.30.ts",
-        "description": "The video is a close-up of a table in a bedroom. A remote control is lying on the table. There is a king-sized bed in the background with the covers pulled up.  There are two framed pictures on the wall behind the bed. A door is open in the right side of the frame. A muffled sound of a person speaking can be heard.  The person mentions \"a pledge\" \"the glamorous\" \"a very bad\" \"a new\" \"and\"  \"a lot\" before the video abruptly cuts off. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAO-674535-SLDWU/20240811/2024Y08M11D10H35M18S00.30.ts",
-        "description": "The video shows a security camera recording of a backyard. The camera is pointed upwards towards a deck, which is partially visible. The railing of the deck is black with white vertical slats. The camera is pointing up towards the sky, which is overcast, and some trees are partially visible.  The time stamp in the top left corner indicates the recording took place on 2024-08-11 at 05:35:18. The camera shakes slightly and a bird can be heard chirping.  A loud \"peep\" sound is heard from what appears to be an animal, possibly a bird. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAJ-058751-MHJUB/20240811/2024Y08M11D22H34M57S00.30.ts",
-        "description": "The video shows a security camera view of a garage with a car parked inside. The camera is pointed towards the door to the garage, which is closed.  There are two doors to the left of the garage door: one is a regular door and the other is a screen door. At the beginning, a person walks towards the garage door, then the view shifts to a closer view of the garage door. The door doesn't open, and the video ends. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAF-461107-CVLRK/20240811/2024Y08M11D13H49M59S00.30.ts",
-        "description": "The video is in black and white and shows a living room with two dog cages in the foreground. A large grand piano is in the middle of the room with a piano stool in front of it. There is a large window to the left and a mirror to the right. A ceiling fan can be seen in the mirror. The camera is set on a tripod in the corner of the room.  The door to a different room is open and a woman is seen walking through the room with a dog following her. The woman walks out of the doorway and out of sight. The dog stops, looks back at the door, and then walks toward the piano. The dog continues to walk around in the living room.  The sound of the dog's paws on the hardwood floor can be heard throughout the clip. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAF-256550-HVWWX/20240811/2024Y08M11D10H51M18S00.30.ts",
-        "description": "The video is a black and white night vision shot from a camera that is mounted on the outside of a house.  You can see a section of the outside door and the surrounding area. The camera picks up a very faint sound of a car or truck driving past. The video is dark and blurry. It is only 23 seconds long. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAO-855347-TSSWM/20240811/2024Y08M11D22H32M19S00.30.ts",
-        "description": "The video shows the inside of a shop. The camera is fixed on a table in front of a door.  A person enters the shop carrying a bag. They set the bag down on the table, and reach into it to retrieve a brown paper bag. The person looks around and then sets the paper bag down.  Then they take a bottle from the brown bag and hold it up to their face. The person then exits the shop. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAM-684306-KEZBD/20240811/2024Y08M11D09H55M33S00.30.ts",
-        "description": "The video shows a parking lot in front of an apartment building at dusk. It is a still image with a date and time stamp in the upper left corner.  The sky is a light gray with some clouds.  There are several cars parked in the lot and a tree on the left side of the frame. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAL-387735-XHDGL/20240811/2024Y08M11D09H01M05S00.30.ts",
-        "description": "The video is a still shot of a living room. It appears to be taken from a security camera. In the center of the shot is a black leather couch. A small, wooden table with an X-shaped base is situated to the left of the couch. On top of the table are a laptop computer, a pair of eyeglasses, some papers, and a red item that is difficult to identify. There is a tan armchair to the right of the table. The back of the armchair is covered in a brown plaid throw blanket. To the right of the armchair is a blue cooler. On the wall behind the couch are various items, including a poster of a playing card, a lamp, and some pieces of paper that are too blurry to make out. A red plastic cup sits on the floor in the foreground.  There is no audio, and the scene is completely static. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAP-040321-MLRKH/20240807/2024Y08M07D09H15M19S00.30.ts",
-        "description": "The video shows a black and white security camera shot of two white headlights shining through a window, it appears that the camera is aimed out towards a road with the view of the headlights obscured by a window. The date and time stamp is visible in the top left corner of the frame: 2024-08-07 05:15:19.  There are some small light reflections within the frame, and there is a light hum in the audio.  The lights remain in a static position throughout the entire video. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAN-172826-TVMUH/20240807/2024Y08M07D21H24M56S00.30.ts",
-        "description": "The video shows a closed gate made of black metal bars with wooden panels in between. There is a pot of flowers hanging on the right side of the frame. A small wind chime is visible as well. At the end of the video, you can hear a series of beeps. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAN-644870-BNHTN/20240811/2024Y08M11D21H52M50S00.30.ts",
-        "description": "The video shows a view from a balcony overlooking a street. The street is paved with cobblestones and has houses on either side. A white car is parked on the right side of the street. In the distance, there is a pickup truck driving up the street. The pickup truck has a black cage in the back, and the tailgate is open. The video then cuts to a shot of the balcony, where a small plant is sitting in a pot on the floor. The railing of the balcony can be seen in the foreground. The rest of the video shows a view of the street, as the pickup truck continues to drive up the street.The camera is stationary throughout the video. The audio is mostly quiet, with the sound of traffic in the background. The video is 1 minute and 7 seconds long. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAO-624120-SZSNS/20240811/2024Y08M11D11H38M01S00.30.ts",
-        "description": "The video shows a security camera footage of a suburban neighborhood. In the front yard of a house, we see a black SUV parked in the driveway. In the background, a basketball hoop is visible. The camera is focused on a large tree in the middle of the yard, with a blue disc swing hanging from one of its branches. We can also see a few cars driving in the street beyond the tree. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAP-034167-BKLUE/20240807/2024Y08M07D18H38M01S00.30.ts",
-        "description": null,
-        "final_description": "Error during description generation"
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAF-273829-PMHZS/20240807/2024Y08M07D09H57M23S00.30.ts",
-        "description": "The video is a black and white, night-vision recording from a security camera. It is a wide-angle shot of a white truck and a smaller white car parked in a garage. The truck has a sticker on the back window that says \"Crazy Tracker\" and includes a cartoon character. There are other stickers below that, including one that says \"CRPD\" and another that says \"Democrats\". The camera is mounted on the wall, pointing slightly downward. It records the two vehicles for about 20 seconds. The only sound is a quiet repetitive \"peeping\" that begins around the 17 second mark. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAE-349126-GMNRG/20240807/2024Y08M07D21H00M15S00.30.ts",
-        "description": "The video shows two men in a gym, one of them is shirtless and has tattoos. They are talking about a weight issue that the man with tattoos is having. They are standing in front of a squat rack. The camera is pointing down at them from above. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAO-726394-DDPEU/20240811/2024Y08M11D21H24M27S00.30.ts",
-        "description": "The video shows a couple hugging by the front door. A white dog is in the living room, jumping on the couch and barking at the couple. The man and woman are in an embrace for a long time. The dog is very agitated by their behavior and barks a lot. There is a couch and a chair visible in the living room. There are several framed pictures on the wall to the left of the door. A lamp is on a side table near the couch. The house has a wood floor. The door is open and a window is behind the couple. The front yard is visible. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPUSAP-421415-KTRGN/20240811/2024Y08M11D17H50M19S00.30.ts",
-        "description": "The video shows two children playing in a room. The camera is mounted high on the wall and is pointing down at the floor. The two children are on the floor, with the older child wearing a red shirt and the younger child wearing a diaper. The older child is rolling a ball around and the younger child is crawling around,  babbling and playing with toys. There is a baby gate behind the children and several toys scattered around the room, including a large red ball, blocks, and other miscellaneous toys. The wall is a light gray color, and the floor is made of hardwood. The video is recorded by a security camera, and the date and time are displayed in the upper left corner of the screen. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAP-252838-BJNWX/20240807/2024Y08M07D09H40M08S00.30.ts",
-        "description": "The video is a night-time security camera recording. It shows a black and white image of a residential driveway. The camera is mounted on the side of the house, looking out over the driveway. The camera captures the silhouette of a small animal walking through the driveway from left to right. The sound of the animal's paws hitting the pavement is audible.  The time stamp in the top left corner shows that the video was taken on August 7, 2024 at 04:30:07. The image is grainy and the lighting is poor. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAO-362636-ZSNPR/20240807/2024Y08M07D18H12M16S00.30.ts",
-        "description": "The video shows a gray and white cat sitting on a furry brown and white bed.  The camera is mounted on the wall, looking slightly down at the cat. The cat is looking directly at the camera, and the timestamp in the top left corner indicates that it's 11:12:16 on August 7th, 2024. There is a white light switch on the wall to the left of the cat, and a security panel on the wall above the cat.  The audio is of a child's voice saying \"Mommy need me.\"  The child's voice continues to whine and plead with their mom to \"need\" them. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAP-357471-LBUBU/20240811/2024Y08M11D12H40M55S00.30.ts",
-        "description": "The video shows a security camera recording in the dark of a back alleyway. It appears to be nighttime, and the only light is coming from the camera's infrared light. There are two large trash cans and a white machine with a large metal dome on top. The camera points down at the ground, and there is a lot of static on the screen. A person walks into the left side of the frame, then leaves the frame to the right. The person can be seen for a few seconds, but their features are too blurry to identify. A loud, sharp noise is heard at the end of the clip. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAL-092337-SBUEL/20240811/2024Y08M11D22H59M05S00.30.ts",
-        "description": "The video is a black and white security camera recording taken at night. The camera is facing a yard with some bushes and a tree in the foreground, and a fence in the middle ground. There are some streetlights visible in the distance, and a figure is moving in the far background. There is a time and date stamp in the top left corner of the screen. A faint sound of barking and possibly some other animal sounds can be heard. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPXGAE-683563-KJTLF/20240807/2024Y08M07D12H08M39S00.30.ts",
-        "description": "The video is from a security camera and shows a white wall and a door opening into a hallway with white tile floors. The door is partially open, and there is a black doorknob on the right side of the door. A sign is visible on the door, but it is too far away to read. The time stamp in the upper left corner shows 2024-08-07 06:08:40. The camera is stationary and the video is silent. The video is very short, lasting for only 30 seconds. ",
-        "final_description": "negative "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAP-418576-WRDNG/20240807/2024Y08M07D12H04M43S00.30.ts",
-        "description": "The video is a recording from a home security camera. It shows a family inside their kitchen, which is messy and scattered with toys and food. A man is standing in the doorway to the kitchen, talking to someone off camera. A young boy, wearing a blue shirt, is playing in the kitchen. He walks around, talking to himself. He picks up a toy and throws it, and then crawls on the floor, making noises. The man in the doorway calls the boy \u201ca funny kid.\u201d The boy continues to play, while the man in the doorway looks in the refrigerator. A woman is seated at a table in the kitchen, sipping from a cup. She occasionally watches the boy, but for the most part she is focused on her drink and looks bored. A black cat enters the kitchen and walks around, then exits back out of the kitchen. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAI-102035-UBLZS/20240811/2024Y08M11D21H06M12S00.30.ts",
-        "description": "The video is a security camera footage from a house. It shows a dark blue SUV pulling up to the curb outside the house. A woman and a young child get out of the car. The woman is holding the child's hand. The child is wearing a pink jacket. The woman is wearing a black jacket and carrying a white bag. They walk away from the camera, heading toward the front door of the house. There is a red car parked in the driveway to the right of the camera.  In the background, you can hear the woman speaking with someone inside the house. She asks, \"Where's the?\"  but the rest of the conversation is inaudible. The video then cuts off. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAO-239223-HYGSV/20240807/2024Y08M07D10H36M25S00.30.ts",
-        "description": "The video starts with a black and white night vision view of a living room.  We see a person walking from the left of the frame toward the right.  The person then walks out of the frame. The camera pans to the right to focus on a glass door refrigerator with a wooden shelf on top of it.  There is a potted plant, a shoe, and a few other things on the shelf. The video ends with the camera focused on the fridge.  The video appears to be from a security camera. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240807/Motion/TNPUSAF-027768-RLNGU/20240807/2024Y08M07D21H11M44S00.30.ts",
-        "description": "The video shows a living room with a brown couch in the foreground, a small kitchen with a brown countertop to the left, and a white Christmas tree and a gray couch in the background. The living room is lit by a single overhead light, while the kitchen has natural light coming in from a window. There is a small dog sitting on the brown couch in the foreground, looking up at something off camera. The dog barks intermittently, making the sounds \"woof\" and \"bark\" throughout the video. There are other sounds in the background, such as the sound of running water and other unidentified noises, but these are relatively faint and not distracting from the dog's barking. ",
-        "final_description": "positive "
-    },
-    {
-        "file": "/nfsmain/videos/20240811/Motion/TNPXGAN-406987-GWMZM/20240811/2024Y08M11D09H00M08S00.30.ts",
-        "description": "The video shows a still shot of a wooden table with two pedestals. It is a black and white video with a timestamp in the upper left corner that reads: 2024-08-11 04:00:08. The video continues for 27 seconds with no movement. There is a faint, high-pitched noise that sounds like \"p\" repeatedly at about 0.2 Hz throughout the video. ",
-        "final_description": "negative "
     }
 ]

@@ -213,8 +213,8 @@ def main():
     api_key = os.getenv('API_KEY_1')
     configure_api(api_key)
     video_data = load_json_data('video_info.json')
-    category_embeddings = [np.array(emb) for emb in load_json_data('category_embeddings.json')]
-    categories_base_path = '/nfsmain/janderson/new_us_region/categorization'
+    category_embeddings = [np.array(emb) for emb in load_json_data('/home/ubuntu/semi-auto-captions/embedded_gen/category_embeddings.json')]
+    categories_base_path = '/home/ubuntu/semi-auto-captions/processed_videos/category'
     
     process_videos(video_data, category_embeddings, categories_base_path)
 
