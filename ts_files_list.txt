@@ -1,0 +1,25 @@
+
+Category: Category_4 (1 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_4/2024Y08M07D12H00M45S00.30.ts
+
+Category: Category_5 (1 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_5/2024Y08M07D21H01M28S00.30.ts
+
+Category: Category_9 (1 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_9/2024Y08M07D12H00M04S00.30.ts
+
+Category: Category_10 (1 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_10/2024Y08M07D21H01M13S00.30.ts
+
+Category: Category_15 (1 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_15/2024Y08M07D12H00M11S00.30.ts
+
+Category: Category_19 (3 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_19/2024Y08M07D21H37M49S00.30.ts
+/home/ubuntu/semi-auto-captions/videos/category/Category_19/2024Y08M07D22H21M32S00.30.ts
+/home/ubuntu/semi-auto-captions/videos/category/Category_19/2024Y08M07D22H30M10S00.30.ts
+
+Category: Category_25 (3 files)
+/home/ubuntu/semi-auto-captions/videos/category/Category_25/2024Y08M07D10H57M48S00.30.ts
+/home/ubuntu/semi-auto-captions/videos/category/Category_25/2024Y08M07D21H00M36S00.30.ts
+/home/ubuntu/semi-auto-captions/videos/category/Category_25/2024Y08M07D21H01M01S00.30.ts
