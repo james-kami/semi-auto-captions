@@ -26,24 +26,29 @@ def exclude_specific_categories(description, category_embeddings):
     description_lower = description.lower()
 
     # Category 1: Returning home (specific to returning home context)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["return", "coming home", "arrive home", "enters house", "back home"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["return", "coming home", "arrive home", "enter(s|ing)? house", "back home"]):
         if len(category_embeddings) >= 1:
-            category_embeddings[0] = None  
+            category_embeddings[0] = None
+
 
     # Category 2: Leaving home (specific to leaving home context)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["leave house", "leaves house", "leave home", "leaves home", "depart", "exit building", "go out"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["leave(s|ing)? house", "leave(s|ing)? home", "depart(s|ing)?", "exit(s|ing)? building", "go(es)? out"]):
         if len(category_embeddings) >= 2:
-            category_embeddings[1] = None  
+            category_embeddings[1] = None
+
 
     # Category 3: Visitor or guest arrival (specific to visitor/guest context)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["visitor", "guest", "arrive", "approach", "enter", "ring bell", "doorbell", "knock"]):
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["visitor", "guest"]) and
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["arrive", "approach", "enter", "ring(s|ing)? bell", "doorbell", "knock(s|ing)?"])):
         if len(category_embeddings) >= 3:
-            category_embeddings[2] = None  
+            category_embeddings[2] = None
+
 
     # Category 4: Stairs interaction (specific to stairs-related activities)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["stairs", "staircase", "upstairs", "downstairs", "steps", "walks past stairs", "climb"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["stairs", "staircase", "upstairs", "downstairs", "steps", "climb(s|ing)?"]):
         if len(category_embeddings) >= 4:
-            category_embeddings[3] = None 
+            category_embeddings[3] = None
+
 
     # Category 5: Pets playing (must involve both pet and playing activity)
     if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["play", "playing"]) and 
@@ -57,7 +62,7 @@ def exclude_specific_categories(description, category_embeddings):
             category_embeddings[5] = None  
 
     # Category 7: Eating (must involve eating activity)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["eat", "eating", "ate", "meal", "dining", "food"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["eat", "eating", "ate", "meal", "food"]):
         if len(category_embeddings) >= 7:
             category_embeddings[6] = None 
 
@@ -69,13 +74,12 @@ def exclude_specific_categories(description, category_embeddings):
 
     # Category 9: Activities (focus on human or specific activities, exclude generic uses)
     if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in [
-        "phone", "call", "piano", "guitar", "drum", "drums", "book", "books", 
-        "reading", "horse", "horses", "horseback", "riding", "bike", "bikes", 
-        "biking", "jogging", "exercise", "jump", "jumping", "sleep", 
-        "sleeping", "photo", "computer", "computers", "walking"]) and \
-       not re.search(r'\brunning(?! water)\b', description_lower):  # Exclude "running water"
+        "phone call", "playing piano", "guitar", "drum", "drums", "reading book(s)?", "horse", "horseback riding", 
+        "bike(s)?", "biking", "jogging", "exercise", "jump(s|ing)?", "sleep(s|ing)?", "taking photo(s)?", "using computer", 
+        "walking", "running\b(?! water)"]):
         if len(category_embeddings) >= 9:
             category_embeddings[8] = None
+
 
     # Category 10: Animal sounds (focus on pet-related sounds)
     if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["barking", "meowing", "bark", "meow"]):
@@ -108,7 +112,9 @@ def exclude_specific_categories(description, category_embeddings):
             category_embeddings[13] = None
 
     # Category 15: Car parks in the garage (must involve parking in a garage)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle", "park", "garage"]):
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "vehicle"]) and 
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["park", "parking"]) and
+            re.search(r'\bgarage\b', description_lower)):
         if len(category_embeddings) >= 15:
             category_embeddings[14] = None
 
@@ -119,9 +125,10 @@ def exclude_specific_categories(description, category_embeddings):
 
     # Category 17: Types of cars passing by (must involve both a vehicle and passing by or movement context)
     if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car", "fire truck", "ambulance", "truck", "police car", "vehicle", "motorcycle", "bus"]) and 
-            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["passed", "passing", "driving by", "moves past", "goes by", "drives past", "travels past"])):
+            any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["pass(es|ing)?", "driving by", "move(s|ing)? past", "go(es)? by", "drive(s|ing)? past", "travel(s|ing)? past"])):
         if len(category_embeddings) >= 17:
             category_embeddings[16] = None
+
 
     # Category 18: Someone approaches/steals car (must involve both car and approach/steal context)
     if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["car"]) and 
@@ -130,14 +137,17 @@ def exclude_specific_categories(description, category_embeddings):
             category_embeddings[17] = None
 
     # Category 19: Door opens (specific to door opening)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door", "open"]):
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door"]) and
+            re.search(r'\bopen(s|ing)?\b', description_lower)):
         if len(category_embeddings) >= 19:
             category_embeddings[18] = None
 
     # Category 20: Door closes (specific to door closing)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door", "close", "closed"]):
+    if not (any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["door"]) and
+            re.search(r'\bclose(s|d|ing)?\b', description_lower)):
         if len(category_embeddings) >= 20:
             category_embeddings[19] = None
+
 
     # Category 21: Package delivery (specific to delivery context)
     if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["package", "parcel", "delivered", "delivery"]):
@@ -155,9 +165,10 @@ def exclude_specific_categories(description, category_embeddings):
             category_embeddings[22] = None
 
     # Category 24: Getting off the bed event (specific to getting off the bed context)
-    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["bed", "getting off", "sleep", "rise", "get up"]):
+    if not any(re.search(r'\b' + keyword + r'\b', description_lower) for keyword in ["bed", "get(s|ting)? off", "wake(s|ing)? up", "rise(s|ing)?", "get(s|ting)? up"]):
         if len(category_embeddings) >= 24:
             category_embeddings[23] = None
+
 
     # Category 25: Catch-all for unmatched categories
     if all(embedding is None for embedding in category_embeddings[:24]):  # All categories are None

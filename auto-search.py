@@ -16,6 +16,7 @@ import google.generativeai as genai # type: ignore
 selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
+failed_videos = set()
 
 # files_to_remove = [
 #     "/home/ubuntu/semi-auto-captions/video_info.json",
@@ -113,7 +114,7 @@ def upload_and_process_video(video_file_name, api_key):
 
             while video_file.state.name == "PROCESSING":
                 print(f'Waiting for video {video_file_name} to be processed.')
-                time.sleep(3)
+                time.sleep(10)
                 video_file = genai.get_file(video_file.name)
 
             if video_file.state.name == "FAILED":
@@ -123,9 +124,12 @@ def upload_and_process_video(video_file_name, api_key):
             return video_file
         except Exception as e:
             print(f"Error uploading/processing video {video_file_name}: {e}")
+            if "SSL" in str(e):
+                print("Detected SSL error, pausing for 60 seconds before retrying...")
+                time.sleep(60)
             if attempt < max_retries - 1:
                 print("Retrying...")
-                time.sleep(1)
+                time.sleep(10)
             else:
                 print("Max retries reached. Skipping file.")
                 return None
@@ -136,6 +140,10 @@ def generate_description(video_file):
         model = genai.GenerativeModel(model_name="models/gemini-1.5-flash-latest")
         print(f"Making LLM inference request for {video_file.name}...")
         response = model.generate_content([prompt, video_file], request_options={"timeout": 10})
+
+        if not response.text:
+            raise ValueError("Empty response from the model")
+        
         description = response.text.replace('\n', '')
         print(description)
 
@@ -147,8 +155,13 @@ def generate_description(video_file):
         )
 
         response = model.generate_content([enhanced_prompt, description], request_options={"timeout": 10})
+
+        if not response.text:
+            raise ValueError("Empty response from the model during enhanced prompt")
+
         final_description = response.text.replace('\n', '')
         print(final_description)
+
         # Post-processing check
         if "grainy" in description.lower() or "poorly lit" in description.lower():
             final_description = "negative"
@@ -156,26 +169,26 @@ def generate_description(video_file):
         return description, final_description
     except Exception as e:
         print(f"Error generating description for video {video_file.name}: {e}")
-        return None, None
+        return None, None  # Ensure failure is handled consistently
 
 def process_video(video_file_name, save_dir, api_key):
-    global processed_videos, selected_videos
+    global processed_videos, selected_videos, failed_videos
 
-    # Check if the video has already been processed
-    for folder, files in processed_videos.items():
-        if video_file_name in files:
-            print(f"Skipping already processed video: {video_file_name}")
-            return video_file_name, "Already processed", "Skipped"
+    if video_file_name in failed_videos:
+        print(f"Skipping previously failed video: {video_file_name}")
+        return video_file_name, "Previously failed", "Skipped"
 
     try:
         # Upload and process video
         video_file = upload_and_process_video(video_file_name, api_key)
         if not video_file:
+            failed_videos.add(video_file_name)  # Mark as failed
             return video_file_name, "Error during upload/processing", "Bad file"
 
         # Generate description
         description, final_description = generate_description(video_file)
         if not final_description:
+            failed_videos.add(video_file_name)  # Mark as failed
             return video_file_name, description, "Error during description generation"
 
         # Save valid video
@@ -198,7 +211,19 @@ def process_video(video_file_name, save_dir, api_key):
         return video_file_name, description, final_description
     except Exception as e:
         print(f"Exception processing video {video_file_name}: {e}")
+        failed_videos.add(video_file_name)  # Mark as failed
         return video_file_name, "Exception occurred", "Bad file"
+
+def load_failed_videos(failed_videos_file):
+    if os.path.exists(failed_videos_file):
+        with open(failed_videos_file, 'r') as f:
+            return set(json.load(f))
+    return set()
+
+def save_failed_videos(failed_videos_file):
+    with open(failed_videos_file, 'w') as f:
+        json.dump(list(failed_videos), f, indent=4)
+
 
 def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directory_usage, directory_usage):
     global selected_videos, processed_videos
@@ -239,9 +264,11 @@ def main():
     global selected_videos, processed_videos, end_time
     start_time = time.time()
     load_dotenv()
+    failed_videos_file = 'failed_videos.json'
+    failed_videos = load_failed_videos(failed_videos_file)
 
     # Load multiple API keys
-    api_keys = [os.getenv(f'API_KEY_{i}') for i in range(1, 11)]
+    api_keys = [os.getenv(f'API_KEY_{i}') for i in range(1, 6)]
     if not any(api_keys):
         print("No API keys found. Please set the API keys in the environment.")
         return
@@ -269,7 +296,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 500 files, but in batches of x
-    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 30, 99999999, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 1000, 99999999, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists
@@ -281,7 +308,7 @@ def main():
 
     video_results = existing_results  # Start with existing data
 
-    batch_size = 10  # Adjust this value as needed to control the number of concurrent tasks
+    batch_size = 100  # Adjust this value as needed to control the number of concurrent tasks
     for i in range(0, len(video_files), batch_size):
         batch_files = video_files[i:i + batch_size]
         print(f"Processing batch {i // batch_size + 1} with {len(batch_files)} videos...")
@@ -320,6 +347,7 @@ def main():
 
     # Save the selected and processed videos to JSON file to avoid duplicates in future runs
     save_selected_videos(json_log, directory_usage)
+    save_failed_videos(failed_videos_file)
     end_time = time.time()
     save_run_time('script_run_times.json', start_time, end_time, interrupted=False)
     print(f"Execution time: {end_time - start_time:.2f} seconds")
