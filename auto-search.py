@@ -17,19 +17,19 @@ selected_videos = {}  # keep track of selected videos
 processed_videos = {}  # keep track of processed videos
 end_time = 0
 
-files_to_remove = [
-    "/home/ubuntu/semi-auto-captions/video_info.json",
-    "/home/ubuntu/semi-auto-captions/selected_videos.json",
-    "/home/ubuntu/semi-auto-captions/script_run_times.json",
-    "/home/ubuntu/semi-auto-captions/categorization_results.json",
+# files_to_remove = [
+#     "/home/ubuntu/semi-auto-captions/video_info.json",
+#     "/home/ubuntu/semi-auto-captions/selected_videos.json",
+#     "/home/ubuntu/semi-auto-captions/script_run_times.json",
+#     "/home/ubuntu/semi-auto-captions/categorization_results.json",
     
-]
+# ]
 
-for file_path in files_to_remove:
-    try:
-        os.remove(file_path)
-    except FileNotFoundError:
-        pass  # Ignore the error if the file is not found
+# for file_path in files_to_remove:
+#     try:
+#         os.remove(file_path)
+#     except FileNotFoundError:
+#         pass  # Ignore the error if the file is not found
 
 def process_batch(video_files, save_dir, api_keys):
     video_results = []
@@ -159,15 +159,16 @@ def generate_description(video_file):
         return None, None
 
 def process_video(video_file_name, save_dir, api_key):
-    global processed_videos
+    global processed_videos, selected_videos
 
     # Check if the video has already been processed
     for folder, files in processed_videos.items():
         if video_file_name in files:
             print(f"Skipping already processed video: {video_file_name}")
             return video_file_name, "Already processed", "Skipped"
+
     try:
-        # Ensure api_key is passed correctly here
+        # Upload and process video
         video_file = upload_and_process_video(video_file_name, api_key)
         if not video_file:
             return video_file_name, "Error during upload/processing", "Bad file"
@@ -186,17 +187,18 @@ def process_video(video_file_name, save_dir, api_key):
         # Delete the file from the server
         genai.delete_file(video_file.name)
         print(f'Deleted file {video_file.uri}')
-        
+
         # Record processed video and update JSON
         folder = os.path.dirname(video_file_name)
         if folder not in processed_videos:
             processed_videos[folder] = []
         processed_videos[folder].append(video_file_name)
+        selected_videos.pop(video_file_name, None)  # Remove from selected_videos
 
-        return (video_file_name, description, final_description)
+        return video_file_name, description, final_description
     except Exception as e:
         print(f"Exception processing video {video_file_name}: {e}")
-        return (video_file_name, "Exception occurred", "Bad file")
+        return video_file_name, "Exception occurred", "Bad file"
 
 def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directory_usage, directory_usage):
     global selected_videos, processed_videos
@@ -209,7 +211,12 @@ def get_random_video_files(video_dir, limit_per_folder, total_limit, max_directo
             if file.endswith('.ts') or file.endswith('.mp4'):
                 all_files.append(os.path.join(root, file))
 
-    #print(f"Found video files: {all_files}")
+    # Process videos that were selected but not processed
+    unprocessed_files = [file for file in selected_videos if file not in processed_videos]
+    
+    if unprocessed_files:
+        print(f"Reprocessing {len(unprocessed_files)} unprocessed files from previous runs.")
+        return unprocessed_files, directory_usage
 
     selected_files = []
     random.shuffle(all_files)  # Shuffle all files to randomize selection
@@ -239,8 +246,8 @@ def main():
         print("No API keys found. Please set the API keys in the environment.")
         return
 
-    video_dir = "/home/ubuntu/semi-auto-captions/processed_videos/start"
-    save_dir = "/home/ubuntu/semi-auto-captions/processed_videos/end"
+    video_dir = "/home/ubuntu/semi-auto-captions/videos/raw"
+    save_dir = "/home/ubuntu/semi-auto-captions/videos/processed"
     json_log = 'selected_videos.json'
 
     # Load previously selected and processed videos and directory usage
@@ -262,7 +269,7 @@ def main():
     os.makedirs(save_dir, exist_ok=True)
 
     # Process max 500 files, but in batches of x
-    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 10, 99999999, directory_usage)
+    video_files, directory_usage = get_random_video_files(video_dir, 99999999, 30, 99999999, directory_usage)
     print(f"Found {len(video_files)} video files.")
 
     # Load existing data from video_info.json if it exists

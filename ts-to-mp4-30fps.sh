@@ -6,7 +6,7 @@
 # Usage: bash standardize_video.sh [base_folder] [output_format] [fps] [num_cores]
 
 # Default settings
-BASE_FOLDER="${1:-/nfsmain/janderson/new_us_region/categorization}"
+BASE_FOLDER="${1:-/home/ubuntu/semi-auto-captions/videos/category}"
 DEFAULT_OUTPUT_FORMAT="mp4"
 DEFAULT_FPS="30"
 DEFAULT_NUM_CORES="$(nproc)"

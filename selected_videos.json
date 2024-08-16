@@ -1,23 +1,124 @@
 {
     "selected": {
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D23H29M55S00.30.mp4": true,
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H18M01S00.30.mp4": true,
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D22H06M36S00.30.mp4": true,
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H04M38S00.30.mp4": true,
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H16M39S00.30.mp4": true,
-        "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H07M56S00.30.mp4": true
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-853968-DURHT/20240807/2024Y08M07D12H45M30S00.30.ts": true,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-308730-NXHST/20240807/2024Y08M07D21H01M36S00.30.ts": true
     },
     "processed": {
-        "/home/ubuntu/semi-auto-captions/processed_videos/start": [
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H18M01S00.30.mp4",
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D22H06M36S00.30.mp4",
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H04M38S00.30.mp4",
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H16M39S00.30.mp4",
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D23H29M55S00.30.mp4",
-            "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H07M56S00.30.mp4"
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-811282-DSSMM/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-811282-DSSMM/20240807/2024Y08M07D12H41M05S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAI-238488-MRDMR/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAI-238488-MRDMR/20240807/2024Y08M07D10H57M48S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-338579-JYRTS/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-338579-JYRTS/20240807/2024Y08M07D09H04M24S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-162517-MGSLR/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-162517-MGSLR/20240807/2024Y08M07D12H00M45S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-319327-HTWXW/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-319327-HTWXW/20240807/2024Y08M07D21H05M30S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-732936-HTUUL/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-732936-HTUUL/20240807/2024Y08M07D21H37M49S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-268488-YYKDT/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-268488-YYKDT/20240807/2024Y08M07D12H28M20S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-652647-UVBMY/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-652647-UVBMY/20240807/2024Y08M07D09H36M56S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-279792-CNDDN/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-279792-CNDDN/20240807/2024Y08M07D22H21M32S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-025511-BFMDR/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-025511-BFMDR/20240807/2024Y08M07D12H09M08S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-743277-PSTKV/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-743277-PSTKV/20240807/2024Y08M07D12H02M47S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-594993-UYWGK/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-594993-UYWGK/20240807/2024Y08M07D12H00M11S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAN-036822-LPVXH/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAN-036822-LPVXH/20240807/2024Y08M07D21H06M27S01.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAM-205148-SETRD/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAM-205148-SETRD/20240807/2024Y08M07D12H02M42S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-491974-GGVUT/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-491974-GGVUT/20240807/2024Y08M07D12H00M04S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-039793-FSTVB/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-039793-FSTVB/20240807/2024Y08M07D12H26M24S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-255118-BUHZT/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-255118-BUHZT/20240807/2024Y08M07D21H01M28S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-746413-VPNNC/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-746413-VPNNC/20240807/2024Y08M07D21H01M13S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-252549-JFMVH/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-252549-JFMVH/20240807/2024Y08M07D10H22M52S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAH-894109-KKUCX/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAH-894109-KKUCX/20240807/2024Y08M07D09H00M04S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-113675-RMFVW/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-113675-RMFVW/20240807/2024Y08M07D10H17M40S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-273329-LHPLW/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-273329-LHPLW/20240807/2024Y08M07D21H00M36S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-858420-HBSJV/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-858420-HBSJV/20240807/2024Y08M07D11H52M34S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-440048-SDHLJ/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-440048-SDHLJ/20240807/2024Y08M07D22H30M10S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-222790-YEWCK/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-222790-YEWCK/20240807/2024Y08M07D21H00M05S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-227162-FZWKX/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-227162-FZWKX/20240807/2024Y08M07D14H05M32S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-307966-KGEBV/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-307966-KGEBV/20240807/2024Y08M07D21H01M01S00.30.ts"
+        ],
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAF-460818-YPFDW/20240807": [
+            "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAF-460818-YPFDW/20240807/2024Y08M07D09H05M05S00.30.ts"
         ]
     },
     "directory_usage": {
-        "/home/ubuntu/semi-auto-captions/processed_videos/start": 6
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-279792-CNDDN/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAI-238488-MRDMR/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-732936-HTUUL/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-319327-HTWXW/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-268488-YYKDT/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-652647-UVBMY/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-811282-DSSMM/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-853968-DURHT/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-162517-MGSLR/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAF-338579-JYRTS/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-252549-JFMVH/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-746413-VPNNC/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-594993-UYWGK/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-039793-FSTVB/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAM-205148-SETRD/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAN-036822-LPVXH/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-743277-PSTKV/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-255118-BUHZT/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-491974-GGVUT/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-025511-BFMDR/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-273329-LHPLW/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAH-894109-KKUCX/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-858420-HBSJV/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-227162-FZWKX/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-113675-RMFVW/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-440048-SDHLJ/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-307966-KGEBV/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-308730-NXHST/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAF-460818-YPFDW/20240807": 1,
+        "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-222790-YEWCK/20240807": 1
     }
 }

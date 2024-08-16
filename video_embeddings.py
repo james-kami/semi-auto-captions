@@ -72,7 +72,7 @@ def exclude_specific_categories(description, category_embeddings):
         "phone", "call", "piano", "guitar", "drum", "drums", "book", "books", 
         "reading", "horse", "horses", "horseback", "riding", "bike", "bikes", 
         "biking", "jogging", "exercise", "jump", "jumping", "sleep", 
-        "sleeping", "photo", "computer", "computers"]) and \
+        "sleeping", "photo", "computer", "computers", "walking"]) and \
        not re.search(r'\brunning(?! water)\b', description_lower):  # Exclude "running water"
         if len(category_embeddings) >= 9:
             category_embeddings[8] = None
@@ -214,7 +214,7 @@ def main():
     configure_api(api_key)
     video_data = load_json_data('video_info.json')
     category_embeddings = [np.array(emb) for emb in load_json_data('/home/ubuntu/semi-auto-captions/embedded_gen/category_embeddings.json')]
-    categories_base_path = '/home/ubuntu/semi-auto-captions/processed_videos/category'
+    categories_base_path = '/home/ubuntu/semi-auto-captions/videos/category'
     
     process_videos(video_data, category_embeddings, categories_base_path)
 

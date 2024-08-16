@@ -1,14 +1,46 @@
 [
     {
-        "video_file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H04M38S00.30.mp4",
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAI-238488-MRDMR/20240807/2024Y08M07D10H57M48S00.30.ts",
+        "category": "Category_9"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-162517-MGSLR/20240807/2024Y08M07D12H00M45S00.30.ts",
+        "category": "Category_4"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-732936-HTUUL/20240807/2024Y08M07D21H37M49S00.30.ts",
+        "category": "Category_19"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-279792-CNDDN/20240807/2024Y08M07D22H21M32S00.30.ts",
+        "category": "Category_19"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAJ-594993-UYWGK/20240807/2024Y08M07D12H00M11S00.30.ts",
+        "category": "Category_15"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAC-491974-GGVUT/20240807/2024Y08M07D12H00M04S00.30.ts",
+        "category": "Category_9"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-255118-BUHZT/20240807/2024Y08M07D21H01M28S00.30.ts",
+        "category": "Category_5"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-746413-VPNNC/20240807/2024Y08M07D21H01M13S00.30.ts",
+        "category": "Category_10"
+    },
+    {
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAO-273329-LHPLW/20240807/2024Y08M07D21H00M36S00.30.ts",
         "category": "Category_25"
     },
     {
-        "video_file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M28D23H29M55S00.30.mp4",
-        "category": "Category_25"
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPUSAP-440048-SDHLJ/20240807/2024Y08M07D22H30M10S00.30.ts",
+        "category": "Category_9"
     },
     {
-        "video_file": "/home/ubuntu/semi-auto-captions/processed_videos/start/2024Y05M29D00H07M56S00.30.mp4",
-        "category": "Category_7"
+        "video_file": "/home/ubuntu/semi-auto-captions/videos/raw/20240807/Motion/TNPXGAL-307966-KGEBV/20240807/2024Y08M07D21H01M01S00.30.ts",
+        "category": "Category_25"
     }
 ]
